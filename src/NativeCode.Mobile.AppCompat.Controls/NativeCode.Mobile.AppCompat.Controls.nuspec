@@ -3,11 +3,11 @@
 <package>
   <metadata>
     <id>$id$</id>
-    <authors>Mike Pham</authors>
-    <description>Provides Xamarin.Forms controls for AppCompat library.</description>
+    <authors>NativeCode</authors>
+    <description>Provides Xamarin.Forms controls for the NativeCode.Mobile.AppCompat package for PCL libraries.</description>
     <language>en-US</language>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
-    <projectUrl>https://github.com/mikepham/xamarin</projectUrl>
+    <projectUrl>https://github.com/nativecode-dev/oss-xamarin</projectUrl>
     <tags>xamarin appcompat android mobile controls</tags>
     <version>$version$</version>
   </metadata>
