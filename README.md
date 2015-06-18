@@ -2,8 +2,8 @@
 
 Provide Material Design themes now for Xamarin.Forms apps natively without hacks! Check out the [wiki](https://github.com/nativecode-dev/oss-xamarin/wiki) for more information.
 
-[![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1)
-[![TeamCity (simple build status)](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_continuous.svg?style=flat-square&label=continuous)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_continuous&guest=1)
+[![Release](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1)
+[![Development](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_development.svg?style=flat-square&label=development)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_development&guest=1)
 
 ## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/) [![AppCompat](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.svg?style=flat-square&label=AppCompat)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/)
 
