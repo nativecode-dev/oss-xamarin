@@ -117,17 +117,13 @@ public class MainActivity : AppCompatFormsApplicationActivity
 - Nexus 5 (emulator)
 - Samsung Galaxy S6
 
+![phone](screenshots/phone.gif)
+
 ### Tablets
 - Samsung Tab 7
 - Nexus 7
 
-## Screenshots
-
-![screenshot](screenshots/screenshot.png)
-![screenshot-masterdetail](screenshots/screenshot-masterdetail.png)
-![screenshot-snackbar](screenshots/screenshot-snackbar.png)
-![screenshot-moreactions](screenshots/screenshot-moreactions.png)
-![movie-actionbardrawertoggle](screenshots/movie-actionbardrawertoggle.gif)
+![tablet](screenshots/tablet.gif)
 
 ### LICENSE
 ```
