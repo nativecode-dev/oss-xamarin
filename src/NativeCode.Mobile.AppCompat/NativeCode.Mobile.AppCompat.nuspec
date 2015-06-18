@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<package>
+  <metadata>
+    <id>$id$</id>
+    <authors>Mike Pham</authors>
+    <description>Provides AppCompat support for Xamarin.Forms.</description>
+    <language>en-US</language>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <projectUrl>https://github.com/mikepham/xamarin</projectUrl>
+    <tags>xamarin appcompat android mobile</tags>
+    <version>$version$</version>
+  </metadata>
+</package>

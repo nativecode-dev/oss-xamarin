@@ -1,0 +1,36 @@
+; To make use of this file in Visual Studio:
+; Tools -> Extensions and Updates, search for EditorConfig and install the extension.
+
+; Top-most EditorConfig file
+root = true
+
+; Line ending
+[*]
+end_of_line = crlf
+max_line_length = 150
+trim_trailing_whitespace = true
+
+; .NET
+[*.{cpp,cs,vb}]
+indent_size = 4
+indent_style = space
+
+; ASP.NET
+[*.{aspx,ascx,cshtml}]
+indent_size = 2
+indent_style = space
+
+; Web
+[*.{css,htm,html,less,js}]
+indent_size = 2
+indent_style = space
+
+; Windows
+[*.{xaml}]
+indent_size = 2
+indent_style = space
+
+; Misc
+[*.{build,config,StyleCop,xml}]
+indent_size = 2
+indent_style = space

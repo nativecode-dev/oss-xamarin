@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat", "NativeCode.Mobile.AppCompat\NativeCode.Mobile.AppCompat.csproj", "{09452688-B99E-4C70-B6B2-86077A663F64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat.Renderers", "NativeCode.Mobile.AppCompat.Renderers\NativeCode.Mobile.AppCompat.Renderers.csproj", "{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Droid", "Demo\Demo.Droid\Demo.Droid.csproj", "{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo\Demo.csproj", "{217137FB-C264-4C05-92BA-191FBB8CD9C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{33088F2E-FECB-49D5-AA1A-F63CF956C83E}"
+	ProjectSection(SolutionItems) = preProject
+		..\.build\common.build = ..\.build\common.build
+		..\Xamarin.build = ..\Xamarin.build
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{89ED9528-3471-4054-92E7-D31BCB8C80FC}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\.nuget\nuget.config = ..\.nuget\nuget.config
+		..\Settings.StyleCop = ..\Settings.StyleCop
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".info", ".info", "{2E6A7C16-4598-4DB5-A2C3-4341EB5D327A}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NativeCode.Mobile.AppCompat.Controls", "NativeCode.Mobile.AppCompat.Controls\NativeCode.Mobile.AppCompat.Controls.csproj", "{DD957F05-DBDB-43FC-84FC-F9EE70D5061B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09452688-B99E-4C70-B6B2-86077A663F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09452688-B99E-4C70-B6B2-86077A663F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09452688-B99E-4C70-B6B2-86077A663F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09452688-B99E-4C70-B6B2-86077A663F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F19D2A4E-6D0D-483F-8BAA-B64BF1B5277F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD957F05-DBDB-43FC-84FC-F9EE70D5061B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD957F05-DBDB-43FC-84FC-F9EE70D5061B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD957F05-DBDB-43FC-84FC-F9EE70D5061B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD957F05-DBDB-43FC-84FC-F9EE70D5061B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D8CC6EC-E21C-4C8D-8543-F7BBD53AB108} = {8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}
+		{217137FB-C264-4C05-92BA-191FBB8CD9C3} = {8442D181-4BBF-459F-AE9D-9BD3FB57F4A0}
+	EndGlobalSection
+EndGlobal

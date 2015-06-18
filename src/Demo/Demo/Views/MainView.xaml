@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
+             x:Class="Demo.Views.MainView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
+  <StackLayout Padding="20">
+    <Button Command="{Binding ShowSnackBar}" Text="Hit me!" />
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Switch On/Off" />
+      <Switch />
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Entry Field" />
+      <Entry HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+    <RelativeLayout>
+      <controls:FloatingButton ButtonSize="Mini" Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
+    </RelativeLayout>
+  </StackLayout>
+</ContentPage>

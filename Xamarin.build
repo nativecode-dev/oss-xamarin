@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<project name="Xamarin" default="manual">
+
+  <!--
+  # Define properties
+  -->
+  <property name="CurrentPath" value="${path::get-directory-name(project::get-buildfile-path())}" />
+  <property name="Solution" value="src\Xamarin.sln" />
+  <property name="ToolsPath" value="${path::get-full-path(path::combine(CurrentPath, '.build'))}" />
+
+  <!--
+  # Include common build tasks.
+  -->
+  <include buildfile="${path::combine(ToolsPath, 'common.build')}"  />
+
+  <!--
+  # Define targets
+  -->
+  <target name="manual" depends="clean nuget_restore build" />
+  <target name="release" depends="clean nuget_restore build" />
+
+</project>

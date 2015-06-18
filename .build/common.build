@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+
+<project>
+  <property name="CompileConfiguration" value="Release" overwrite="false" />
+  <property name="MSBuildPath" value="C:\Program Files (x86)\MSBuild\12.0\bin\msbuild.exe" overwrite="false" />
+  <property name="MSBuildVerbosity" value="minimal" overwrite="false" />
+  <property name="ToolsPath" value="" overwrite="false" />
+
+  <!--
+  # Builds the solution only.
+  -->
+  <target name="build" depends="clean" description="Builds the solution.">
+    <fail if="${string::get-length(Solution) == 0}" message="No Solution was specified." />
+
+    <!-- Build the Visual Studio Solution -->
+    <exec program="${MSBuildPath}">
+      <arg line="${Solution}" />
+      <arg line="/detailedsummary" />
+      <arg line="/target:Build" />
+      <arg line="/property:Configuration=${CompileConfiguration};VisualStudioVersion=12.0" />
+      <arg line="/verbosity:${MSBuildVerbosity}" />
+    </exec>
+
+    <!-- Skips building again when a nuget project is defined -->
+    <property name="NugetProjectBuild" value="false" />
+  </target>
+
+  <!--
+  # Builds and publishes the solution.
+  -->
+  <property name="WebPublishProfile" value="" />
+  <property name="WebPublishProfileFile" value="" />
+
+  <target name="build_publish" depends="clean" description="Builds the solution.">
+    <fail if="${string::get-length(WebPublishProfile) == 0}" message="No WebPublishProfile was specified." />
+
+    <!-- Build the Visual Studio Solution -->
+    <exec program="${MSBuildPath}">
+      <arg line="${Solution}" />
+      <arg line="/detailedsummary" />
+      <arg line="/target:Build" />
+      <arg line="/property:Configuration=${CompileConfiguration};VisualStudioVersion=12.0" />
+      <arg line="/property:DeployOnBuild=true;PublishProfile=${WebPublishProfile}" if="${file::exists(WebPublishProfileFile)}" />
+      <arg line="/verbosity:${MSBuildVerbosity}" />
+    </exec>
+
+    <!-- Skips building again when a nuget project is defined -->
+    <property name="NugetProjectBuild" value="false" />
+  </target>
+
+  <!--
+  # Run unit tests.
+  -->
+  <property name="NunitExecutable" value="${path::combine(ToolsPath, 'nunit\bin\nunit-console-x86.exe')}" />
+
+  <target name="nunit_tests" depends="clean" description="Run all unit tests in the solution">
+    <foreach item="File" property="nunit.project">
+        <in>
+          <items refid="test.projects" />
+        </in>
+        <do>
+          <exec program="${NunitExecutable}">
+            <arg value="${nunit.project}" />
+            <arg value="/xml:artifacts\nunit-results.xml" />
+            <arg value="/framework:net-4.0" />
+            <arg value="/config:${CompileConfiguration}" />
+          </exec>
+        </do>
+    </foreach>
+  </target>
+
+  <!--
+  # Cleanup the solution back to an initial state.
+  -->
+  <property name="ArtifactsCleaned" value="false" />
+
+  <target name="clean" description="Clean up solution after a build and revert it to its pre-build state.">
+    <if test="${not ArtifactsCleaned}">
+      <delete dir="artifacts" if="${directory::exists('artifacts')}" />
+      <delete dir="packages" if="${directory::exists('packages')}" />
+      <property name="ArtifactsCleaned" value="true" />
+    </if>
+    <mkdir dir="artifacts" if="${not directory::exists('artifacts')}" />
+    <exec program="${MSBuildPath}">
+      <arg line="${Solution}" />
+      <arg line="/fileLogger" />
+      <arg line="/flp:logfile=artifacts\build.log" />
+      <arg line="/property:Configuration=${CompileConfiguration};VisualStudioVersion=12.0" />
+      <arg line="/target:Clean" />
+      <arg line="/verbosity:${MSBuildVerbosity}" />
+    </exec>
+  </target>
+
+  <!--
+  # Restores any dependency nuget packages used by the solution.
+  -->
+  <property name="NugetExecutable" value="${path::combine(ToolsPath, 'nuget.exe')}" />
+  <property name="NugetVerbosity" value="normal" />
+
+  <target name="nuget_restore" depends="clean" description="Fetch nuget packages for the solution.">
+    <exec program="${NugetExecutable}">
+      <arg line="restore ${Solution}" />
+      <arg line="-Verbosity ${NugetVerbosity}" />
+    </exec>
+  </target>
+
+  <!--
+  # Publishes the NuGet projects.
+  -->
+  <property name="NugetPublish" value="true" />
+  <property name="NugetPublishKey" value="HomenetPublisher:homenet" />
+  <property name="NugetPublishUrl" value="http://h3p-nuget1.na.autotrader.int/nuget/HomeNet" />
+  <property name="NugetProjectBuild" value="true" />
+
+  <target name="nuget_publish" depends="clean">
+    <!-- Define and create nuget output path -->
+    <property name="NugetOutputPath" value="artifacts\nuget" />
+    <mkdir dir="${NugetOutputPath}" if="${not directory::exists(NugetOutputPath)}" />
+
+    <!-- Clean up old nuget packages -->
+    <delete>
+      <fileset>
+        <include name="${NugetOutputPath}\*.nupkg" />
+      </fileset>
+    </delete>
+
+    <!-- Build nuget package -->
+    <foreach item="File" property="nuget.project">
+      <in>
+        <items refid="nuget.projects" />
+      </in>
+      <do>
+        <loadfile file="${path::combine(path::get-directory-name(nuget.project), 'VERSION')}" property="package_version" failonerror="false" />
+        <exec program="${NugetExecutable}">
+          <arg line="pack &quot;${nuget.project}&quot;" />
+          <arg line="-Build" if="${NugetProjectBuild}" />
+          <arg line="-NonInteractive" />
+          <arg line="-OutputDirectory ${NugetOutputPath}" />
+          <arg line="-Properties Configuration=${CompileConfiguration}" />
+          <arg line="-Symbols" />
+          <arg line="-Verbosity ${NugetVerbosity}" />
+          <arg line="-Version ${package_version}" if="${package_version!=''}" />
+        </exec>
+      </do>
+    </foreach>
+
+    <!-- Publish nuget package -->
+    <foreach item="File" property="nuget.package" if="${NugetPublish}">
+      <in>
+        <items>
+          <include name="${NugetOutputPath}\*.nupkg" />
+        </items>
+      </in>
+      <do>
+        <exec program="${NugetExecutable}" if="${string::contains(nuget.package, '.symbols.nupkg')}" failonerror="false">
+          <arg line="push &quot;${nuget.package}&quot;" />
+          <arg line="-ApiKey ${NugetPublishKey}" />
+          <arg line="-Source ${NugetPublishUrl}" />
+          <arg line="-Verbosity ${NugetVerbosity}" />
+        </exec>
+        <exec program="${NugetExecutable}" unless="${string::contains(nuget.package, '.symbols.nupkg')}">
+          <arg line="push &quot;${nuget.package}&quot;" />
+          <arg line="-ApiKey ${NugetPublishKey}" />
+          <arg line="-Source ${NugetPublishUrl}" />
+          <arg line="-Verbosity ${NugetVerbosity}" />
+        </exec>
+      </do>
+    </foreach>
+  </target>
+
+  <!--
+  # Updates the revision based on the SVN revision.
+  -->
+  <property name="SvnExecutable" value="svn.exe" />
+
+  <target name="update_revision" depends="clean" description="Copy the current SVN revision number">
+    <exec program="${SvnExecutable}" commandline="info --xml" output="_revision.xml" />
+    <xmlpeek file="_revision.xml" xpath="/info/entry/commit/@revision" property="RevisionNumber" />
+    <echo file="revision.txt">${RevisionNumber}</echo>
+    <if test="${property::exists('CCNetLabel')}">
+      <echo file="version.txt">${CCNetLabel}</echo>
+    </if>
+  </target>
+
+</project>
