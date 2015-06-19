@@ -85,7 +85,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
             if (this.Control == null)
             {
-                var control = new SwitchCompat(this.Context.GetAppCompatThemedContext());
+                var context = this.Context.GetAppCompatThemedContext();
+                var control = new SwitchCompat(context);
                 control.SetOnCheckedChangeListener(this);
                 this.SetNativeControl(control);
             }

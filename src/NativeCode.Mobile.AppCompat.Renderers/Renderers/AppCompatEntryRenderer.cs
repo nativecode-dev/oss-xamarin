@@ -67,7 +67,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
             if (e.OldElement == null)
             {
-                var control = new AppCompatEntryEditText(this.Context.GetAppCompatThemedContext());
+                var context = this.Context.GetAppCompatThemedContext();
+                var control = new AppCompatEntryEditText(context);
                 this.SetNativeControl(control);
 
                 this.Control.ImeOptions = ImeAction.Done;
