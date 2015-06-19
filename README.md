@@ -2,6 +2,8 @@
 
 Provide Material Design themes now for Xamarin.Forms apps natively without hacks! Check out the [wiki](https://github.com/nativecode-dev/oss-xamarin/wiki) for more information.
 
+**NOTE**: As it is still very early in the project (v1.1 will be considered production ready), expect breaking changes.
+
 [![Release](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1)
 [![Development](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_development.svg?style=flat-square&label=development)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_development&guest=1)
 
