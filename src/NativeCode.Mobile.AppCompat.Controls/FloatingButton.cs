@@ -7,7 +7,7 @@
     /// <summary>
     /// Provides a floating action button.
     /// </summary>
-    public class FloatingButton : View
+    public class FloatingButton : View, ICommandProvider
     {
         public static readonly BindableProperty ButtonSizeProperty = BindableProperty.Create<FloatingButton, FloatingButtonSize>(
             x => x.ButtonSize,

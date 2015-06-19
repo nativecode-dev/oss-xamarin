@@ -1321,6 +1321,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f060050
 			public static int fab_elevation = 2131099728;
 			
+			// aapt resource value: 0x7f06005f
+			public static int fab_margin = 2131099743;
+			
 			// aapt resource value: 0x7f060051
 			public static int fab_size_mini = 2131099729;
 			
@@ -1608,8 +1611,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b006a
-			public static int action0 = 2131427434;
+			// aapt resource value: 0x7f0b006b
+			public static int action0 = 2131427435;
 			
 			// aapt resource value: 0x7f0b0057
 			public static int action_bar = 2131427415;
@@ -1635,8 +1638,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0058
 			public static int action_context_bar = 2131427416;
 			
-			// aapt resource value: 0x7f0b006e
-			public static int action_divider = 2131427438;
+			// aapt resource value: 0x7f0b006f
+			public static int action_divider = 2131427439;
 			
 			// aapt resource value: 0x7f0b0002
 			public static int action_menu_divider = 2131427330;
@@ -1662,6 +1665,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0017
 			public static int always = 2131427351;
 			
+			// aapt resource value: 0x7f0b0066
+			public static int appcompat_coordinator = 2131427430;
+			
 			// aapt resource value: 0x7f0b0014
 			public static int beginning = 2131427348;
 			
@@ -1671,8 +1677,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b004d
 			public static int buttonPanel = 2131427405;
 			
-			// aapt resource value: 0x7f0b006b
-			public static int cancel_action = 2131427435;
+			// aapt resource value: 0x7f0b006c
+			public static int cancel_action = 2131427436;
 			
 			// aapt resource value: 0x7f0b002b
 			public static int center = 2131427371;
@@ -1686,8 +1692,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b004f
 			public static int checkbox = 2131427407;
 			
-			// aapt resource value: 0x7f0b0071
-			public static int chronometer = 2131427441;
+			// aapt resource value: 0x7f0b0072
+			public static int chronometer = 2131427442;
 			
 			// aapt resource value: 0x7f0b002e
 			public static int clip_horizontal = 2131427374;
@@ -1728,8 +1734,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0015
 			public static int end = 2131427349;
 			
-			// aapt resource value: 0x7f0b0076
-			public static int end_padder = 2131427446;
+			// aapt resource value: 0x7f0b0077
+			public static int end_padder = 2131427447;
 			
 			// aapt resource value: 0x7f0b0024
 			public static int enterAlways = 2131427364;
@@ -1746,11 +1752,11 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b004e
 			public static int expanded_menu = 2131427406;
 			
-			// aapt resource value: 0x7f0b0066
-			public static int fab_mini = 2131427430;
-			
 			// aapt resource value: 0x7f0b0067
-			public static int fab_normal = 2131427431;
+			public static int fab_mini = 2131427431;
+			
+			// aapt resource value: 0x7f0b0068
+			public static int fab_normal = 2131427432;
 			
 			// aapt resource value: 0x7f0b0030
 			public static int fill = 2131427376;
@@ -1779,17 +1785,17 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b003f
 			public static int image = 2131427391;
 			
-			// aapt resource value: 0x7f0b0075
-			public static int info = 2131427445;
+			// aapt resource value: 0x7f0b0076
+			public static int info = 2131427446;
 			
 			// aapt resource value: 0x7f0b0033
 			public static int left = 2131427379;
 			
-			// aapt resource value: 0x7f0b006f
-			public static int line1 = 2131427439;
+			// aapt resource value: 0x7f0b0070
+			public static int line1 = 2131427440;
 			
-			// aapt resource value: 0x7f0b0073
-			public static int line3 = 2131427443;
+			// aapt resource value: 0x7f0b0074
+			public static int line3 = 2131427444;
 			
 			// aapt resource value: 0x7f0b000a
 			public static int listMode = 2131427338;
@@ -1797,8 +1803,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0041
 			public static int list_item = 2131427393;
 			
-			// aapt resource value: 0x7f0b006d
-			public static int media_actions = 2131427437;
+			// aapt resource value: 0x7f0b006e
+			public static int media_actions = 2131427438;
 			
 			// aapt resource value: 0x7f0b0016
 			public static int middle = 2131427350;
@@ -1896,11 +1902,11 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0012
 			public static int showTitle = 2131427346;
 			
-			// aapt resource value: 0x7f0b0069
-			public static int snackbar_action = 2131427433;
+			// aapt resource value: 0x7f0b006a
+			public static int snackbar_action = 2131427434;
 			
-			// aapt resource value: 0x7f0b0068
-			public static int snackbar_text = 2131427432;
+			// aapt resource value: 0x7f0b0069
+			public static int snackbar_text = 2131427433;
 			
 			// aapt resource value: 0x7f0b0007
 			public static int split_action_bar = 2131427335;
@@ -1917,8 +1923,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0035
 			public static int start = 2131427381;
 			
-			// aapt resource value: 0x7f0b006c
-			public static int status_bar_latest_event_content = 2131427436;
+			// aapt resource value: 0x7f0b006d
+			public static int status_bar_latest_event_content = 2131427437;
 			
 			// aapt resource value: 0x7f0b0062
 			public static int submit_area = 2131427426;
@@ -1926,17 +1932,17 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b000c
 			public static int tabMode = 2131427340;
 			
-			// aapt resource value: 0x7f0b0074
-			public static int text = 2131427444;
+			// aapt resource value: 0x7f0b0075
+			public static int text = 2131427445;
 			
-			// aapt resource value: 0x7f0b0072
-			public static int text2 = 2131427442;
+			// aapt resource value: 0x7f0b0073
+			public static int text2 = 2131427443;
 			
 			// aapt resource value: 0x7f0b004a
 			public static int textSpacerNoButtons = 2131427402;
 			
-			// aapt resource value: 0x7f0b0070
-			public static int time = 2131427440;
+			// aapt resource value: 0x7f0b0071
+			public static int time = 2131427441;
 			
 			// aapt resource value: 0x7f0b0043
 			public static int title = 2131427395;
@@ -2085,67 +2091,70 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			public static int abc_simple_dropdown_hint = 2130903064;
 			
 			// aapt resource value: 0x7f030019
-			public static int design_navigation_item = 2130903065;
+			public static int appcompat_coordinator = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public static int design_navigation_item_header = 2130903066;
+			public static int design_navigation_item = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public static int design_navigation_item_separator = 2130903067;
+			public static int design_navigation_item_header = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public static int design_navigation_item_subheader = 2130903068;
+			public static int design_navigation_item_separator = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public static int design_navigation_menu = 2130903069;
+			public static int design_navigation_item_subheader = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public static int fab_mini = 2130903070;
+			public static int design_navigation_menu = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public static int fab_normal = 2130903071;
+			public static int fab_mini = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public static int layout_snackbar = 2130903072;
+			public static int fab_normal = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public static int layout_snackbar_include = 2130903073;
+			public static int layout_snackbar = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public static int notification_media_action = 2130903074;
+			public static int layout_snackbar_include = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public static int notification_media_cancel_action = 2130903075;
+			public static int notification_media_action = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public static int notification_template_big_media = 2130903076;
+			public static int notification_media_cancel_action = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public static int notification_template_big_media_narrow = 2130903077;
+			public static int notification_template_big_media = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public static int notification_template_lines = 2130903078;
+			public static int notification_template_big_media_narrow = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public static int notification_template_media = 2130903079;
+			public static int notification_template_lines = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public static int notification_template_part_chronometer = 2130903080;
+			public static int notification_template_media = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public static int notification_template_part_time = 2130903081;
+			public static int notification_template_part_chronometer = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public static int select_dialog_item_material = 2130903082;
+			public static int notification_template_part_time = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public static int select_dialog_multichoice_material = 2130903083;
+			public static int select_dialog_item_material = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public static int select_dialog_singlechoice_material = 2130903084;
+			public static int select_dialog_multichoice_material = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public static int support_simple_spinner_dropdown_item = 2130903085;
+			public static int select_dialog_singlechoice_material = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public static int support_simple_spinner_dropdown_item = 2130903086;
 			
 			static Layout()
 			{

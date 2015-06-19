@@ -137,7 +137,7 @@ namespace NativeCode.Mobile.AppCompat
         /// <param name="view">The view.</param>
         /// <param name="command">The command.</param>
         /// <param name="parameter">The parameter.</param>
-        protected void SetupClickable(TNativeView view, ICommand command, object parameter)
+        protected void SetClickable(TNativeView view, ICommand command, object parameter)
         {
             var listener = new OnClickListener(v => this.HandleClickListener(this.Control, command, parameter));
             this.Add(listener);

@@ -13,7 +13,7 @@
       <Label Text="Entry Field" />
       <Entry HorizontalOptions="FillAndExpand" />
     </StackLayout>
-    <RelativeLayout>
+    <RelativeLayout Padding="10" HorizontalOptions="Center" VerticalOptions="Center">
       <controls:FloatingButton ButtonSize="Mini" Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
     </RelativeLayout>
   </StackLayout>

@@ -1,9 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
              x:Class="Demo.Views.MenuView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
-  <StackLayout>
-    <Button Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
-    <Button Command="{Binding LoremIpsumCommand}" Text="{Binding LoremIpsumText}" />
-  </StackLayout>
+  <controls:NavigationLayout>
+    <controls:NavigationLayout.HeaderView>
+      <StackLayout>
+        <BoxView HeightRequest="150" BackgroundColor="Green" />
+        <Label Text="Header" />
+      </StackLayout>
+    </controls:NavigationLayout.HeaderView>
+    <controls:NavigationLayout.Children>
+      <controls:NavigationMenu Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
+      <controls:NavigationMenu Command="{Binding LoremIpsumCommand}" Text="{Binding LoremIpsumText}" />
+    </controls:NavigationLayout.Children>
+  </controls:NavigationLayout>
 </ContentPage>

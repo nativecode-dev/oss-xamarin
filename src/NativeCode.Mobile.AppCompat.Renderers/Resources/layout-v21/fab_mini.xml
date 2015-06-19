@@ -5,6 +5,7 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:id="@+id/fab_mini"
   android:layout_height="wrap_content"
+  android:layout_margin="@dimen/fab_margin"
   android:layout_width="wrap_content"
   app:borderWidth="0dp"
   app:elevation="4dp"
