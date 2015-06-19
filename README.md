@@ -97,7 +97,7 @@ public class MainActivity : AppCompatFormsApplicationActivity
     base.OnCreate(savedInstanceState);
 
     Forms.Init(this, savedInstanceState);
-    AppCompatRenderers.EnableAll();
+    FormsAppCompat.EnableAll();
 
     this.LoadApplication(new App());
   }
