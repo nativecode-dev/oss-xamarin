@@ -182,7 +182,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
         [Obsolete("Will be removed in a future version.", false)]
         public override void SelectTab(Tab tab)
         {
-            this.SupportActionBar.SelectTab(((TabAdapter)tab).SupportTab);
+            if (tab != null)
+            {
+                this.SupportActionBar.SelectTab(((TabAdapter)tab).SupportTab);
+            }
         }
 
         [Obsolete("Will be removed in a future version.", false)]

@@ -26,7 +26,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             // in the base method.
             if (this.Control == null)
             {
-                var control = new AppCompatButton(this.Context.GetAppCompatThemedContext());
+                var context = this.Context.GetAppCompatThemedContext();
+                var control = new AppCompatButton(context);
                 this.SetNativeControl(control);
 
                 control.SetOnClickListener(ButtonClickListener.Instance);

@@ -152,23 +152,22 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 
         public override void SetContentView(View view)
         {
-            var child = view;
+            var content = view;
 
             // We need to create a CoordinatorLayout for Snackbars to find so we get the proper display.
             // This simply wraps the LinearLayout that the FormsApplicationActivity creates.
             // TODO: This relies too much on the implementation detail of the FormsApplicationActivity.
-            if (child is LinearLayout)
+            if (content is LinearLayout)
             {
-                this.coordinator = new CoordinatorLayout(this);
-                this.coordinator.SetFitsSystemWindows(true);
+                this.coordinator = this.Inflate<CoordinatorLayout>(Resource.Layout.appcompat_coordinator, null);
                 this.coordinator.AddView(view);
 
                 this.disposables.Add(this.coordinator);
 
-                child = this.coordinator;
+                content = this.coordinator;
             }
 
-            this.AppCompatDelegate.SetContentView(child);
+            this.AppCompatDelegate.SetContentView(content);
         }
 
         public override void SetContentView(View view, ViewGroup.LayoutParams @params)
@@ -247,6 +246,12 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         {
             base.OnTitleChanged(title, color);
             this.AppCompatDelegate.SetTitle(title);
+        }
+
+        private T Inflate<T>(int id, ViewGroup viewGroup) where T : View
+        {
+            var inflated = this.LayoutInflater.Inflate(id, viewGroup);
+            return inflated.FindViewById<T>(inflated.Id);
         }
     }
 }

@@ -37,6 +37,9 @@
   <ItemGroup>
     <Compile Include="FloatingButton.cs" />
     <Compile Include="FloatingButtonSize.cs" />
+    <Compile Include="ICommandProvider.cs" />
+    <Compile Include="NavigationLayout.cs" />
+    <Compile Include="NavigationMenu.cs" />
     <Compile Include="Platforms\IUserNotifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

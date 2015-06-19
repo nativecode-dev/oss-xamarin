@@ -1,14 +1,16 @@
-namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
+namespace NativeCode.Mobile.AppCompat.Renderers
 {
     using System;
     using System.Reflection;
 
+    using NativeCode.Mobile.AppCompat.Renderers.Renderers;
+
     using Xamarin.Forms;
 
     /// <summary>
-    /// Allows registration of renderers.
+    /// Enables renderers for various aspects of the library.
     /// </summary>
-    public static class AppCompatRenderers
+    public static class FormsAppCompat
     {
         private const string RegistrarType = "Xamarin.Forms.Registrar, Xamarin.Forms.Core";
 
@@ -17,9 +19,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         private static readonly MethodInfo RegisterMethod;
 
         /// <summary>
-        /// Initializes static members of the <see cref="AppCompatRenderers"/> class.
+        /// Initializes static members of the <see cref="FormsAppCompat"/> class.
         /// </summary>
-        static AppCompatRenderers()
+        static FormsAppCompat()
         {
             var type = Type.GetType(RegistrarType, true);
             var property = type.GetProperty("Registered", BindingFlags.NonPublic | BindingFlags.Static);
@@ -32,16 +34,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         /// </summary>
         public static void EnableAll()
         {
-            EnableMasterDetailRenderer();
             EnableAppCompatReplacements();
-        }
-
-        /// <summary>
-        /// Enables registration of the <see cref="AppCompatMasterDetailRenderer"/>.
-        /// </summary>
-        public static void EnableMasterDetailRenderer()
-        {
-            RegisterType(typeof(MasterDetailPage), typeof(AppCompatMasterDetailRenderer));
+            EnableMasterDetailRenderer();
         }
 
         /// <summary>
@@ -52,6 +46,14 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             RegisterType(typeof(Button), typeof(AppCompatButtonRenderer));
             RegisterType(typeof(Entry), typeof(AppCompatEntryRenderer));
             RegisterType(typeof(Switch), typeof(AppCompatSwitchRenderer));
+        }
+
+        /// <summary>
+        /// Enables registration of the <see cref="AppCompatMasterDetailRenderer"/>.
+        /// </summary>
+        public static void EnableMasterDetailRenderer()
+        {
+            RegisterType(typeof(MasterDetailPage), typeof(AppCompatMasterDetailRenderer));
         }
 
         private static void RegisterType(Type handler, Type target)

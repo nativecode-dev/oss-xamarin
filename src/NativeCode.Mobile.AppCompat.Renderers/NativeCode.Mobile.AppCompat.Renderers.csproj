@@ -76,6 +76,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\CommandExtensions.cs" />
     <Compile Include="Extensions\ElementExtensions.cs" />
     <Compile Include="Extensions\EntryExtensions.cs" />
     <Compile Include="Helpers\KeyboardHelper.cs" />
@@ -86,8 +87,9 @@
     <Compile Include="Renderers\AppCompatMasterDetailRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
+    <Compile Include="FormsAppCompat.cs" />
     <Compile Include="Renderers\FloatingButtonRenderer.cs" />
-    <Compile Include="Renderers\AppCompatRenderers.cs" />
+    <Compile Include="Renderers\NavigationLayoutRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -117,6 +119,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\dimensions.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-v21\fab_mini.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout-v21\fab_normal.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
