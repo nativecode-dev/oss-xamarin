@@ -3,6 +3,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers
     using System;
     using System.Reflection;
 
+    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
     using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
     using Xamarin.Forms;
@@ -24,9 +25,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         static FormsAppCompat()
         {
             var type = Type.GetType(RegistrarType, true);
-            var property = type.GetProperty("Registered", BindingFlags.NonPublic | BindingFlags.Static);
+            var property = type.GetProperty("Registered", ReflectionHelper.NonPublicStatic);
             RegistrarInstance = property.GetValue(null);
-            RegisterMethod = property.PropertyType.GetMethod("Register", BindingFlags.Instance | BindingFlags.Public);
+            RegisterMethod = property.PropertyType.GetMethod("Register", ReflectionHelper.InstancePublic);
         }
 
         /// <summary>
