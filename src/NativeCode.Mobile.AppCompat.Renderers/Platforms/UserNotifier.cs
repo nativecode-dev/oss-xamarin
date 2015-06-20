@@ -37,7 +37,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Platforms
 
         private View GetSnackbarAnchorView()
         {
-            var provider = Forms.Context as IAppCompatDelegateProvider;
+            var provider = Forms.Context as IAppCompatCoordinatorLayoutProvider;
 
             if (provider == null)
             {

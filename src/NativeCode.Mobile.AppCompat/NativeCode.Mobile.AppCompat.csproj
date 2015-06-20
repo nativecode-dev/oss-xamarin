@@ -81,6 +81,7 @@
     <Compile Include="Extensions\ViewExtensions.cs" />
     <Compile Include="Fonts\ITypefaceCache.cs" />
     <Compile Include="Fonts\TypefaceCache.cs" />
+    <Compile Include="FormsAppCompat\AppCompatFormsActivity.cs" />
     <Compile Include="FormsAppCompat\AppCompatFormsApplicationActivity.cs" />
     <Compile Include="FormsAppCompat\Adapters\ActionBarAdapter.cs" />
     <Compile Include="FormsAppCompat\Adapters\LayoutParamsAdapter.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="FormsAppCompat\Adapters\TabAdapter.cs" />
     <Compile Include="FormsAppCompat\Adapters\TabListenerAdapter.cs" />
     <Compile Include="FormsAppCompat\Adapters\WindowAdapter.cs" />
+    <Compile Include="FormsAppCompat\IAppCompatCoordinatorLayoutProvider.cs" />
     <Compile Include="FormsAppCompat\IAppCompatDelegateProvider.cs" />
     <Compile Include="Helpers\DisposableContainer.cs" />
     <Compile Include="Helpers\IDisposableContainer.cs" />
