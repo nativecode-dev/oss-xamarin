@@ -31,8 +31,9 @@ public class MainActivity : AppCompatFormsApplicationActivity
 }
 ```
 
-You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
-You also no longer need to define your own styles.xml as you can use the ones packages with the package (the exception is if you want your own colors). The following styles are available:
+You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities. You also no longer need to define your own **styles.xml** as you can use the ones already packaged (the exception is if you want your own colors).
+
+The following styles are available:
 - CompatTheme (Theme.AppCompat)
 - CompatThemeLight (Theme.AppCompat.Light)
 - CompatThemeLightDarkActionBar (Theme.AppCompat.Light.DarkActionBar)
