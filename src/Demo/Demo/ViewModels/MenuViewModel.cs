@@ -12,7 +12,7 @@
     {
         public MenuViewModel()
         {
-            this.HomeCommand = new Command(async () => await App.Navigation.PopToRootAsync());
+            this.HomeCommand = new Command(App.ShowChooser);
             this.HomeText = "Home";
 
             this.LoremIpsumCommand = new Command(async () => await App.Navigation.PushAsync(new LoremIpsumView()));

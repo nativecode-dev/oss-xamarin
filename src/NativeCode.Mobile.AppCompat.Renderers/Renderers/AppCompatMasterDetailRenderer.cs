@@ -1,6 +1,9 @@
 namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
+    using System.ComponentModel;
+
     using Android.App;
+    using Android.Provider;
     using Android.Support.V4.Widget;
     using Android.Support.V7.App;
 
@@ -9,11 +12,24 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
 
+    using ActionBar = Android.Support.V7.App.ActionBar;
+    using PropertyChangingEventArgs = Xamarin.Forms.PropertyChangingEventArgs;
+    using RendererResource = Resource;
     using View = Android.Views.View;
 
     public class AppCompatMasterDetailRenderer : MasterDetailRenderer
     {
         private CustomActionBarDrawerToggle actionBarDrawerToggle;
+
+        protected ActionBar ActionBar
+        {
+            get { return this.Context.GetSupportActionBar(); }
+        }
+
+        protected MasterDetailPage MasterDetailPage
+        {
+            get { return (MasterDetailPage)this.Element; }
+        }
 
         public override void SetDrawerListener(IDrawerListener listener)
         {
@@ -24,19 +40,97 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             base.OnElementChanged(oldElement, newElement);
 
+            if (oldElement != null)
+            {
+                oldElement.PropertyChanged -= this.HandleMasterDetailPagePropertyChanged;
+                oldElement.PropertyChanging -= this.HandleMasterDetailPagePropertyChanging;
+            }
+
+            if (newElement != null)
+            {
+                newElement.PropertyChanged += this.HandleMasterDetailPagePropertyChanged;
+                newElement.PropertyChanging += this.HandleMasterDetailPagePropertyChanging;
+            }
+
             if (oldElement == null && newElement != null)
             {
                 this.SetFitsSystemWindows(true);
 
                 var activity = (Activity)this.Context;
+
                 this.actionBarDrawerToggle = new CustomActionBarDrawerToggle(this, activity, this) { DrawerIndicatorEnabled = true };
 
-                var actionbar = this.Context.GetSupportActionBar();
-                actionbar.SetDisplayHomeAsUpEnabled(true);
-                actionbar.SetHomeButtonEnabled(true);
+                this.ActionBar.SetDisplayHomeAsUpEnabled(true);
+                this.ActionBar.SetHomeButtonEnabled(true);
 
                 this.actionBarDrawerToggle.SyncState();
+
+                this.BindNavigationEventHandlers();
             }
+        }
+
+        protected void UpdateHomeAsUpIndicator(bool navigable)
+        {
+            if (navigable && this.actionBarDrawerToggle.DrawerIndicatorEnabled)
+            {
+                this.ActionBar.SetDisplayHomeAsUpEnabled(false);
+                this.actionBarDrawerToggle.DrawerIndicatorEnabled = false;
+                this.ActionBar.SetDisplayHomeAsUpEnabled(true);
+            }
+            else if (!this.actionBarDrawerToggle.DrawerIndicatorEnabled)
+            {
+                this.actionBarDrawerToggle.DrawerIndicatorEnabled = true;
+            }
+        }
+
+        private void BindNavigationEventHandlers()
+        {
+            var navigation = this.MasterDetailPage.Detail as NavigationPage;
+
+            if (navigation != null)
+            {
+                navigation.Popped += this.HandleNavigationPopped;
+                navigation.Pushed += this.HandleNavigationPushed;
+            }
+        }
+
+        private void UnbindNavigationEventHandlers()
+        {
+            var navigation = this.MasterDetailPage.Detail as NavigationPage;
+
+            if (navigation != null)
+            {
+                navigation.Popped -= this.HandleNavigationPopped;
+                navigation.Pushed -= this.HandleNavigationPushed;
+            }
+        }
+
+        private void HandleMasterDetailPagePropertyChanging(object sender, PropertyChangingEventArgs e)
+        {
+            if (e.PropertyName == "Detail")
+            {
+                this.UnbindNavigationEventHandlers();
+            }
+        }
+
+        private void HandleMasterDetailPagePropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "Detail")
+            {
+                this.BindNavigationEventHandlers();
+            }
+        }
+
+        private void HandleNavigationPopped(object sender, NavigationEventArgs e)
+        {
+            var canNavigateBack = ((NavigationPage)sender).Navigation.NavigationStack.Count > 1;
+            this.UpdateHomeAsUpIndicator(canNavigateBack);
+        }
+
+        private void HandleNavigationPushed(object sender, NavigationEventArgs e)
+        {
+            var canNavigateBack = ((NavigationPage)sender).Navigation.NavigationStack.Count > 1;
+            this.UpdateHomeAsUpIndicator(canNavigateBack);
         }
 
         private class CustomActionBarDrawerToggle : ActionBarDrawerToggle
