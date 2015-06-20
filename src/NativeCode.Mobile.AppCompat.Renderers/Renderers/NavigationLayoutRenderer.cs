@@ -20,7 +20,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
     public class NavigationLayoutRenderer : ViewRenderer<NavigationLayout, NavigationView>, NavigationView.IOnNavigationItemSelectedListener
     {
-        private readonly Dictionary<IMenuItem, NavigationMenu> mappings = new Dictionary<IMenuItem, NavigationMenu>();
+        private readonly Dictionary<IMenuItem, NavigationLayoutMenu> mappings = new Dictionary<IMenuItem, NavigationLayoutMenu>();
 
         public bool OnNavigationItemSelected(IMenuItem menuItem)
         {
@@ -60,6 +60,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 var control = new NavigationView(context);
                 control.SetFitsSystemWindows(true);
                 control.SetNavigationItemSelectedListener(this);
+
                 this.SetNativeControl(control);
 
                 this.UpdateHeaderView();
@@ -71,6 +72,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             if (this.Element.HeaderView != null)
             {
+                // TODO: It's adding it, but it never shows up in the XML in monitor.
                 var renderer = RendererFactory.GetRenderer(this.Element.HeaderView);
                 this.Control.AddHeaderView(renderer.ViewGroup);
             }
@@ -82,7 +84,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
             for (var index = 0; index < this.Element.Children.Count; index++)
             {
-                var menu = this.Element.Children[index];
+                // NOTE: Not sure if it's just my local machine or not, but this doesn't seem to resolve until compile-time.
+                var menu = (NavigationLayoutMenu)this.Element.Children[index];
                 var item = this.Control.Menu.Add(0, index, index, menu.Text);
 
                 if (menu.Icon != null)

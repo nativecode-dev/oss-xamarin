@@ -11,8 +11,8 @@
       </StackLayout>
     </controls:NavigationLayout.HeaderView>
     <controls:NavigationLayout.Children>
-      <controls:NavigationMenu Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
-      <controls:NavigationMenu Command="{Binding LoremIpsumCommand}" Text="{Binding LoremIpsumText}" />
+      <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
+      <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Text="{Binding LoremIpsumText}" />
     </controls:NavigationLayout.Children>
   </controls:NavigationLayout>
 </ContentPage>

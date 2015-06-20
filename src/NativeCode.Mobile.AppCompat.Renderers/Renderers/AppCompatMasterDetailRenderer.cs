@@ -13,11 +13,11 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
     public class AppCompatMasterDetailRenderer : MasterDetailRenderer
     {
-        private CustomActionBarDrawerToggle toggle;
+        private CustomActionBarDrawerToggle actionBarDrawerToggle;
 
         public override void SetDrawerListener(IDrawerListener listener)
         {
-            base.SetDrawerListener(this.toggle);
+            base.SetDrawerListener(this.actionBarDrawerToggle);
         }
 
         protected override void OnElementChanged(VisualElement oldElement, VisualElement newElement)
@@ -29,13 +29,13 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 this.SetFitsSystemWindows(true);
 
                 var activity = (Activity)this.Context;
-                this.toggle = new CustomActionBarDrawerToggle(this, activity, this) { DrawerIndicatorEnabled = true };
+                this.actionBarDrawerToggle = new CustomActionBarDrawerToggle(this, activity, this) { DrawerIndicatorEnabled = true };
 
                 var actionbar = this.Context.GetSupportActionBar();
                 actionbar.SetDisplayHomeAsUpEnabled(true);
                 actionbar.SetHomeButtonEnabled(true);
 
-                this.toggle.SyncState();
+                this.actionBarDrawerToggle.SyncState();
             }
         }
 
@@ -43,39 +43,39 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             private readonly AppCompatDelegate appCompatDelegate;
 
-            private readonly AppCompatMasterDetailRenderer renderer;
+            private readonly AppCompatMasterDetailRenderer owner;
 
-            public CustomActionBarDrawerToggle(AppCompatMasterDetailRenderer renderer, Activity activity, DrawerLayout drawerLayout)
+            public CustomActionBarDrawerToggle(AppCompatMasterDetailRenderer owner, Activity activity, DrawerLayout drawerLayout)
                 : base(activity, drawerLayout, Resource.String.navigation_drawer_open, Resource.String.navigation_drawer_close)
             {
-                this.renderer = renderer;
                 this.appCompatDelegate = activity.GetAppCompatDelegate();
+                this.owner = owner;
             }
 
             public override void OnDrawerClosed(View drawerView)
             {
                 base.OnDrawerClosed(drawerView);
                 this.appCompatDelegate.InvalidateOptionsMenu();
-                this.renderer.OnDrawerClosed(drawerView);
+                this.owner.OnDrawerClosed(drawerView);
             }
 
             public override void OnDrawerOpened(View drawerView)
             {
                 base.OnDrawerOpened(drawerView);
                 this.appCompatDelegate.InvalidateOptionsMenu();
-                this.renderer.OnDrawerOpened(drawerView);
+                this.owner.OnDrawerOpened(drawerView);
             }
 
             public override void OnDrawerSlide(View drawerView, float slideOffset)
             {
                 base.OnDrawerSlide(drawerView, slideOffset);
-                this.renderer.OnDrawerSlide(drawerView, slideOffset);
+                this.owner.OnDrawerSlide(drawerView, slideOffset);
             }
 
             public override void OnDrawerStateChanged(int newState)
             {
                 base.OnDrawerStateChanged(newState);
-                this.renderer.OnDrawerStateChanged(newState);
+                this.owner.OnDrawerStateChanged(newState);
             }
         }
     }

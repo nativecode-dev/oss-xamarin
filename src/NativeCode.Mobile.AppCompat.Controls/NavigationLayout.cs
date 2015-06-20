@@ -2,7 +2,7 @@
 {
     using Xamarin.Forms;
 
-    public class NavigationLayout : Layout<NavigationMenu>
+    public class NavigationLayout : Layout<NavigationLayoutMenu>
     {
         public static readonly BindableProperty HeaderViewProperty = BindableProperty.Create<NavigationLayout, View>(x => x.HeaderView, default(View));
 
