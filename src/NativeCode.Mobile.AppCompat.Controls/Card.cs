@@ -16,15 +16,5 @@
             get { return (double)this.GetValue(RadiusProperty); }
             set { this.SetValue(RadiusProperty, value); }
         }
-
-        protected override SizeRequest OnSizeRequest(double widthConstraint, double heightConstraint)
-        {
-            if (this.Content != null)
-            {
-                return this.Content.GetSizeRequest(widthConstraint, heightConstraint);
-            }
-
-            return base.OnSizeRequest(widthConstraint, heightConstraint);
-        }
     }
 }

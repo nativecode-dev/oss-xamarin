@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
+namespace NativeCode.Mobile.AppCompat.Helpers
 {
     using Android.Views;
 

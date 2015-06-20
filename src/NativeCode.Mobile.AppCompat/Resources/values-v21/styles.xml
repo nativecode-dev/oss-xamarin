@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-  <style name="AppTheme" parent="AppTheme.Base">
+  <style name="AppTheme" parent="Base.AppTheme">
     <item name="android:windowAllowEnterTransitionOverlap">true</item>
     <item name="android:windowAllowReturnTransitionOverlap">true</item>
     <item name="android:windowContentTransitions">true</item>
@@ -9,7 +9,7 @@
     <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
   </style>
 
-  <style name="AppThemeLight" parent="AppThemeLight.Base">
+  <style name="AppTheme.Light" parent="Base.AppTheme.Light">
     <item name="android:windowAllowEnterTransitionOverlap">true</item>
     <item name="android:windowAllowReturnTransitionOverlap">true</item>
     <item name="android:windowContentTransitions">true</item>
@@ -17,7 +17,7 @@
     <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
   </style>
 
-  <style name="AppThemeLightDarkActionBar" parent="AppThemeLightDarkActionBar.Base">
+  <style name="AppTheme.Light.DarkActionBar" parent="Base.AppTheme.Light.DarkActionBar">
     <item name="android:windowAllowEnterTransitionOverlap">true</item>
     <item name="android:windowAllowReturnTransitionOverlap">true</item>
     <item name="android:windowContentTransitions">true</item>

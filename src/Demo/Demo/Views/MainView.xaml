@@ -4,7 +4,7 @@
              xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
              x:Class="Demo.Views.MainView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
   <StackLayout Padding="20">
-    <controls:Card Radius="20" HorizontalOptions="FillAndExpand">
+    <controls:Card Padding="40" Radius="20">
       <controls:Card.Content>
         <StackLayout>
           <Button Command="{Binding ShowSnackBar}" Text="Hit me!" />
@@ -19,9 +19,9 @@
         </StackLayout>
       </controls:Card.Content>
     </controls:Card>
-    <controls:Card HorizontalOptions="FillAndExpand">
+    <controls:Card>
       <controls:Card.Content>
-        <StackLayout>
+        <StackLayout Orientation="Horizontal">
           <controls:FloatingButton ButtonSize="Mini" Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
           <controls:FloatingButton ButtonSize="Normal" Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
         </StackLayout>

@@ -93,6 +93,9 @@
     <Compile Include="FormsAppCompat\IAppCompatDelegateProvider.cs" />
     <Compile Include="Helpers\DisposableContainer.cs" />
     <Compile Include="Helpers\IDisposableContainer.cs" />
+    <Compile Include="Helpers\KeyboardHelper.cs" />
+    <Compile Include="Helpers\LayoutParamsHelper.cs" />
+    <Compile Include="Helpers\ReflectionHelper.cs" />
     <Compile Include="InflateViewRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

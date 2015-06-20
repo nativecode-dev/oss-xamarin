@@ -83,9 +83,6 @@
     <Compile Include="Extensions\CommandExtensions.cs" />
     <Compile Include="Extensions\ElementExtensions.cs" />
     <Compile Include="Extensions\EntryExtensions.cs" />
-    <Compile Include="Helpers\KeyboardHelper.cs" />
-    <Compile Include="Helpers\LayoutParamsHelper.cs" />
-    <Compile Include="Helpers\ReflectionHelper.cs" />
     <Compile Include="Platforms\UserNotifier.cs" />
     <Compile Include="Renderers\AppCompatButtonRenderer.cs" />
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />

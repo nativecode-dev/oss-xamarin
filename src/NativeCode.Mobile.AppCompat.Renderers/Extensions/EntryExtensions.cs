@@ -2,7 +2,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
 {
     using System.Reflection;
 
-    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
+    using NativeCode.Mobile.AppCompat.Helpers;
 
     using Xamarin.Forms;
 

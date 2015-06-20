@@ -7,111 +7,54 @@ using Xamarin.Forms;
 
 namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
-    using System;
     using System.ComponentModel;
 
     using Android.OS;
     using Android.Support.V7.Widget;
-    using Android.Views;
+    using Android.Widget;
 
     using NativeCode.Mobile.AppCompat.Controls;
     using NativeCode.Mobile.AppCompat.Extensions;
-    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
+    using NativeCode.Mobile.AppCompat.Helpers;
 
-    using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
 
-    public class CardRenderer : CardView, IVisualElementRenderer
+    public class CardRenderer : ViewRenderer<Card, CardView>
     {
-        public CardRenderer() : base(Forms.Context.GetAppCompatThemedContext())
+        protected override void OnElementChanged(ElementChangedEventArgs<Card> e)
         {
-        }
+            base.OnElementChanged(e);
 
-        public event EventHandler<VisualElementChangedEventArgs> ElementChanged;
-
-        VisualElement IVisualElementRenderer.Element
-        {
-            get { return this.Element; }
-        }
-
-        public VisualElementTracker Tracker { get; private set; }
-
-        public ViewGroup ViewGroup
-        {
-            get { return this; }
-        }
-
-        protected Card Element { get; private set; }
-
-        protected VisualElementPackager Packager { get; private set; }
-
-        public void SetElement(VisualElement element)
-        {
-            var oldElement = this.Element;
-            var newElement = element;
-            this.Element = (Card)element;
-
-            if (oldElement != null)
+            if (this.Control == null)
             {
-                oldElement.PropertyChanged -= this.OnElementPropertyChanged;
-            }
+                var lollipop = Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop;
+                var context = this.Context.GetAppCompatThemedContext();
+                var control = new CardView(context) { PreventCornerOverlap = !lollipop, UseCompatPadding = lollipop };
 
-            if (newElement != null)
-            {
-                newElement.PropertyChanged += this.OnElementPropertyChanged;
-            }
+                var @params = new LinearLayout.LayoutParams(LayoutParamsHelper.MatchParent, LayoutParamsHelper.WrapContent);
+                var elevation = (int)control.CardElevation;
+                @params.SetMargins(elevation, elevation, elevation, elevation);
+                control.LayoutParameters = @params;
 
-            this.LayoutParameters = LayoutParamsHelper.MatchParentLayout();
-            this.ViewGroup.RemoveAllViews();
+                this.SetNativeControl(control);
 
-            var lollipop = Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop;
-            this.PreventCornerOverlap = !lollipop;
-            this.UseCompatPadding = lollipop;
-
-            this.Tracker = new VisualElementTracker(this);
-            this.Packager = new VisualElementPackager(this);
-            this.Packager.Load();
-
-            this.OnElementChanged(new VisualElementChangedEventArgs(oldElement, newElement));
-
-            this.UpdateBackgroundColor();
-            this.UpdatePadding();
-            this.UpdateRadius();
-        }
-
-        public SizeRequest GetDesiredSize(int widthConstraint, int heightConstraint)
-        {
-            this.Measure(widthConstraint, heightConstraint);
-            return new SizeRequest(new Size(widthConstraint, heightConstraint));
-        }
-
-        public void UpdateLayout()
-        {
-            if (this.Tracker != null)
-            {
-                this.Tracker.UpdateLayout();
+                this.UpdateCardBackgroundColor();
+                this.UpdateContentPadding();
+                this.UpdateRadius();
             }
         }
 
-        protected virtual void OnElementChanged(VisualElementChangedEventArgs e)
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            var handler = this.ElementChanged;
+            base.OnElementPropertyChanged(sender, e);
 
-            if (handler != null)
-            {
-                handler(this, e);
-            }
-        }
-
-        protected virtual void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
             if (e.PropertyName == VisualElement.BackgroundColorProperty.PropertyName)
             {
-                this.UpdateBackgroundColor();
+                this.UpdateCardBackgroundColor();
             }
             else if (e.PropertyName == Xamarin.Forms.Layout.PaddingProperty.PropertyName)
             {
-                this.UpdatePadding();
+                this.UpdateContentPadding();
             }
             else if (e.PropertyName == Card.RadiusProperty.PropertyName)
             {
@@ -119,24 +62,24 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             }
         }
 
-        private void UpdateBackgroundColor()
+        private void UpdateCardBackgroundColor()
         {
-            this.SetCardBackgroundColor(this.Element.BackgroundColor.ToAndroid());
+            this.Control.SetCardBackgroundColor(this.Element.BackgroundColor.ToAndroid());
         }
 
-        private void UpdatePadding()
+        private void UpdateContentPadding()
         {
             var bottom = (int)this.Element.Padding.Bottom;
             var left = (int)this.Element.Padding.Left;
             var right = (int)this.Element.Padding.Right;
             var top = (int)this.Element.Padding.Top;
 
-            this.SetContentPadding(left, top, right, bottom);
+            this.Control.SetContentPadding(left, top, right, bottom);
         }
 
         private void UpdateRadius()
         {
-            this.Radius = (float)this.Element.Radius;
+            this.Control.Radius = (float)this.Element.Radius;
         }
     }
 }
