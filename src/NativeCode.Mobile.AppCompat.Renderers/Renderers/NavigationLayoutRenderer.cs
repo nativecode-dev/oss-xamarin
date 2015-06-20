@@ -87,9 +87,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 {
                     item.SetIcon(menu.Icon.ToBitmapDrawable());
                 }
-#if DEBUG
-                item.SetIcon(Resource.Drawable.abc_ic_search_api_mtrl_alpha);
-#endif
+
                 this.mappings.Add(item, menu);
             }
         }
