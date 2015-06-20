@@ -4,7 +4,7 @@ Provide Material Design themes now for Xamarin.Forms apps natively without hacks
 
 **NOTE**: As it is still very early in the project (v1.1 will be considered production ready), expect breaking changes.
 
-[![Release](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_release.svg?style=flat-square&label=release)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_release&guest=1)
+[![Release](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_master.svg?style=flat-square&label=master)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_master&guest=1)
 [![Development](https://img.shields.io/teamcity/http/nativecode.no-ip.org:90/s/xamarin_development.svg?style=flat-square&label=development)](http://nativecode.no-ip.org:90/viewType.html?buildTypeId=xamarin_development&guest=1)
 
 ## [AppCompat](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/) [![AppCompat](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.svg?style=flat-square&label=AppCompat)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat/)
