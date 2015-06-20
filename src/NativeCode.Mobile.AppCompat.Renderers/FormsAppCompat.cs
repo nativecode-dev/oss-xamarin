@@ -3,6 +3,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
     using System;
     using System.Reflection;
 
+    using NativeCode.Mobile.AppCompat.Controls;
+    using NativeCode.Mobile.AppCompat.Helpers;
     using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
     using Xamarin.Forms;
@@ -24,9 +26,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         static FormsAppCompat()
         {
             var type = Type.GetType(RegistrarType, true);
-            var property = type.GetProperty("Registered", BindingFlags.NonPublic | BindingFlags.Static);
+            var property = type.GetProperty("Registered", ReflectionHelper.NonPublicStatic);
             RegistrarInstance = property.GetValue(null);
-            RegisterMethod = property.PropertyType.GetMethod("Register", BindingFlags.Instance | BindingFlags.Public);
+            RegisterMethod = property.PropertyType.GetMethod("Register", ReflectionHelper.InstancePublic);
         }
 
         /// <summary>
@@ -34,14 +36,25 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         /// </summary>
         public static void EnableAll()
         {
-            EnableAppCompatReplacements();
+            EnableAndroidRenderers();
+            EnableAppCompatRenderers();
             EnableMasterDetailRenderer();
         }
 
         /// <summary>
-        /// Enables registration of $AppCompat$ renderers.
+        /// Enables Android-specific renderers.
         /// </summary>
-        public static void EnableAppCompatReplacements()
+        public static void EnableAndroidRenderers()
+        {
+            RegisterType(typeof(Card), typeof(CardRenderer));
+            RegisterType(typeof(FloatingButton), typeof(FloatingButtonRenderer));
+            RegisterType(typeof(NavigationLayout), typeof(NavigationLayoutRenderer));
+        }
+
+        /// <summary>
+        /// Enables compatibility renderers.
+        /// </summary>
+        public static void EnableAppCompatRenderers()
         {
             RegisterType(typeof(Button), typeof(AppCompatButtonRenderer));
             RegisterType(typeof(Entry), typeof(AppCompatEntryRenderer));
@@ -49,7 +62,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         }
 
         /// <summary>
-        /// Enables registration of the <see cref="AppCompatMasterDetailRenderer"/>.
+        /// Enables the <see cref="AppCompatMasterDetailRenderer"/>.
         /// </summary>
         public static void EnableMasterDetailRenderer()
         {

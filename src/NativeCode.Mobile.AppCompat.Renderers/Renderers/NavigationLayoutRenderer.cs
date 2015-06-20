@@ -1,10 +1,3 @@
-using NativeCode.Mobile.AppCompat.Controls;
-using NativeCode.Mobile.AppCompat.Renderers.Renderers;
-
-using Xamarin.Forms;
-
-[assembly: ExportRenderer(typeof(NavigationLayout), typeof(NavigationLayoutRenderer))]
-
 namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System.Collections.Generic;
@@ -15,6 +8,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
     using NativeCode.Mobile.AppCompat.Controls;
     using NativeCode.Mobile.AppCompat.Extensions;
+    using NativeCode.Mobile.AppCompat.Renderers.Extensions;
 
     using Xamarin.Forms.Platform.Android;
 
@@ -24,15 +18,15 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
         public bool OnNavigationItemSelected(IMenuItem menuItem)
         {
-            var menu = this.mappings[menuItem];
-
-            if (menu.Command != null && menu.Command.CanExecute(menu.CommandParameter))
+            try
             {
-                menu.Command.Execute(menu.CommandParameter);
+                this.mappings[menuItem].ExecuteCommand();
                 return true;
             }
-
-            return false;
+            catch
+            {
+                return false;
+            }
         }
 
         protected override void Dispose(bool disposing)
@@ -63,6 +57,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
                 this.SetNativeControl(control);
 
+                this.UpdateBackgroundColor();
                 this.UpdateHeaderView();
                 this.UpdateMenuItems();
             }
@@ -73,7 +68,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             if (this.Element.HeaderView != null)
             {
                 // TODO: It's adding it, but it never shows up in the XML in monitor.
-                var renderer = RendererFactory.GetRenderer(this.Element.HeaderView);
+                var renderer = this.Element.HeaderView.GetRenderer();
                 this.Control.AddHeaderView(renderer.ViewGroup);
             }
         }

@@ -11,8 +11,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using Java.Lang;
 
     using NativeCode.Mobile.AppCompat.Extensions;
+    using NativeCode.Mobile.AppCompat.Helpers;
     using NativeCode.Mobile.AppCompat.Renderers.Extensions;
-    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
     using NativeCode.Mobile.AppCompat.Renderers.Renderers.Controls;
 
     using Xamarin.Forms;

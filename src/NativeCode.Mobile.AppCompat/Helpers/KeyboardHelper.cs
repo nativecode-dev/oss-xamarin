@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
+namespace NativeCode.Mobile.AppCompat.Helpers
 {
     using System;
     using System.Reflection;
@@ -36,8 +36,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
             MethodToInputType = keyboardExtensionsType.GetMethod(KeyboardExtensionsToInputType);
 
             var keyboardManagerType = Type.GetType(KeyboardManagerType, true);
-            MethodHideKeyboard = keyboardManagerType.GetMethod(KeyboardManagerHideKeyboard, ReflectionHelper.InternalStatic);
-            MethodShowKeyboard = keyboardManagerType.GetMethod(KeyboardManagerShowKeyboard, ReflectionHelper.InternalStatic);
+            MethodHideKeyboard = keyboardManagerType.GetMethod(KeyboardManagerHideKeyboard, ReflectionHelper.NonPublicStatic);
+            MethodShowKeyboard = keyboardManagerType.GetMethod(KeyboardManagerShowKeyboard, ReflectionHelper.NonPublicStatic);
         }
 
         public static InputTypes GetInputType(Keyboard keyboard)

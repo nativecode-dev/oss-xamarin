@@ -2245,20 +2245,11 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f070136
 			public static int AppTheme = 2131165494;
 			
-			// aapt resource value: 0x7f070133
-			public static int AppTheme_Base = 2131165491;
-			
 			// aapt resource value: 0x7f070137
-			public static int AppThemeLight = 2131165495;
-			
-			// aapt resource value: 0x7f070134
-			public static int AppThemeLight_Base = 2131165492;
+			public static int AppTheme_Light = 2131165495;
 			
 			// aapt resource value: 0x7f070138
-			public static int AppThemeLightDarkActionBar = 2131165496;
-			
-			// aapt resource value: 0x7f070135
-			public static int AppThemeLightDarkActionBar_Base = 2131165493;
+			public static int AppTheme_Light_DarkActionBar = 2131165496;
 			
 			// aapt resource value: 0x7f070077
 			public static int Base_AlertDialog_AppCompat = 2131165303;
@@ -2271,6 +2262,15 @@ namespace NativeCode.Mobile.AppCompat
 			
 			// aapt resource value: 0x7f07007a
 			public static int Base_Animation_AppCompat_DropDownUp = 2131165306;
+			
+			// aapt resource value: 0x7f070133
+			public static int Base_AppTheme = 2131165491;
+			
+			// aapt resource value: 0x7f070134
+			public static int Base_AppTheme_Light = 2131165492;
+			
+			// aapt resource value: 0x7f070135
+			public static int Base_AppTheme_Light_DarkActionBar = 2131165493;
 			
 			// aapt resource value: 0x7f07007b
 			public static int Base_DialogWindowTitle_AppCompat = 2131165307;

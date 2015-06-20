@@ -1,10 +1,3 @@
-using NativeCode.Mobile.AppCompat.Controls;
-using NativeCode.Mobile.AppCompat.Renderers.Renderers;
-
-using Xamarin.Forms;
-
-[assembly: ExportRenderer(typeof(FloatingButton), typeof(FloatingButtonRenderer))]
-
 namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System;

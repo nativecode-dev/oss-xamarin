@@ -1,4 +1,4 @@
-namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
+namespace NativeCode.Mobile.AppCompat.Helpers
 {
     using System;
     using System.Reflection;
@@ -7,7 +7,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
     {
         public const BindingFlags InstanceNonPublic = BindingFlags.Instance | BindingFlags.NonPublic;
 
-        public const BindingFlags InternalStatic = BindingFlags.NonPublic | BindingFlags.Static;
+        public const BindingFlags InstancePublic = BindingFlags.Instance | BindingFlags.Public;
+
+        public const BindingFlags NonPublicStatic = BindingFlags.NonPublic | BindingFlags.Static;
 
         public static readonly object[] EmptyParameters = new object[0];
 

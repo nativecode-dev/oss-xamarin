@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Card.cs" />
     <Compile Include="FloatingButton.cs" />
     <Compile Include="FloatingButtonSize.cs" />
     <Compile Include="ICommandProvider.cs" />

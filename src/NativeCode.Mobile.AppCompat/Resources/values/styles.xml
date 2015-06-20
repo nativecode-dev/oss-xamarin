@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-  <style name="AppTheme.Base" parent="Theme.AppCompat">
+  <style name="Base.AppTheme" parent="Theme.AppCompat">
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     <item name="colorAccent">#8BC34A</item>
     <item name="colorPrimary">#03A9F4</item>
@@ -10,7 +10,7 @@
     <item name="windowActionModeOverlay">true</item>
   </style>
 
-  <style name="AppThemeLight.Base" parent="Theme.AppCompat.Light">
+  <style name="Base.AppTheme.Light" parent="Theme.AppCompat.Light">
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     <item name="colorAccent">#8BC34A</item>
     <item name="colorPrimary">#03A9F4</item>
@@ -19,7 +19,7 @@
     <item name="windowActionModeOverlay">true</item>
   </style>
 
-  <style name="AppThemeLightDarkActionBar.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+  <style name="Base.AppTheme.Light.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     <item name="colorAccent">#8BC34A</item>
     <item name="colorPrimary">#03A9F4</item>
@@ -28,9 +28,9 @@
     <item name="windowActionModeOverlay">true</item>
   </style>
 
-  <style name="AppTheme" parent="AppTheme.Base"></style>
-  <style name="AppThemeLight" parent="AppTheme.Base"></style>
-  <style name="AppThemeLightDarkActionBar" parent="AppTheme.Base"></style>
+  <style name="AppTheme" parent="Base.AppTheme"></style>
+  <style name="AppTheme.Light" parent="Base.AppTheme.Light"></style>
+  <style name="AppTheme.Light.DarkActionBar" parent="Base.AppTheme.Light.DarkActionBar"></style>
 
   <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">true</item>

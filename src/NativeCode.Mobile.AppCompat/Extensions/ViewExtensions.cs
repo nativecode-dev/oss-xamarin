@@ -9,46 +9,52 @@ namespace NativeCode.Mobile.AppCompat.Extensions
     using View = Android.Views.View;
 
     /// <summary>
-    /// Provides extensions for <see cref="View" /> instances.
+    /// Provides extensions for <see cref="Android.Views.View" /> instances.
     /// </summary>
     public static class ViewExtensions
     {
-        private static readonly Type PlatformType = Type.GetType("Xamarin.Forms.Platform.Android.Platform, Xamarin.Forms.Platform.Android", true);
+        private const string PlatformType = "Xamarin.Forms.Platform.Android.Platform, Xamarin.Forms.Platform.Android";
+
+        private const string PlatformRenderer = "RendererProperty";
+
+        private static readonly FieldInfo FieldRenderer;
+
+        static ViewExtensions()
+        {
+            var type = Type.GetType(PlatformType, true);
+            FieldRenderer = type.GetField(PlatformRenderer, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
+        }
 
         internal static BindableProperty RendererProperty
         {
-            get
-            {
-                var property = PlatformType.GetField("RendererProperty", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
-
-                if (property != null)
-                {
-                    return (BindableProperty)property.GetValue(null);
-                }
-
-                // TODO: This might need a more specific exception.
-                throw new InvalidCastException("Cannot convert to a BindableProperty.");
-            }
+            get { return (BindableProperty)FieldRenderer.GetValue(null); }
         }
 
         /// <summary>
         /// Attempts to get the <see cref="IVisualElementRenderer" /> for a given <see cref="BindableObject" />.
         /// </summary>
-        /// <param name="bindableObject">The $bindable$ object.</param>
+        /// <param name="element">The element.</param>
         /// <returns>Returns a <see cref="IVisualElementRenderer" />.</returns>
-        public static IVisualElementRenderer GetRenderer(this BindableObject bindableObject)
+        public static IVisualElementRenderer GetRenderer(this VisualElement element)
         {
-            return (IVisualElementRenderer)bindableObject.GetValue(RendererProperty);
+            return element.GetValue(RendererProperty) as IVisualElementRenderer ?? RendererFactory.GetRenderer(element);
         }
 
         /// <summary>
         /// Attempts to get a native Android <see cref="View" />.
         /// </summary>
-        /// <param name="bindableObject">The $bindable$ object.</param>
+        /// <param name="element">The element.</param>
         /// <returns>Returns a <see cref="View" />.</returns>
-        public static View GetNativeView(this BindableObject bindableObject)
+        public static View GetNativeView(this VisualElement element)
         {
-            return bindableObject.GetRenderer().ViewGroup.RootView;
+            var renderer = element.GetRenderer();
+
+            if (renderer == null)
+            {
+                throw new InvalidOperationException("Could not get renderer for bindable object.");
+            }
+
+            return renderer.ViewGroup.RootView;
         }
     }
 }

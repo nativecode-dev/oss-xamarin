@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
+             x:Class="Demo.Views.ChooserView">
+  <controls:NavigationLayout>
+    <controls:NavigationLayout.Children>
+      <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternOneCommand}" Text="Master Detail Pattern One" />
+      <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternTwoCommand}" Text="Master Detail Pattern Two" />
+    </controls:NavigationLayout.Children>
+  </controls:NavigationLayout>
+</ContentPage>
