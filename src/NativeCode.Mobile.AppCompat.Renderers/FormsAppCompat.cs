@@ -3,6 +3,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers
     using System;
     using System.Reflection;
 
+    using NativeCode.Mobile.AppCompat.Controls;
     using NativeCode.Mobile.AppCompat.Helpers;
     using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
@@ -35,14 +36,25 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         /// </summary>
         public static void EnableAll()
         {
-            EnableAppCompatReplacements();
+            EnableAndroidRenderers();
+            EnableAppCompatRenderers();
             EnableMasterDetailRenderer();
         }
 
         /// <summary>
-        /// Enables registration of $AppCompat$ renderers.
+        /// Enables Android-specific renderers.
         /// </summary>
-        public static void EnableAppCompatReplacements()
+        public static void EnableAndroidRenderers()
+        {
+            RegisterType(typeof(Card), typeof(CardRenderer));
+            RegisterType(typeof(FloatingButton), typeof(FloatingButtonRenderer));
+            RegisterType(typeof(NavigationLayout), typeof(NavigationLayoutRenderer));
+        }
+
+        /// <summary>
+        /// Enables compatibility renderers.
+        /// </summary>
+        public static void EnableAppCompatRenderers()
         {
             RegisterType(typeof(Button), typeof(AppCompatButtonRenderer));
             RegisterType(typeof(Entry), typeof(AppCompatEntryRenderer));
@@ -50,7 +62,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         }
 
         /// <summary>
-        /// Enables registration of the <see cref="AppCompatMasterDetailRenderer"/>.
+        /// Enables the <see cref="AppCompatMasterDetailRenderer"/>.
         /// </summary>
         public static void EnableMasterDetailRenderer()
         {

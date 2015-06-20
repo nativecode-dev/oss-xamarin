@@ -1,10 +1,3 @@
-using NativeCode.Mobile.AppCompat.Controls;
-using NativeCode.Mobile.AppCompat.Renderers.Renderers;
-
-using Xamarin.Forms;
-
-[assembly: ExportRenderer(typeof(Card), typeof(CardRenderer))]
-
 namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System.ComponentModel;
@@ -19,6 +12,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using NativeCode.Mobile.AppCompat.Helpers;
     using NativeCode.Mobile.AppCompat.Renderers.Extensions;
 
+    using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
 
     public class CardRenderer : ViewRenderer<Card, CardView>
