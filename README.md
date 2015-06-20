@@ -47,6 +47,7 @@ NOTE: You must install the Renderers package into your Android project.
 
 ### Available controls
 - FloatingButton ([FloatingActionButton](https://developer.android.com/reference/android/support/design/widget/FloatingActionButton.html))
+- (Beta) NavigationLayout ([NavigationView](https://developer.android.com/reference/android/support/design/widget/NavigationView.html))
 - IUserNotifier ([Snackbar](https://developer.android.com/reference/android/support/design/widget/Snackbar.html))
 
 ## [AppCompat Renderers](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/) [![AppCompat.Renderers](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.Renderers.svg?style=flat-square&label=AppCompat.Renderers)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Renderers/)
@@ -72,12 +73,11 @@ public class MainActivity : AppCompatFormsApplicationActivity
 }
 ```
 
-
 ### Current Renderers
 - Button ([AppCompatButton](http://developer.android.com/reference/android/support/v7/widget/AppCompatButton.html))
 - Entry ([AppCompatEditText](http://developer.android.com/reference/android/support/v7/widget/AppCompatEditText.html))
 - Switch ([SwitchCompat](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html))
-- MasterDetailPage
+- MasterDetailPage (AppCompatMasterDetailRenderer)
 
 ## Devices Tested
 
