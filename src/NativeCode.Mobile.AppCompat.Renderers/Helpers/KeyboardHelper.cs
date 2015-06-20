@@ -9,7 +9,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
 
     using View = Android.Views.View;
 
-    internal static class KeyboardHelper
+    public static class KeyboardHelper
     {
         private const string KeyboardExtensionsType = "Xamarin.Forms.Platform.Android.KeyboardExtensions, Xamarin.Forms.Platform.Android";
 
@@ -20,8 +20,6 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
         private const string KeyboardManagerHideKeyboard = "HideKeyboard";
 
         private const string KeyboardManagerShowKeyboard = "ShowKeyboard";
-
-        private const BindingFlags StaticInternalMethods = BindingFlags.NonPublic | BindingFlags.Static;
 
         private static readonly MethodInfo MethodToInputType;
 
@@ -38,8 +36,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Helpers
             MethodToInputType = keyboardExtensionsType.GetMethod(KeyboardExtensionsToInputType);
 
             var keyboardManagerType = Type.GetType(KeyboardManagerType, true);
-            MethodHideKeyboard = keyboardManagerType.GetMethod(KeyboardManagerHideKeyboard, StaticInternalMethods);
-            MethodShowKeyboard = keyboardManagerType.GetMethod(KeyboardManagerShowKeyboard, StaticInternalMethods);
+            MethodHideKeyboard = keyboardManagerType.GetMethod(KeyboardManagerHideKeyboard, ReflectionHelper.InternalStatic);
+            MethodShowKeyboard = keyboardManagerType.GetMethod(KeyboardManagerShowKeyboard, ReflectionHelper.InternalStatic);
         }
 
         public static InputTypes GetInputType(Keyboard keyboard)

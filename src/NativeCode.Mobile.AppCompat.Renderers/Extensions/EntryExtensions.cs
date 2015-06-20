@@ -13,8 +13,6 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
     {
         private const string EntrySendCompleted = "SendCompleted";
 
-        private const BindingFlags InstanceNonPublic = BindingFlags.Instance | BindingFlags.NonPublic;
-
         private static readonly MethodInfo MethodSendCompleted;
 
         /// <summary>
@@ -23,7 +21,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
         static EntryExtensions()
         {
             var type = typeof(Entry);
-            MethodSendCompleted = type.GetMethod(EntrySendCompleted, InstanceNonPublic);
+            MethodSendCompleted = type.GetMethod(EntrySendCompleted, ReflectionHelper.InstanceNonPublic);
         }
 
         /// <summary>
