@@ -58,6 +58,10 @@
       <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Forms.1.4.2.6359\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -80,12 +84,14 @@
     <Compile Include="Extensions\ElementExtensions.cs" />
     <Compile Include="Extensions\EntryExtensions.cs" />
     <Compile Include="Helpers\KeyboardHelper.cs" />
+    <Compile Include="Helpers\LayoutParamsHelper.cs" />
     <Compile Include="Helpers\ReflectionHelper.cs" />
     <Compile Include="Platforms\UserNotifier.cs" />
     <Compile Include="Renderers\AppCompatButtonRenderer.cs" />
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />
     <Compile Include="Renderers\AppCompatMasterDetailRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
+    <Compile Include="Renderers\CardRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
     <Compile Include="FormsAppCompat.cs" />
     <Compile Include="Renderers\FloatingButtonRenderer.cs" />
