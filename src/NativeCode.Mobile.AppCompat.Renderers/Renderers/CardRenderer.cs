@@ -14,13 +14,28 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using Android.Widget;
 
     using NativeCode.Mobile.AppCompat.Controls;
+    using NativeCode.Mobile.AppCompat.EventListeners;
     using NativeCode.Mobile.AppCompat.Extensions;
     using NativeCode.Mobile.AppCompat.Helpers;
+    using NativeCode.Mobile.AppCompat.Renderers.Extensions;
 
     using Xamarin.Forms.Platform.Android;
 
     public class CardRenderer : ViewRenderer<Card, CardView>
     {
+        private OnClickListener onClickListener;
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && this.onClickListener != null)
+            {
+                this.onClickListener.Dispose();
+                this.onClickListener = null;
+            }
+
+            base.Dispose(disposing);
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<Card> e)
         {
             base.OnElementChanged(e);
@@ -35,6 +50,12 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 var elevation = (int)control.CardElevation;
                 @params.SetMargins(elevation, elevation, elevation, elevation);
                 control.LayoutParameters = @params;
+
+                if (this.Element.Command != null)
+                {
+                    control.Clickable = true;
+                    control.SetOnClickListener(this.onClickListener = new OnClickListener(v => this.Element.ExecuteCommand()));
+                }
 
                 this.SetNativeControl(control);
 
