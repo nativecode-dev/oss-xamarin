@@ -32,45 +32,10 @@ public class MainActivity : AppCompatFormsApplicationActivity
 ```
 
 You can then use the normal `Forms.Init` and `LoadApplication` methods to initialize your activities.
-
-You should also set your **Resources/values/styles.xml** to the following:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-  <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
-    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-    <item name="colorAccent">#8BC34A</item>
-    <item name="colorPrimary">#03A9F4</item>
-    <item name="colorPrimaryDark">#0288D1</item>
-    <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-    <item name="windowActionModeOverlay">true</item>
-  </style>
-
-  <style name="AppTheme" parent="AppTheme.Base">
-  </style>
-
-  <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
-    <item name="spinBars">true</item>
-    <item name="color">@android:color/white</item>
-  </style>
-</resources>
-```
-
-And also set **Resources/values-v21/styles.xml** to:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-
-<resources>
-  <style name="AppTheme" parent="AppTheme.Base">
-    <item name="android:windowAllowEnterTransitionOverlap">true</item>
-    <item name="android:windowAllowReturnTransitionOverlap">true</item>
-    <item name="android:windowContentTransitions">true</item>
-    <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
-    <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
-  </style>
-</resources>
-```
+You also no longer need to define your own styles.xml as you can use the ones packages with the package (the exception is if you want your own colors). The following styles are available:
+- CompatTheme (Theme.AppCompat)
+- CompatThemeLight (Theme.AppCompat.Light)
+- CompatThemeLightDarkActionBar (Theme.AppCompat.Light.DarkActionBar)
 
 ## [AppCompat Controls](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/) [![AppCompat.Controls](https://img.shields.io/nuget/v/NativeCode.Mobile.AppCompat.Controls.svg?style=flat-square&label=AppCompat.Controls)](https://www.nuget.org/packages/NativeCode.Mobile.AppCompat.Controls/)
 
