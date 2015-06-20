@@ -6,16 +6,13 @@
 
     using NativeCode.Mobile.AppCompat.FormsAppCompat;
     using NativeCode.Mobile.AppCompat.Renderers;
-    using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
     using Xamarin.Forms;
 
-    [Activity(ConfigurationChanges = AppConfig, MainLauncher = true, Theme = AppTheme)]
+    [Activity(ConfigurationChanges = AppConfig, MainLauncher = true, Theme = CompatThemeLightDarkActionBar)]
     public class MainActivity : AppCompatFormsApplicationActivity
     {
         private const ConfigChanges AppConfig = ConfigChanges.Orientation | ConfigChanges.ScreenSize;
-
-        private const string AppTheme = "@style/AppTheme";
 
         protected override void OnCreate(Bundle savedInstanceState)
         {

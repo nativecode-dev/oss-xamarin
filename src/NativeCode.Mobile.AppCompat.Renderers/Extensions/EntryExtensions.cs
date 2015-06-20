@@ -1,7 +1,8 @@
 namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
 {
-    using System;
     using System.Reflection;
+
+    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
 
     using Xamarin.Forms;
 
@@ -12,21 +13,24 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
     {
         private const string EntrySendCompleted = "SendCompleted";
 
+        private static readonly MethodInfo MethodSendCompleted;
+
+        /// <summary>
+        /// Initializes static members of the <see cref="EntryExtensions"/> class.
+        /// </summary>
+        static EntryExtensions()
+        {
+            var type = typeof(Entry);
+            MethodSendCompleted = type.GetMethod(EntrySendCompleted, ReflectionHelper.InstanceNonPublic);
+        }
+
         /// <summary>
         /// Invokes the send completed.
         /// </summary>
         /// <param name="entry">The entry.</param>
         public static void InvokeSendCompleted(this Entry entry)
         {
-            var type = entry.GetType();
-            var method = type.GetMethod(EntrySendCompleted, BindingFlags.Instance | BindingFlags.NonPublic);
-
-            if (method == null)
-            {
-                throw new MissingMethodException(type.Name, EntrySendCompleted);
-            }
-
-            method.Invoke(entry, new object[0]);
+            MethodSendCompleted.Invoke(entry, ReflectionHelper.EmptyParameters);
         }
     }
 }

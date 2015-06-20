@@ -2263,6 +2263,24 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f070076
 			public static int Animation_AppCompat_DropDownUp = 2131165302;
 			
+			// aapt resource value: 0x7f070136
+			public static int AppTheme = 2131165494;
+			
+			// aapt resource value: 0x7f070133
+			public static int AppTheme_Base = 2131165491;
+			
+			// aapt resource value: 0x7f070137
+			public static int AppThemeLight = 2131165495;
+			
+			// aapt resource value: 0x7f070134
+			public static int AppThemeLight_Base = 2131165492;
+			
+			// aapt resource value: 0x7f070138
+			public static int AppThemeLightDarkActionBar = 2131165496;
+			
+			// aapt resource value: 0x7f070135
+			public static int AppThemeLightDarkActionBar_Base = 2131165493;
+			
 			// aapt resource value: 0x7f070077
 			public static int Base_AlertDialog_AppCompat = 2131165303;
 			
@@ -2661,6 +2679,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			
 			// aapt resource value: 0x7f070125
 			public static int Base_Widget_Design_TabLayout = 2131165477;
+			
+			// aapt resource value: 0x7f070139
+			public static int DrawerArrowStyle = 2131165497;
 			
 			// aapt resource value: 0x7f070010
 			public static int Platform_AppCompat = 2131165200;

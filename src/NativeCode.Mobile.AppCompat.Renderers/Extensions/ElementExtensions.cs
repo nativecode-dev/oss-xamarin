@@ -1,7 +1,9 @@
 namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
 {
     using System;
-    using System.Linq;
+    using System.Reflection;
+
+    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
 
     using Xamarin.Forms;
 
@@ -10,9 +12,20 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
     /// </summary>
     public static class ElementExtensions
     {
-        private const string ButtonController = "IButtonController";
+        private const string ButtonControllerType = "Xamarin.Forms.IButtonController, Xamarin.Forms.Core";
 
         private const string ButtonControllerSendClicked = "SendClicked";
+
+        private static readonly MethodInfo MethodSendClicked;
+
+        /// <summary>
+        /// Initializes static members of the <see cref="ElementExtensions"/> class.
+        /// </summary>
+        static ElementExtensions()
+        {
+            var type = Type.GetType(ButtonControllerType, true);
+            MethodSendClicked = type.GetMethod(ButtonControllerSendClicked);
+        }
 
         /// <summary>
         /// Tries to cast the element to a button controller and invoke the SendClicked method.
@@ -22,27 +35,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Extensions
         /// <remarks>The IButtonController is an internal interface, so we have to use reflection.</remarks>
         public static void InvokeSendClicked(this Element element)
         {
-            var type = GetImplementedInterface(element, ButtonController);
-            var method = type.GetMethod(ButtonControllerSendClicked);
-
-            if (method == null)
-            {
-                throw new MissingMethodException(type.Name, ButtonControllerSendClicked);
-            }
-
-            method.Invoke(element, new object[0]);
-        }
-
-        private static Type GetImplementedInterface(object instance, string name)
-        {
-            var type = instance.GetType().GetInterfaces().Single(x => x.Name == ButtonController);
-
-            if (type == null)
-            {
-                throw new InvalidCastException("Type does not implement interface " + name + ".");
-            }
-
-            return type;
+            MethodSendClicked.Invoke(element, ReflectionHelper.EmptyParameters);
         }
     }
 }

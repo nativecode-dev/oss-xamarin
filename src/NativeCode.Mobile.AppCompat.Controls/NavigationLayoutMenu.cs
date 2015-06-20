@@ -4,17 +4,17 @@
 
     using Xamarin.Forms;
 
-    public class NavigationMenu : View, ICommandProvider
+    public class NavigationLayoutMenu : View, ICommandProvider
     {
-        public static readonly BindableProperty CommandProperty = BindableProperty.Create<NavigationMenu, ICommand>(x => x.Command, default(ICommand));
+        public static readonly BindableProperty CommandProperty = BindableProperty.Create<NavigationLayoutMenu, ICommand>(x => x.Command, default(ICommand));
 
-        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create<NavigationMenu, object>(
+        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create<NavigationLayoutMenu, object>(
             x => x.CommandParameter,
             default(object));
 
-        public static readonly BindableProperty IconProperty = BindableProperty.Create<NavigationMenu, ImageSource>(x => x.Icon, default(ImageSource));
+        public static readonly BindableProperty IconProperty = BindableProperty.Create<NavigationLayoutMenu, ImageSource>(x => x.Icon, default(ImageSource));
 
-        public static readonly BindableProperty TextProperty = BindableProperty.Create<NavigationMenu, string>(x => x.Text, default(string));
+        public static readonly BindableProperty TextProperty = BindableProperty.Create<NavigationLayoutMenu, string>(x => x.Text, default(string));
 
         public ICommand Command
         {

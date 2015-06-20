@@ -26,15 +26,7 @@
 
         private static MasterDetailPage CreateMasterDetailPage(Page master, Page detail)
         {
-            MasterDetail = new MasterDetailPage
-            {
-                Detail = detail,
-                Master = master,
-                MasterBehavior = MasterBehavior.Popover,
-                Title = "AppCompat Demo"
-            };
-
-            return MasterDetail;
+            return MasterDetail = new MasterDetailPage { Detail = detail, Master = master, MasterBehavior = MasterBehavior.Popover, Title = "AppCompat Demo" };
         }
 
         private static NavigationPage CreateNavigationPage(Page page)
