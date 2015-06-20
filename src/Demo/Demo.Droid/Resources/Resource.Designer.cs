@@ -721,6 +721,12 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Style.AlertDialog_AppCompat_Light = global::Demo.Droid.Resource.Style.AlertDialog_AppCompat_Light;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Animation_AppCompat_Dialog = global::Demo.Droid.Resource.Style.Animation_AppCompat_Dialog;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Animation_AppCompat_DropDownUp = global::Demo.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.AppTheme = global::Demo.Droid.Resource.Style.AppTheme;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.AppTheme_Base = global::Demo.Droid.Resource.Style.AppTheme_Base;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.AppThemeLight = global::Demo.Droid.Resource.Style.AppThemeLight;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.AppThemeLight_Base = global::Demo.Droid.Resource.Style.AppThemeLight_Base;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.AppThemeLightDarkActionBar = global::Demo.Droid.Resource.Style.AppThemeLightDarkActionBar;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.AppThemeLightDarkActionBar_Base = global::Demo.Droid.Resource.Style.AppThemeLightDarkActionBar_Base;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AlertDialog_AppCompat = global::Demo.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Demo.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_Animation_AppCompat_Dialog = global::Demo.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -854,6 +860,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Demo.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Demo.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_Widget_Design_TabLayout = global::Demo.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.DrawerArrowStyle = global::Demo.Droid.Resource.Style.DrawerArrowStyle;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Platform_AppCompat = global::Demo.Droid.Resource.Style.Platform_AppCompat;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Platform_AppCompat_Light = global::Demo.Droid.Resource.Style.Platform_AppCompat_Light;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Demo.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
@@ -2112,6 +2119,12 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AlertDialog_AppCompat_Light = global::Demo.Droid.Resource.Style.AlertDialog_AppCompat_Light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Animation_AppCompat_Dialog = global::Demo.Droid.Resource.Style.Animation_AppCompat_Dialog;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Animation_AppCompat_DropDownUp = global::Demo.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AppTheme = global::Demo.Droid.Resource.Style.AppTheme;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AppTheme_Base = global::Demo.Droid.Resource.Style.AppTheme_Base;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AppThemeLight = global::Demo.Droid.Resource.Style.AppThemeLight;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AppThemeLight_Base = global::Demo.Droid.Resource.Style.AppThemeLight_Base;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AppThemeLightDarkActionBar = global::Demo.Droid.Resource.Style.AppThemeLightDarkActionBar;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.AppThemeLightDarkActionBar_Base = global::Demo.Droid.Resource.Style.AppThemeLightDarkActionBar_Base;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AlertDialog_AppCompat = global::Demo.Droid.Resource.Style.Base_AlertDialog_AppCompat;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Demo.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_Animation_AppCompat_Dialog = global::Demo.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
@@ -2245,6 +2258,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Demo.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Demo.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_Widget_Design_TabLayout = global::Demo.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.DrawerArrowStyle = global::Demo.Droid.Resource.Style.DrawerArrowStyle;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Platform_AppCompat = global::Demo.Droid.Resource.Style.Platform_AppCompat;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Platform_AppCompat_Light = global::Demo.Droid.Resource.Style.Platform_AppCompat_Light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Demo.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
@@ -5047,11 +5061,23 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f070076
 			public const int Animation_AppCompat_DropDownUp = 2131165302;
 			
-			// aapt resource value: 0x7f070134
-			public const int AppTheme = 2131165492;
+			// aapt resource value: 0x7f070136
+			public const int AppTheme = 2131165494;
 			
 			// aapt resource value: 0x7f070133
 			public const int AppTheme_Base = 2131165491;
+			
+			// aapt resource value: 0x7f070137
+			public const int AppThemeLight = 2131165495;
+			
+			// aapt resource value: 0x7f070134
+			public const int AppThemeLight_Base = 2131165492;
+			
+			// aapt resource value: 0x7f070138
+			public const int AppThemeLightDarkActionBar = 2131165496;
+			
+			// aapt resource value: 0x7f070135
+			public const int AppThemeLightDarkActionBar_Base = 2131165493;
 			
 			// aapt resource value: 0x7f070077
 			public const int Base_AlertDialog_AppCompat = 2131165303;
@@ -5452,8 +5478,8 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f070125
 			public const int Base_Widget_Design_TabLayout = 2131165477;
 			
-			// aapt resource value: 0x7f070135
-			public const int DrawerArrowStyle = 2131165493;
+			// aapt resource value: 0x7f070139
+			public const int DrawerArrowStyle = 2131165497;
 			
 			// aapt resource value: 0x7f070010
 			public const int Platform_AppCompat = 2131165200;

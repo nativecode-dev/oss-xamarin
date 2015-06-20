@@ -24,17 +24,17 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// <summary>
         /// Standard compatibility theme.
         /// </summary>
-        public const string CompatTheme = "@style/Theme.AppCompat";
+        public const string CompatTheme = "@style/AppTheme";
 
         /// <summary>
         /// Light compatibility theme.
         /// </summary>
-        public const string CompatThemeLight = "@style/Theme.AppCompat.Light";
+        public const string CompatThemeLight = "@style/AppThemeLight";
 
         /// <summary>
         /// Light compatibility theme with a dark action bar.
         /// </summary>
-        public const string CompatThemeLightDarkActionBar = "@style/Theme.AppCompat.Light.DarkActionBar";
+        public const string CompatThemeLightDarkActionBar = "@style/AppThemeLightDarkActionBar";
 
         private readonly DisposableContainer disposables = new DisposableContainer();
 
