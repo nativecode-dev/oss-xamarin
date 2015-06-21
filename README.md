@@ -1,6 +1,6 @@
 # [Power to the people, Cos!](http://www.imdb.com/title/tt0105435/?ref_=nv_sr_1)
 
-Provide Material Design themes now for Xamarin.Forms apps natively without hacks! Check out the [wiki](https://github.com/nativecode-dev/oss-xamarin/wiki) for more information.
+Provide Material Design themes now for Xamarin.Forms apps natively without hacks! Check out the [wiki](https://github.com/nativecode-dev/oss-xamarin/wiki) for more information. And yes, I [blogged](https://www.secretlifeof.net/development/use-appcompat-v7-with-xamarin-forms) about it.
 
 **NOTE**: As it is still very early in the project (v1.1 will be considered production ready), expect breaking changes.
 
