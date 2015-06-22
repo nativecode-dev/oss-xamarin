@@ -4,7 +4,7 @@
   <metadata>
     <id>$id$</id>
     <authors>NativeCode</authors>
-    <description>Allows Material Design themes to be properly used in Xamarin.Forms using the Design Support Library.</description>
+    <description>$description$</description>
     <language>en-US</language>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/nativecode-dev/oss-xamarin</projectUrl>
