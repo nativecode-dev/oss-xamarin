@@ -4,7 +4,7 @@
   <metadata>
     <id>$id$</id>
     <authors>NativeCode</authors>
-    <description>$description$</description>
+    <description>Provides a library for enabling Material Design for Android projects.</description>
     <language>en-US</language>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <projectUrl>https://github.com/nativecode-dev/oss-xamarin</projectUrl>
