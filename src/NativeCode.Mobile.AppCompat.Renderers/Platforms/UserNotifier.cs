@@ -37,15 +37,16 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Platforms
 
         private View GetSnackbarAnchorView()
         {
+            var activity = (Activity)Forms.Context;
+            var view = activity.FindViewById(Resource.Id.decor_content_parent);
             var provider = Forms.Context as IAppCompatCoordinatorLayoutProvider;
 
             if (provider == null)
             {
-                var activity = (Activity)Forms.Context;
-                return activity.FindViewById(Resource.Id.decor_content_parent);
+                return view;
             }
 
-            return provider.GetCoordinatorLayout();
+            return provider.GetCoordinatorLayout() ?? view;
         }
     }
 }
