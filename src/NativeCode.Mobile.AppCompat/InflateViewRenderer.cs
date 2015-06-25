@@ -5,7 +5,6 @@ namespace NativeCode.Mobile.AppCompat
     using System.Windows.Input;
 
     using Android.App;
-    using Android.Support.Design.Widget;
     using Android.Views;
 
     using NativeCode.Mobile.AppCompat.EventListeners;
@@ -120,15 +119,8 @@ namespace NativeCode.Mobile.AppCompat
         protected T InflateNativeControl<T>(int id, ViewGroup @group = null, bool attachToRoot = false) where T : Android.Views.View
         {
             var inflated = this.LayoutInflater.Inflate(id, @group, attachToRoot);
-            var view = inflated.FindViewById<FloatingActionButton>(inflated.Id);
-            var native = view as T;
 
-            if (native == null)
-            {
-                throw new InvalidCastException(string.Format("Could not cast the view {0} to a {1}.", view.GetType().Name, typeof(T).Name));
-            }
-
-            return native;
+            return inflated.FindViewById<T>(inflated.Id);
         }
 
         /// <summary>
