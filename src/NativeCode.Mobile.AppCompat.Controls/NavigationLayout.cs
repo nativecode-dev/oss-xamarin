@@ -4,11 +4,13 @@
 
     public class NavigationLayout : Layout<NavigationLayoutMenu>
     {
-        public static readonly BindableProperty HeaderViewProperty = BindableProperty.Create<NavigationLayout, View>(x => x.HeaderView, default(View));
+        public static readonly BindableProperty HeaderViewProperty = BindableProperty.Create<NavigationLayout, ContentView>(
+            x => x.HeaderView,
+            default(ContentView));
 
-        public View HeaderView
+        public ContentView HeaderView
         {
-            get { return (View)this.GetValue(HeaderViewProperty); }
+            get { return (ContentView)this.GetValue(HeaderViewProperty); }
             set { this.SetValue(HeaderViewProperty, value); }
         }
 

@@ -58,8 +58,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 this.SetNativeControl(control);
 
                 this.UpdateBackgroundColor();
-                this.UpdateHeaderView();
                 this.UpdateMenuItems();
+                this.UpdateHeaderView();
             }
         }
 
@@ -68,8 +68,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             if (this.Element.HeaderView != null)
             {
                 // TODO: It's adding it, but it never shows up in the XML in monitor.
-                var renderer = this.Element.HeaderView.GetRenderer();
-                this.Control.AddHeaderView(renderer.ViewGroup);
+                this.Control.AddHeaderView(this.Element.HeaderView.GetNativeView());
             }
         }
 

@@ -5,10 +5,12 @@
              x:Class="Demo.Views.MenuView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
   <controls:NavigationLayout>
     <controls:NavigationLayout.HeaderView>
-      <StackLayout>
-        <BoxView HeightRequest="150" BackgroundColor="Green" />
-        <Label Text="Header" />
-      </StackLayout>
+      <ContentView>
+        <StackLayout>
+          <BoxView HeightRequest="150" BackgroundColor="Green" />
+          <Label Text="Header" />
+        </StackLayout>
+      </ContentView>
     </controls:NavigationLayout.HeaderView>
     <controls:NavigationLayout.Children>
       <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
