@@ -21,6 +21,16 @@
             Current.MainPage = new ChooserView();
         }
 
+        public static void ShowTabbed()
+        {
+            var tabbed = new TabbedPage();
+            tabbed.Children.Add(new LoremIpsumView { Title = "Page 1" });
+            tabbed.Children.Add(new LoremIpsumView { Title = "Page 2" });
+            tabbed.Children.Add(new LoremIpsumView { Title = "Page 3" });
+
+            Current.MainPage = CreateNavigationPage(CreateMasterDetailPage(new MenuView(), tabbed));
+        }
+
         public static void ShowMasterDetailPatternOne()
         {
             var master = CreateMasterDetailPage(new MenuView(), new MainView());

@@ -4,6 +4,7 @@
              x:Class="Demo.Views.ChooserView">
   <controls:NavigationLayout>
     <controls:NavigationLayout.Children>
+      <controls:NavigationLayoutMenu Command="{Binding TabbedCommand}" Text="Tabbed Navigation" />
       <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternOneCommand}" Text="Master Detail Pattern One" />
       <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternTwoCommand}" Text="Master Detail Pattern Two" />
     </controls:NavigationLayout.Children>
