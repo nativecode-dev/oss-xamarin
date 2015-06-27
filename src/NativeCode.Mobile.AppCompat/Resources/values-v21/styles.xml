@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
   <style name="AppTheme" parent="Base.AppTheme">
     <item name="android:windowAllowEnterTransitionOverlap">true</item>
     <item name="android:windowAllowReturnTransitionOverlap">true</item>

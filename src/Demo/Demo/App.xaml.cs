@@ -16,6 +16,11 @@
 
         internal static INavigation Navigation { get; private set; }
 
+        public static INavigation Navigate()
+        {
+            return Navigation;
+        }
+
         public static void ShowChooser()
         {
             Current.MainPage = new ChooserView();
@@ -33,18 +38,36 @@
             Current.MainPage = master;
         }
 
+        public static void ShowNavigation()
+        {
+            Current.MainPage = CreateNavigationPage(new NestNavigationView(), false);
+        }
+
+        public static void ShowTabbed()
+        {
+            var tabbed = new TabbedPage();
+            tabbed.Children.Add(new LoremIpsumView { Title = "Page 1" });
+            tabbed.Children.Add(new LoremIpsumView { Title = "Page 2" });
+            tabbed.Children.Add(new LoremIpsumView { Title = "Page 3" });
+
+            Current.MainPage = CreateNavigationPage(CreateMasterDetailPage(new MenuView(), tabbed));
+        }
+
         private static MasterDetailPage CreateMasterDetailPage(Page master, Page detail)
         {
             return MasterDetail = new MasterDetailPage { Detail = detail, Master = master, MasterBehavior = GetMasterBehavior(), Title = "AppCompat Demo" };
         }
 
-        private static NavigationPage CreateNavigationPage(Page page)
+        private static NavigationPage CreateNavigationPage(Page page, bool handleEvents = true)
         {
             var navigation = new NavigationPage(page);
 
-            navigation.Popped += (sender, args) => HideMenu();
-            navigation.PoppedToRoot += (sender, args) => HideMenu();
-            navigation.Pushed += (sender, args) => HideMenu();
+            if (handleEvents)
+            {
+                navigation.Popped += (sender, args) => HideMenu();
+                navigation.PoppedToRoot += (sender, args) => HideMenu();
+                navigation.Pushed += (sender, args) => HideMenu();
+            }
 
             Navigation = navigation.Navigation;
 

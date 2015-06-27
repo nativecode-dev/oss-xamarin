@@ -885,29 +885,29 @@ namespace NativeCode.Mobile.AppCompat
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0a003c
-			public static int abc_background_cache_hint_selector_material_dark = 2131361852;
+			// aapt resource value: 0x7f0a0043
+			public static int abc_background_cache_hint_selector_material_dark = 2131361859;
 			
-			// aapt resource value: 0x7f0a003d
-			public static int abc_background_cache_hint_selector_material_light = 2131361853;
+			// aapt resource value: 0x7f0a0044
+			public static int abc_background_cache_hint_selector_material_light = 2131361860;
 			
 			// aapt resource value: 0x7f0a0000
 			public static int abc_input_method_navigation_guard = 2131361792;
 			
-			// aapt resource value: 0x7f0a003e
-			public static int abc_primary_text_disable_only_material_dark = 2131361854;
+			// aapt resource value: 0x7f0a0045
+			public static int abc_primary_text_disable_only_material_dark = 2131361861;
 			
-			// aapt resource value: 0x7f0a003f
-			public static int abc_primary_text_disable_only_material_light = 2131361855;
+			// aapt resource value: 0x7f0a0046
+			public static int abc_primary_text_disable_only_material_light = 2131361862;
 			
-			// aapt resource value: 0x7f0a0040
-			public static int abc_primary_text_material_dark = 2131361856;
+			// aapt resource value: 0x7f0a0047
+			public static int abc_primary_text_material_dark = 2131361863;
 			
-			// aapt resource value: 0x7f0a0041
-			public static int abc_primary_text_material_light = 2131361857;
+			// aapt resource value: 0x7f0a0048
+			public static int abc_primary_text_material_light = 2131361864;
 			
-			// aapt resource value: 0x7f0a0042
-			public static int abc_search_url_text = 2131361858;
+			// aapt resource value: 0x7f0a0049
+			public static int abc_search_url_text = 2131361865;
 			
 			// aapt resource value: 0x7f0a0001
 			public static int abc_search_url_text_normal = 2131361793;
@@ -918,11 +918,14 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f0a0003
 			public static int abc_search_url_text_selected = 2131361795;
 			
-			// aapt resource value: 0x7f0a0043
-			public static int abc_secondary_text_material_dark = 2131361859;
+			// aapt resource value: 0x7f0a004a
+			public static int abc_secondary_text_material_dark = 2131361866;
 			
-			// aapt resource value: 0x7f0a0044
-			public static int abc_secondary_text_material_light = 2131361860;
+			// aapt resource value: 0x7f0a004b
+			public static int abc_secondary_text_material_light = 2131361867;
+			
+			// aapt resource value: 0x7f0a003c
+			public static int accent = 2131361852;
 			
 			// aapt resource value: 0x7f0a0004
 			public static int accent_material_dark = 2131361796;
@@ -965,6 +968,15 @@ namespace NativeCode.Mobile.AppCompat
 			
 			// aapt resource value: 0x7f0a0011
 			public static int button_material_light = 2131361809;
+			
+			// aapt resource value: 0x7f0a0040
+			public static int controlActivated = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public static int controlHighlight = 2131361857;
+			
+			// aapt resource value: 0x7f0a003f
+			public static int controlNormal = 2131361855;
 			
 			// aapt resource value: 0x7f0a0012
 			public static int dim_foreground_disabled_material_dark = 2131361810;
@@ -1026,6 +1038,12 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f0a0020
 			public static int material_deep_teal_500 = 2131361824;
 			
+			// aapt resource value: 0x7f0a003d
+			public static int primary = 2131361853;
+			
+			// aapt resource value: 0x7f0a003e
+			public static int primaryDark = 2131361854;
+			
 			// aapt resource value: 0x7f0a0021
 			public static int primary_dark_material_dark = 2131361825;
 			
@@ -1086,17 +1104,20 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f0a0030
 			public static int switch_thumb_disabled_material_light = 2131361840;
 			
-			// aapt resource value: 0x7f0a0045
-			public static int switch_thumb_material_dark = 2131361861;
+			// aapt resource value: 0x7f0a004c
+			public static int switch_thumb_material_dark = 2131361868;
 			
-			// aapt resource value: 0x7f0a0046
-			public static int switch_thumb_material_light = 2131361862;
+			// aapt resource value: 0x7f0a004d
+			public static int switch_thumb_material_light = 2131361869;
 			
 			// aapt resource value: 0x7f0a0031
 			public static int switch_thumb_normal_material_dark = 2131361841;
 			
 			// aapt resource value: 0x7f0a0032
 			public static int switch_thumb_normal_material_light = 2131361842;
+			
+			// aapt resource value: 0x7f0a0042
+			public static int text = 2131361858;
 			
 			static Color()
 			{
@@ -2265,6 +2286,12 @@ namespace NativeCode.Mobile.AppCompat
 			
 			// aapt resource value: 0x7f070133
 			public static int Base_AppTheme = 2131165491;
+			
+			// aapt resource value: 0x7f07013a
+			public static int Base_AppTheme_EditTextStyle = 2131165498;
+			
+			// aapt resource value: 0x7f07013b
+			public static int Base_AppTheme_EditTextStyle_Light = 2131165499;
 			
 			// aapt resource value: 0x7f070134
 			public static int Base_AppTheme_Light = 2131165492;

@@ -1,39 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Standard -->
   <style name="Base.AppTheme" parent="Theme.AppCompat">
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-    <item name="colorAccent">#8BC34A</item>
-    <item name="colorPrimary">#03A9F4</item>
-    <item name="colorPrimaryDark">#0288D1</item>
+
+    <item name="colorAccent">@color/accent</item>
+    <item name="colorPrimary">@color/primary</item>
+    <item name="colorPrimaryDark">@color/primaryDark</item>
+
+    <item name="colorControlActivated">@color/controlActivated</item>
+    <item name="colorControlHighlight">@color/controlHighlight</item>
+    <item name="colorControlNormal">@color/controlNormal</item>
+
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    <item name="editTextStyle">@style/Base.AppTheme.EditTextStyle</item>
+
     <item name="windowActionModeOverlay">true</item>
   </style>
 
+  <!-- Light -->
   <style name="Base.AppTheme.Light" parent="Theme.AppCompat.Light">
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
     <item name="colorAccent">#8BC34A</item>
     <item name="colorPrimary">#03A9F4</item>
     <item name="colorPrimaryDark">#0288D1</item>
+
+    <item name="colorControlNormal">@color/controlNormal</item>
+    <item name="colorControlActivated">@color/controlActivated</item>
+    <item name="colorControlHighlight">@color/controlHighlight</item>
+
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    <item name="editTextStyle">@style/Base.AppTheme.EditTextStyle.Light</item>
+
     <item name="windowActionModeOverlay">true</item>
   </style>
 
+  <!-- Light Dark ActionBar -->
   <style name="Base.AppTheme.Light.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
     <item name="colorAccent">#8BC34A</item>
     <item name="colorPrimary">#03A9F4</item>
     <item name="colorPrimaryDark">#0288D1</item>
+
+    <item name="colorControlNormal">@color/controlNormal</item>
+    <item name="colorControlActivated">@color/controlActivated</item>
+    <item name="colorControlHighlight">@color/controlHighlight</item>
+
     <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    <item name="editTextStyle">@style/Base.AppTheme.EditTextStyle.Light</item>
+
     <item name="windowActionModeOverlay">true</item>
   </style>
 
+  <!-- AppThemes -->
   <style name="AppTheme" parent="Base.AppTheme"></style>
   <style name="AppTheme.Light" parent="Base.AppTheme.Light"></style>
   <style name="AppTheme.Light.DarkActionBar" parent="Base.AppTheme.Light.DarkActionBar"></style>
 
+  <!-- DrawerArrow -->
   <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
     <item name="spinBars">true</item>
-    <item name="color">@android:color/white</item>
+    <item name="color">@color/accent</item>
+  </style>
+
+  <!-- EditText -->
+  <style name="Base.AppTheme.EditTextStyle" parent="Widget.AppCompat.EditText">
+    <item name="android:textColor">@color/text</item>
+    <item name="colorControlActivated">@color/controlActivated</item>
+    <item name="colorControlHighlight">@color/controlHighlight</item>
+    <item name="colorControlNormal">@color/controlNormal</item>
+  </style>
+
+  <style name="Base.AppTheme.EditTextStyle.Light" parent="Widget.AppCompat.EditText">
+    <item name="android:textColor">@color/text</item>
+    <item name="colorControlActivated">@color/controlActivated</item>
+    <item name="colorControlHighlight">@color/controlHighlight</item>
+    <item name="colorControlNormal">@color/controlNormal</item>
   </style>
 </resources>

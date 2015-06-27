@@ -6,6 +6,8 @@
     <controls:NavigationLayout.Children>
       <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternOneCommand}" Text="Master Detail Pattern One" />
       <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternTwoCommand}" Text="Master Detail Pattern Two" />
+      <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Text="Navigation Pattern" />
+      <controls:NavigationLayoutMenu Command="{Binding TabbedCommand}" Text="Tabbed Navigation" />
     </controls:NavigationLayout.Children>
   </controls:NavigationLayout>
 </ContentPage>

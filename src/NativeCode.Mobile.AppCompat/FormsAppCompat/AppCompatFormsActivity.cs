@@ -1,8 +1,10 @@
 namespace NativeCode.Mobile.AppCompat.FormsAppCompat
 {
+    using Android.Content;
     using Android.Content.Res;
     using Android.Graphics;
     using Android.OS;
+    using Android.Support.V4.App;
     using Android.Support.V7.App;
     using Android.Views;
 
@@ -14,10 +16,12 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
     using Xamarin.Forms.Platform.Android;
 
     using ActionBar = Android.App.ActionBar;
+    using ActionBarDrawerToggle = Android.Support.V7.App.ActionBarDrawerToggle;
     using ActionMode = Android.Support.V7.View.ActionMode;
 
     public abstract class AppCompatFormsActivity : FormsApplicationActivity,
                                                    ActionBarDrawerToggle.IDelegateProvider,
+                                                   TaskStackBuilder.ISupportParentable,
                                                    IAppCompatCallback,
                                                    IAppCompatDelegateProvider
     {
@@ -70,7 +74,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// <summary>
         /// Gets the drawer toggle delegate.
         /// </summary>
-        public ActionBarDrawerToggle.IDelegate DrawerToggleDelegate
+        public virtual ActionBarDrawerToggle.IDelegate DrawerToggleDelegate
         {
             get { return this.AppCompatDelegate.DrawerToggleDelegate; }
         }
@@ -89,6 +93,14 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         public override MenuInflater MenuInflater
         {
             get { return this.AppCompatDelegate.MenuInflater; }
+        }
+
+        /// <summary>
+        /// Gets the support parent activity intent.
+        /// </summary>
+        public virtual Intent SupportParentActivityIntent
+        {
+            get { return NavUtils.GetParentActivityIntent(this); }
         }
 
         /// <summary>
@@ -132,6 +144,39 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
             this.AppCompatDelegate.OnConfigurationChanged(newConfig);
         }
 
+        public virtual void OnCreateSupportNavigateUpTaskStack(TaskStackBuilder builder)
+        {
+            builder.AddParentStack(this);
+        }
+
+        public override bool OnMenuItemSelected(int featureId, IMenuItem item)
+        {
+            const int DisplayHomeAsUp = 4;
+
+            if (base.OnMenuItemSelected(featureId, item))
+            {
+                return true;
+            }
+
+            var supportActionBar = this.AppCompatDelegate.SupportActionBar;
+
+            if (item.ItemId == Resource.Id.home || supportActionBar == null)
+            {
+                return false;
+            }
+
+            if ((supportActionBar.DisplayOptions & DisplayHomeAsUp) != 0)
+            {
+                return this.OnSupportNavigateUp();
+            }
+
+            return false;
+        }
+
+        public virtual void OnPrepareSupportNavigateUpTaskStack(TaskStackBuilder builder)
+        {
+        }
+
         public virtual void OnSupportActionModeFinished(ActionMode mode)
         {
         }
@@ -140,7 +185,44 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         {
         }
 
-        public ActionMode OnWindowStartingSupportActionMode(ActionMode.ICallback callback)
+        public virtual bool OnSupportNavigateUp()
+        {
+            var parent = this.SupportParentActivityIntent;
+
+            if (parent != null)
+            {
+                if (this.SupportShouldUpRecreateTask(parent))
+                {
+                    var taskStackBuilder = TaskStackBuilder.Create(this);
+                    this.OnCreateSupportNavigateUpTaskStack(taskStackBuilder);
+                    this.OnPrepareSupportNavigateUpTaskStack(taskStackBuilder);
+                    taskStackBuilder.StartActivities();
+
+                    try
+                    {
+                        ActivityCompat.FinishAffinity(this);
+                    }
+                    catch (IllegalStateException)
+                    {
+                        // This can only happen on 4.1+, when we don't have a parent or a result set.
+                        // In that case we should just finish().
+                        this.Finish();
+                    }
+                }
+                else
+                {
+                    // This activity is part of the application's task, so simply
+                    // navigate up to the hierarchical parent activity.
+                    this.SupportNavigateUpTo(parent);
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
+        public virtual ActionMode OnWindowStartingSupportActionMode(ActionMode.ICallback callback)
         {
             return this.AppCompatDelegate.StartSupportActionMode(callback);
         }
@@ -158,6 +240,16 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         public override void SetContentView(int layoutResId)
         {
             this.AppCompatDelegate.SetContentView(layoutResId);
+        }
+
+        public virtual void SupportNavigateUpTo(Intent intent)
+        {
+            NavUtils.NavigateUpTo(this, intent);
+        }
+
+        public virtual bool SupportShouldUpRecreateTask(Intent targetIntent)
+        {
+            return NavUtils.ShouldUpRecreateTask(this, targetIntent);
         }
 
         protected override void Dispose(bool disposing)

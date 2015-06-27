@@ -312,6 +312,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Color.abc_search_url_text_selected = global::Demo.Droid.Resource.Color.abc_search_url_text_selected;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.abc_secondary_text_material_dark = global::Demo.Droid.Resource.Color.abc_secondary_text_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.abc_secondary_text_material_light = global::Demo.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.accent = global::Demo.Droid.Resource.Color.accent;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.accent_material_dark = global::Demo.Droid.Resource.Color.accent_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.accent_material_light = global::Demo.Droid.Resource.Color.accent_material_light;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.background_floating_material_dark = global::Demo.Droid.Resource.Color.background_floating_material_dark;
@@ -326,6 +327,9 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Color.bright_foreground_material_light = global::Demo.Droid.Resource.Color.bright_foreground_material_light;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.button_material_dark = global::Demo.Droid.Resource.Color.button_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.button_material_light = global::Demo.Droid.Resource.Color.button_material_light;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.controlActivated = global::Demo.Droid.Resource.Color.controlActivated;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.controlHighlight = global::Demo.Droid.Resource.Color.controlHighlight;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.controlNormal = global::Demo.Droid.Resource.Color.controlNormal;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.dim_foreground_disabled_material_dark = global::Demo.Droid.Resource.Color.dim_foreground_disabled_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.dim_foreground_disabled_material_light = global::Demo.Droid.Resource.Color.dim_foreground_disabled_material_light;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.dim_foreground_material_dark = global::Demo.Droid.Resource.Color.dim_foreground_material_dark;
@@ -346,6 +350,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Color.material_blue_grey_950 = global::Demo.Droid.Resource.Color.material_blue_grey_950;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.material_deep_teal_200 = global::Demo.Droid.Resource.Color.material_deep_teal_200;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.material_deep_teal_500 = global::Demo.Droid.Resource.Color.material_deep_teal_500;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.primary = global::Demo.Droid.Resource.Color.primary;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.primaryDark = global::Demo.Droid.Resource.Color.primaryDark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.primary_dark_material_dark = global::Demo.Droid.Resource.Color.primary_dark_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.primary_dark_material_light = global::Demo.Droid.Resource.Color.primary_dark_material_light;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.primary_material_dark = global::Demo.Droid.Resource.Color.primary_material_dark;
@@ -370,6 +376,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Color.switch_thumb_material_light = global::Demo.Droid.Resource.Color.switch_thumb_material_light;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.switch_thumb_normal_material_dark = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.switch_thumb_normal_material_light = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.text = global::Demo.Droid.Resource.Color.text;
 			global::NativeCode.Mobile.AppCompat.Resource.Dimension.abc_action_bar_content_inset_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
 			global::NativeCode.Mobile.AppCompat.Resource.Dimension.abc_action_bar_default_height_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_height_material;
 			global::NativeCode.Mobile.AppCompat.Resource.Dimension.abc_action_bar_default_padding_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_padding_material;
@@ -729,6 +736,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_Animation_AppCompat_Dialog = global::Demo.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Demo.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AppTheme = global::Demo.Droid.Resource.Style.Base_AppTheme;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AppTheme_EditTextStyle = global::Demo.Droid.Resource.Style.Base_AppTheme_EditTextStyle;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AppTheme_EditTextStyle_Light = global::Demo.Droid.Resource.Style.Base_AppTheme_EditTextStyle_Light;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AppTheme_Light = global::Demo.Droid.Resource.Style.Base_AppTheme_Light;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_AppTheme_Light_DarkActionBar = global::Demo.Droid.Resource.Style.Base_AppTheme_Light_DarkActionBar;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Demo.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
@@ -1714,6 +1723,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.abc_search_url_text_selected = global::Demo.Droid.Resource.Color.abc_search_url_text_selected;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.abc_secondary_text_material_dark = global::Demo.Droid.Resource.Color.abc_secondary_text_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.abc_secondary_text_material_light = global::Demo.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.accent = global::Demo.Droid.Resource.Color.accent;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.accent_material_dark = global::Demo.Droid.Resource.Color.accent_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.accent_material_light = global::Demo.Droid.Resource.Color.accent_material_light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.background_floating_material_dark = global::Demo.Droid.Resource.Color.background_floating_material_dark;
@@ -1732,11 +1742,15 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.cardview_light_background = global::Demo.Droid.Resource.Color.cardview_light_background;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.cardview_shadow_end_color = global::Demo.Droid.Resource.Color.cardview_shadow_end_color;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.cardview_shadow_start_color = global::Demo.Droid.Resource.Color.cardview_shadow_start_color;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.controlActivated = global::Demo.Droid.Resource.Color.controlActivated;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.controlHighlight = global::Demo.Droid.Resource.Color.controlHighlight;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.controlNormal = global::Demo.Droid.Resource.Color.controlNormal;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.dim_foreground_disabled_material_dark = global::Demo.Droid.Resource.Color.dim_foreground_disabled_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.dim_foreground_disabled_material_light = global::Demo.Droid.Resource.Color.dim_foreground_disabled_material_light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.dim_foreground_material_dark = global::Demo.Droid.Resource.Color.dim_foreground_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.dim_foreground_material_light = global::Demo.Droid.Resource.Color.dim_foreground_material_light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.error_color = global::Demo.Droid.Resource.Color.error_color;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.fab = global::Demo.Droid.Resource.Color.fab;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.fab_stroke_end_inner_color = global::Demo.Droid.Resource.Color.fab_stroke_end_inner_color;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.fab_stroke_end_outer_color = global::Demo.Droid.Resource.Color.fab_stroke_end_outer_color;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.fab_stroke_top_inner_color = global::Demo.Droid.Resource.Color.fab_stroke_top_inner_color;
@@ -1752,6 +1766,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.material_blue_grey_950 = global::Demo.Droid.Resource.Color.material_blue_grey_950;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.material_deep_teal_200 = global::Demo.Droid.Resource.Color.material_deep_teal_200;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.material_deep_teal_500 = global::Demo.Droid.Resource.Color.material_deep_teal_500;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.primary = global::Demo.Droid.Resource.Color.primary;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.primaryDark = global::Demo.Droid.Resource.Color.primaryDark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.primary_dark_material_dark = global::Demo.Droid.Resource.Color.primary_dark_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.primary_dark_material_light = global::Demo.Droid.Resource.Color.primary_dark_material_light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.primary_material_dark = global::Demo.Droid.Resource.Color.primary_material_dark;
@@ -1776,6 +1792,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.switch_thumb_material_light = global::Demo.Droid.Resource.Color.switch_thumb_material_light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.switch_thumb_normal_material_dark = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.switch_thumb_normal_material_light = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.text = global::Demo.Droid.Resource.Color.text;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Dimension.abc_action_bar_content_inset_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Dimension.abc_action_bar_default_height_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_height_material;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Dimension.abc_action_bar_default_padding_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_padding_material;
@@ -2145,6 +2162,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_Animation_AppCompat_Dialog = global::Demo.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Demo.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AppTheme = global::Demo.Droid.Resource.Style.Base_AppTheme;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AppTheme_EditTextStyle = global::Demo.Droid.Resource.Style.Base_AppTheme_EditTextStyle;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AppTheme_EditTextStyle_Light = global::Demo.Droid.Resource.Style.Base_AppTheme_EditTextStyle_Light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AppTheme_Light = global::Demo.Droid.Resource.Style.Base_AppTheme_Light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_AppTheme_Light_DarkActionBar = global::Demo.Droid.Resource.Style.Base_AppTheme_Light_DarkActionBar;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Demo.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
@@ -3746,29 +3765,29 @@ namespace Demo.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f050040
-			public const int abc_background_cache_hint_selector_material_dark = 2131034176;
+			// aapt resource value: 0x7f050047
+			public const int abc_background_cache_hint_selector_material_dark = 2131034183;
 			
-			// aapt resource value: 0x7f050041
-			public const int abc_background_cache_hint_selector_material_light = 2131034177;
+			// aapt resource value: 0x7f050048
+			public const int abc_background_cache_hint_selector_material_light = 2131034184;
 			
 			// aapt resource value: 0x7f050004
 			public const int abc_input_method_navigation_guard = 2131034116;
 			
-			// aapt resource value: 0x7f050042
-			public const int abc_primary_text_disable_only_material_dark = 2131034178;
+			// aapt resource value: 0x7f050049
+			public const int abc_primary_text_disable_only_material_dark = 2131034185;
 			
-			// aapt resource value: 0x7f050043
-			public const int abc_primary_text_disable_only_material_light = 2131034179;
+			// aapt resource value: 0x7f05004a
+			public const int abc_primary_text_disable_only_material_light = 2131034186;
 			
-			// aapt resource value: 0x7f050044
-			public const int abc_primary_text_material_dark = 2131034180;
+			// aapt resource value: 0x7f05004b
+			public const int abc_primary_text_material_dark = 2131034187;
 			
-			// aapt resource value: 0x7f050045
-			public const int abc_primary_text_material_light = 2131034181;
+			// aapt resource value: 0x7f05004c
+			public const int abc_primary_text_material_light = 2131034188;
 			
-			// aapt resource value: 0x7f050046
-			public const int abc_search_url_text = 2131034182;
+			// aapt resource value: 0x7f05004d
+			public const int abc_search_url_text = 2131034189;
 			
 			// aapt resource value: 0x7f050005
 			public const int abc_search_url_text_normal = 2131034117;
@@ -3779,11 +3798,14 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050007
 			public const int abc_search_url_text_selected = 2131034119;
 			
-			// aapt resource value: 0x7f050047
-			public const int abc_secondary_text_material_dark = 2131034183;
+			// aapt resource value: 0x7f05004e
+			public const int abc_secondary_text_material_dark = 2131034190;
 			
-			// aapt resource value: 0x7f050048
-			public const int abc_secondary_text_material_light = 2131034184;
+			// aapt resource value: 0x7f05004f
+			public const int abc_secondary_text_material_light = 2131034191;
+			
+			// aapt resource value: 0x7f050040
+			public const int accent = 2131034176;
 			
 			// aapt resource value: 0x7f050008
 			public const int accent_material_dark = 2131034120;
@@ -3839,6 +3861,15 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050003
 			public const int cardview_shadow_start_color = 2131034115;
 			
+			// aapt resource value: 0x7f050044
+			public const int controlActivated = 2131034180;
+			
+			// aapt resource value: 0x7f050045
+			public const int controlHighlight = 2131034181;
+			
+			// aapt resource value: 0x7f050043
+			public const int controlNormal = 2131034179;
+			
 			// aapt resource value: 0x7f050016
 			public const int dim_foreground_disabled_material_dark = 2131034134;
 			
@@ -3853,6 +3884,9 @@ namespace Demo.Droid
 			
 			// aapt resource value: 0x7f050037
 			public const int error_color = 2131034167;
+			
+			// aapt resource value: 0x7f050050
+			public const int fab = 2131034192;
 			
 			// aapt resource value: 0x7f050038
 			public const int fab_stroke_end_inner_color = 2131034168;
@@ -3898,6 +3932,12 @@ namespace Demo.Droid
 			
 			// aapt resource value: 0x7f050024
 			public const int material_deep_teal_500 = 2131034148;
+			
+			// aapt resource value: 0x7f050041
+			public const int primary = 2131034177;
+			
+			// aapt resource value: 0x7f050042
+			public const int primaryDark = 2131034178;
 			
 			// aapt resource value: 0x7f050025
 			public const int primary_dark_material_dark = 2131034149;
@@ -3959,17 +3999,20 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050034
 			public const int switch_thumb_disabled_material_light = 2131034164;
 			
-			// aapt resource value: 0x7f050049
-			public const int switch_thumb_material_dark = 2131034185;
+			// aapt resource value: 0x7f050051
+			public const int switch_thumb_material_dark = 2131034193;
 			
-			// aapt resource value: 0x7f05004a
-			public const int switch_thumb_material_light = 2131034186;
+			// aapt resource value: 0x7f050052
+			public const int switch_thumb_material_light = 2131034194;
 			
 			// aapt resource value: 0x7f050035
 			public const int switch_thumb_normal_material_dark = 2131034165;
 			
 			// aapt resource value: 0x7f050036
 			public const int switch_thumb_normal_material_light = 2131034166;
+			
+			// aapt resource value: 0x7f050046
+			public const int text = 2131034182;
 			
 			static Color()
 			{
@@ -5171,6 +5214,12 @@ namespace Demo.Droid
 			
 			// aapt resource value: 0x7f070136
 			public const int Base_AppTheme = 2131165494;
+			
+			// aapt resource value: 0x7f07013d
+			public const int Base_AppTheme_EditTextStyle = 2131165501;
+			
+			// aapt resource value: 0x7f07013e
+			public const int Base_AppTheme_EditTextStyle_Light = 2131165502;
 			
 			// aapt resource value: 0x7f070137
 			public const int Base_AppTheme_Light = 2131165495;

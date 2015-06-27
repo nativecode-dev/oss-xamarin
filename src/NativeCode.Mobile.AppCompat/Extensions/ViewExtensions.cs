@@ -19,6 +19,8 @@ namespace NativeCode.Mobile.AppCompat.Extensions
 
         private static readonly FieldInfo FieldRenderer;
 
+        private static BindableProperty cachedRendererProperty;
+
         static ViewExtensions()
         {
             var type = Type.GetType(PlatformType, true);
@@ -27,7 +29,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
 
         internal static BindableProperty RendererProperty
         {
-            get { return (BindableProperty)FieldRenderer.GetValue(null); }
+            get { return cachedRendererProperty ?? (cachedRendererProperty = (BindableProperty)FieldRenderer.GetValue(null)); }
         }
 
         /// <summary>
@@ -37,7 +39,15 @@ namespace NativeCode.Mobile.AppCompat.Extensions
         /// <returns>Returns a <see cref="IVisualElementRenderer" />.</returns>
         public static IVisualElementRenderer GetRenderer(this VisualElement element)
         {
-            return element.GetValue(RendererProperty) as IVisualElementRenderer ?? RendererFactory.GetRenderer(element);
+            var renderer = element.GetValue(RendererProperty) as IVisualElementRenderer;
+
+            if (renderer == null)
+            {
+                renderer = RendererFactory.GetRenderer(element);
+                element.SetValue(RendererProperty, renderer);
+            }
+
+            return renderer;
         }
 
         /// <summary>
