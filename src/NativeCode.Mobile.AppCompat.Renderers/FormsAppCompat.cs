@@ -58,6 +58,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         {
             RegisterType(typeof(Button), typeof(AppCompatButtonRenderer));
             RegisterType(typeof(Entry), typeof(AppCompatEntryRenderer));
+            RegisterType(typeof(Picker), typeof(AppCompatSpinnerRenderer));
             RegisterType(typeof(Switch), typeof(AppCompatSwitchRenderer));
         }
 

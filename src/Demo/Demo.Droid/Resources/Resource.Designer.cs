@@ -2053,6 +2053,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.showTitle = global::Demo.Droid.Resource.Id.showTitle;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.snackbar_action = global::Demo.Droid.Resource.Id.snackbar_action;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.snackbar_text = global::Demo.Droid.Resource.Id.snackbar_text;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.spinner = global::Demo.Droid.Resource.Id.spinner;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.split_action_bar = global::Demo.Droid.Resource.Id.split_action_bar;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.src_atop = global::Demo.Droid.Resource.Id.src_atop;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Id.src_in = global::Demo.Droid.Resource.Id.src_in;
@@ -2126,6 +2127,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.select_dialog_item_material = global::Demo.Droid.Resource.Layout.select_dialog_item_material;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.select_dialog_multichoice_material = global::Demo.Droid.Resource.Layout.select_dialog_multichoice_material;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.select_dialog_singlechoice_material = global::Demo.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.spinner = global::Demo.Droid.Resource.Layout.spinner;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.support_simple_spinner_dropdown_item = global::Demo.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.ApplicationName = global::Demo.Droid.Resource.String.ApplicationName;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.String.Hello = global::Demo.Droid.Resource.String.Hello;
@@ -4836,6 +4838,9 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f0b0069
 			public const int snackbar_text = 2131427433;
 			
+			// aapt resource value: 0x7f0b0078
+			public const int spinner = 2131427448;
+			
 			// aapt resource value: 0x7f0b0007
 			public const int split_action_bar = 2131427335;
 			
@@ -5082,7 +5087,10 @@ namespace Demo.Droid
 			public const int select_dialog_singlechoice_material = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int support_simple_spinner_dropdown_item = 2130903086;
+			public const int spinner = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int support_simple_spinner_dropdown_item = 2130903087;
 			
 			static Layout()
 			{
