@@ -46,6 +46,7 @@ NOTE: You must install the Renderers package into your Android project.
 `Install-Package NativeCode.Mobile.AppCompat.Controls`
 
 ### Available controls
+- (Beta) Card ([CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html))
 - FloatingButton ([FloatingActionButton](https://developer.android.com/reference/android/support/design/widget/FloatingActionButton.html))
 - (Beta) NavigationLayout ([NavigationView](https://developer.android.com/reference/android/support/design/widget/NavigationView.html))
 - IUserNotifier ([Snackbar](https://developer.android.com/reference/android/support/design/widget/Snackbar.html))
