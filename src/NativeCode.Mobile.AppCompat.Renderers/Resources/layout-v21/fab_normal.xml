@@ -3,6 +3,7 @@
 <android.support.design.widget.FloatingActionButton
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
+  backgroundTint="@color/fab"
   android:id="@+id/fab_normal"
   android:layout_height="wrap_content"
   android:layout_margin="@dimen/fab_margin"

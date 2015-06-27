@@ -16,6 +16,8 @@
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            this.EnableCoordinatorLayout = true;
+
             base.OnCreate(savedInstanceState);
 
             Forms.Init(this, savedInstanceState);
