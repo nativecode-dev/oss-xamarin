@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo.Views.NestNavigationView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
+  <StackLayout>
+    <Button Command="{Binding PushCommand}" Text="Push" />
+    <Button Command="{Binding PopCommand}" Text="Pop" />
+    <BoxView HeightRequest="1" Color="Black" />
+    <Button Command="{Binding RootCommand}" Text="Root" />
+  </StackLayout>
+</ContentPage>

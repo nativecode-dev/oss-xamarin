@@ -13,8 +13,9 @@
       </ContentView>
     </controls:NavigationLayout.HeaderView>
     <controls:NavigationLayout.Children>
-      <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Text="{Binding HomeText}" />
-      <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Text="{Binding LoremIpsumText}" />
+      <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Text="Home" />
+      <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Text="Lorem Ipsum" />
+      <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Text="Nested Navigation" />
     </controls:NavigationLayout.Children>
   </controls:NavigationLayout>
 </ContentPage>

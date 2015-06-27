@@ -13,10 +13,8 @@
         public MenuViewModel()
         {
             this.HomeCommand = new Command(App.ShowChooser);
-            this.HomeText = "Home";
-
             this.LoremIpsumCommand = new Command(async () => await App.Navigation.PushAsync(new LoremIpsumView()));
-            this.LoremIpsumText = "Lorem Ipsum";
+            this.NavigationCommand = new Command(async () => await App.Navigation.PushAsync(new NestNavigationView()));
 
             this.Title = "Menu";
         }
@@ -24,11 +22,10 @@
         [DoNotNotify]
         public ICommand HomeCommand { get; private set; }
 
-        public string HomeText { get; set; }
-
         [DoNotNotify]
         public ICommand LoremIpsumCommand { get; private set; }
 
-        public string LoremIpsumText { get; set; }
+        [DoNotNotify]
+        public ICommand NavigationCommand { get; private set; }
     }
 }
