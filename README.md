@@ -76,7 +76,7 @@ public class MainActivity : AppCompatFormsApplicationActivity
 ### Current Renderers
 - Button ([AppCompatButton](http://developer.android.com/reference/android/support/v7/widget/AppCompatButton.html))
 - Entry ([AppCompatEditText](http://developer.android.com/reference/android/support/v7/widget/AppCompatEditText.html))
-- Picker ([AppCompatSpinner])(https://developer.android.com/reference/android/support/v7/widget/AppCompatSpinner.html)
+- Picker ([AppCompatSpinner](https://developer.android.com/reference/android/support/v7/widget/AppCompatSpinner.html))
 - Switch ([SwitchCompat](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html))
 - MasterDetailPage (AppCompatMasterDetailRenderer)
 
