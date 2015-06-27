@@ -5,6 +5,19 @@
              x:Class="Demo.Views.MainView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
   <ScrollView>
     <StackLayout Padding="20">
+      <Picker>
+        <Picker.Items>
+          <x:String>Item 1</x:String>
+          <x:String>Item 2</x:String>
+          <x:String>Item 3</x:String>
+          <x:String>Item 4</x:String>
+          <x:String>Item 5</x:String>
+          <x:String>Item 6</x:String>
+          <x:String>Item 7</x:String>
+          <x:String>Item 8</x:String>
+          <x:String>Item 9</x:String>
+        </Picker.Items>
+      </Picker>
       <controls:Card Padding="40" Radius="20">
         <controls:Card.Content>
           <StackLayout>

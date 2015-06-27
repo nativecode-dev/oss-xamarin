@@ -1986,6 +1986,9 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			// aapt resource value: 0x7f0b0069
 			public static int snackbar_text = 2131427433;
 			
+			// aapt resource value: 0x7f0b0078
+			public static int spinner = 2131427448;
+			
 			// aapt resource value: 0x7f0b0007
 			public static int split_action_bar = 2131427335;
 			
@@ -2232,7 +2235,10 @@ namespace NativeCode.Mobile.AppCompat.Renderers
 			public static int select_dialog_singlechoice_material = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public static int support_simple_spinner_dropdown_item = 2130903086;
+			public static int spinner = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public static int support_simple_spinner_dropdown_item = 2130903087;
 			
 			static Layout()
 			{

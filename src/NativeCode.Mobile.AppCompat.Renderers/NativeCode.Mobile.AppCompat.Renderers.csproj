@@ -87,6 +87,7 @@
     <Compile Include="Renderers\AppCompatButtonRenderer.cs" />
     <Compile Include="Renderers\AppCompatEntryRenderer.cs" />
     <Compile Include="Renderers\AppCompatMasterDetailRenderer.cs" />
+    <Compile Include="Renderers\AppCompatSpinnerRenderer.cs" />
     <Compile Include="Renderers\AppCompatSwitchRenderer.cs" />
     <Compile Include="Renderers\CardRenderer.cs" />
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
@@ -142,6 +143,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\color\fab.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spinner.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.4.2.6359\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
