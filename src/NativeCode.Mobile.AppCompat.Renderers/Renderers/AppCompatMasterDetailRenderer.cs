@@ -77,7 +77,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 this.actionBarDrawerToggle.DrawerIndicatorEnabled = false;
                 this.ActionBar.SetDisplayHomeAsUpEnabled(true);
             }
-            else if (!this.actionBarDrawerToggle.DrawerIndicatorEnabled)
+            else if (!navigable && !this.actionBarDrawerToggle.DrawerIndicatorEnabled)
             {
                 this.actionBarDrawerToggle.DrawerIndicatorEnabled = true;
             }
@@ -90,6 +90,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             if (navigation != null)
             {
                 navigation.Popped += this.HandleNavigationPopped;
+                navigation.PoppedToRoot += this.HandleNavigationPoppedToRoot;
                 navigation.Pushed += this.HandleNavigationPushed;
             }
         }
@@ -101,6 +102,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             if (navigation != null)
             {
                 navigation.Popped -= this.HandleNavigationPopped;
+                navigation.PoppedToRoot -= this.HandleNavigationPoppedToRoot;
                 navigation.Pushed -= this.HandleNavigationPushed;
             }
         }
@@ -125,6 +127,11 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             var canNavigateBack = ((NavigationPage)sender).Navigation.NavigationStack.Count > 1;
             this.UpdateHomeAsUpIndicator(canNavigateBack);
+        }
+
+        private void HandleNavigationPoppedToRoot(object sender, NavigationEventArgs e)
+        {
+            this.UpdateHomeAsUpIndicator(false);
         }
 
         private void HandleNavigationPushed(object sender, NavigationEventArgs e)
