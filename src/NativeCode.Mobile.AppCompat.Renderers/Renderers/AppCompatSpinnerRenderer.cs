@@ -60,6 +60,11 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             this.Adapter.Clear();
 
+            if (this.Element.Items == null)
+            {
+                return;
+            }
+
             foreach (var item in this.Element.Items)
             {
                 this.Adapter.Add(item);
