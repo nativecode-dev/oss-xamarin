@@ -377,6 +377,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Color.switch_thumb_normal_material_dark = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_dark;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.switch_thumb_normal_material_light = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_light;
 			global::NativeCode.Mobile.AppCompat.Resource.Color.text = global::Demo.Droid.Resource.Color.text;
+			global::NativeCode.Mobile.AppCompat.Resource.Color.textLight = global::Demo.Droid.Resource.Color.textLight;
 			global::NativeCode.Mobile.AppCompat.Resource.Dimension.abc_action_bar_content_inset_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
 			global::NativeCode.Mobile.AppCompat.Resource.Dimension.abc_action_bar_default_height_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_height_material;
 			global::NativeCode.Mobile.AppCompat.Resource.Dimension.abc_action_bar_default_padding_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_padding_material;
@@ -1793,6 +1794,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.switch_thumb_normal_material_dark = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_dark;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.switch_thumb_normal_material_light = global::Demo.Droid.Resource.Color.switch_thumb_normal_material_light;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.text = global::Demo.Droid.Resource.Color.text;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Color.textLight = global::Demo.Droid.Resource.Color.textLight;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Dimension.abc_action_bar_content_inset_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Dimension.abc_action_bar_default_height_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_height_material;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Dimension.abc_action_bar_default_padding_material = global::Demo.Droid.Resource.Dimension.abc_action_bar_default_padding_material;
@@ -3767,29 +3769,29 @@ namespace Demo.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f050047
-			public const int abc_background_cache_hint_selector_material_dark = 2131034183;
-			
 			// aapt resource value: 0x7f050048
-			public const int abc_background_cache_hint_selector_material_light = 2131034184;
+			public const int abc_background_cache_hint_selector_material_dark = 2131034184;
+			
+			// aapt resource value: 0x7f050049
+			public const int abc_background_cache_hint_selector_material_light = 2131034185;
 			
 			// aapt resource value: 0x7f050004
 			public const int abc_input_method_navigation_guard = 2131034116;
 			
-			// aapt resource value: 0x7f050049
-			public const int abc_primary_text_disable_only_material_dark = 2131034185;
-			
 			// aapt resource value: 0x7f05004a
-			public const int abc_primary_text_disable_only_material_light = 2131034186;
+			public const int abc_primary_text_disable_only_material_dark = 2131034186;
 			
 			// aapt resource value: 0x7f05004b
-			public const int abc_primary_text_material_dark = 2131034187;
+			public const int abc_primary_text_disable_only_material_light = 2131034187;
 			
 			// aapt resource value: 0x7f05004c
-			public const int abc_primary_text_material_light = 2131034188;
+			public const int abc_primary_text_material_dark = 2131034188;
 			
 			// aapt resource value: 0x7f05004d
-			public const int abc_search_url_text = 2131034189;
+			public const int abc_primary_text_material_light = 2131034189;
+			
+			// aapt resource value: 0x7f05004e
+			public const int abc_search_url_text = 2131034190;
 			
 			// aapt resource value: 0x7f050005
 			public const int abc_search_url_text_normal = 2131034117;
@@ -3800,11 +3802,11 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050007
 			public const int abc_search_url_text_selected = 2131034119;
 			
-			// aapt resource value: 0x7f05004e
-			public const int abc_secondary_text_material_dark = 2131034190;
-			
 			// aapt resource value: 0x7f05004f
-			public const int abc_secondary_text_material_light = 2131034191;
+			public const int abc_secondary_text_material_dark = 2131034191;
+			
+			// aapt resource value: 0x7f050050
+			public const int abc_secondary_text_material_light = 2131034192;
 			
 			// aapt resource value: 0x7f050040
 			public const int accent = 2131034176;
@@ -3887,8 +3889,8 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050037
 			public const int error_color = 2131034167;
 			
-			// aapt resource value: 0x7f050050
-			public const int fab = 2131034192;
+			// aapt resource value: 0x7f050051
+			public const int fab = 2131034193;
 			
 			// aapt resource value: 0x7f050038
 			public const int fab_stroke_end_inner_color = 2131034168;
@@ -4001,11 +4003,11 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f050034
 			public const int switch_thumb_disabled_material_light = 2131034164;
 			
-			// aapt resource value: 0x7f050051
-			public const int switch_thumb_material_dark = 2131034193;
-			
 			// aapt resource value: 0x7f050052
-			public const int switch_thumb_material_light = 2131034194;
+			public const int switch_thumb_material_dark = 2131034194;
+			
+			// aapt resource value: 0x7f050053
+			public const int switch_thumb_material_light = 2131034195;
 			
 			// aapt resource value: 0x7f050035
 			public const int switch_thumb_normal_material_dark = 2131034165;
@@ -4015,6 +4017,9 @@ namespace Demo.Droid
 			
 			// aapt resource value: 0x7f050046
 			public const int text = 2131034182;
+			
+			// aapt resource value: 0x7f050047
+			public const int textLight = 2131034183;
 			
 			static Color()
 			{
