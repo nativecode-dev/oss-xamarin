@@ -4527,11 +4527,14 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f02003c
 			public const int launcher = 2130837564;
 			
-			// aapt resource value: 0x7f02003e
-			public const int notification_template_icon_bg = 2130837566;
-			
 			// aapt resource value: 0x7f02003d
-			public const int snackbar_background = 2130837565;
+			public const int navbackground = 2130837565;
+			
+			// aapt resource value: 0x7f02003f
+			public const int notification_template_icon_bg = 2130837567;
+			
+			// aapt resource value: 0x7f02003e
+			public const int snackbar_background = 2130837566;
 			
 			static Drawable()
 			{
