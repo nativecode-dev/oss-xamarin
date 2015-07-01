@@ -65,10 +65,10 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
         private void UpdateHeaderView()
         {
-            if (this.Element.HeaderView != null)
+            if (this.Element.HeaderView != null && this.Element.HeaderView.Content != null)
             {
                 // TODO: It's adding it, but it never shows up in the XML in monitor.
-                this.Control.AddHeaderView(this.Element.HeaderView.GetNativeView());
+                this.Control.AddHeaderView(this.Element.HeaderView.Content.GetNativeView());
             }
         }
 
