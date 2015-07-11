@@ -67,6 +67,9 @@
     <Compile Include="Views\NestNavigationView.xaml.cs">
       <DependentUpon>NestNavigationView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shared\MenuHeaderView.xaml.cs">
+      <DependentUpon>MenuHeaderView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="PropertyChanged, Version=1.50.1.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd">
@@ -124,6 +127,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\NestNavigationView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Shared\MenuHeaderView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

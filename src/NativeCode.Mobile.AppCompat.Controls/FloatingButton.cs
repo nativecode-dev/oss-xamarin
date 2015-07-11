@@ -14,7 +14,9 @@
             default(FloatingButtonSize),
             BindingMode.OneWayToSource);
 
-        public static readonly BindableProperty ColorProperty = BindableProperty.Create<FloatingButton, Color>(x => x.Color, default(Color));
+        public static readonly BindableProperty ColorProperty = BindableProperty.Create<FloatingButton, Color>(x => x.Color, Color.Accent);
+
+        public static readonly BindableProperty ColorPressedProperty = BindableProperty.Create<FloatingButton, Color>(x => x.ColorPressed, Color.Accent);
 
         public static readonly BindableProperty CommandProperty = BindableProperty.Create<FloatingButton, ICommand>(x => x.Command, default(ICommand));
 
@@ -40,6 +42,12 @@
         {
             get { return (Color)this.GetValue(ColorProperty); }
             set { this.SetValue(ColorProperty, value); }
+        }
+
+        public Color ColorPressed
+        {
+            get { return (Color)this.GetValue(ColorPressedProperty); }
+            set { this.SetValue(ColorPressedProperty, value); }
         }
 
         /// <summary>

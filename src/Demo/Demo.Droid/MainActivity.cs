@@ -9,7 +9,7 @@
 
     using Xamarin.Forms;
 
-    [Activity(ConfigurationChanges = AppConfig, MainLauncher = true, Theme = CompatTheme)]
+    [Activity(ConfigurationChanges = AppConfig, MainLauncher = true, Theme = CompatThemeLightDarkActionBar)]
     public class MainActivity : AppCompatFormsApplicationActivity
     {
         private const ConfigChanges AppConfig = ConfigChanges.Orientation | ConfigChanges.ScreenSize;

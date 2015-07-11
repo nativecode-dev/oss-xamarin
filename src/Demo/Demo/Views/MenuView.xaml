@@ -2,30 +2,20 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
+             xmlns:shared="clr-namespace:Demo.Views.Shared;assembly=Demo"
              x:Class="Demo.Views.MenuView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
   <StackLayout>
 
     <controls:NavigationLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
       <controls:NavigationLayout.HeaderView>
-        <ContentView>
-          <RelativeLayout x:Name="Header">
-            <Image x:Name="HeaderImage" Source="navbackground" IsOpaque="True" Opacity="0.75" />
-            <StackLayout
-              RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=HeaderImage, Constant=0, Factor=1, Property=Height}"
-              RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Constant=0, Factor=0, Property=Y}"
-              Padding="10">
-              <Image Source="launcher" HeightRequest="64" WidthRequest="64" HorizontalOptions="Start" VerticalOptions="Start" />
-              <Label HorizontalOptions="Start" VerticalOptions="EndAndExpand" Text="test@testable.com" />
-            </StackLayout>
-          </RelativeLayout>
-        </ContentView>
+        <shared:MenuHeaderView />
       </controls:NavigationLayout.HeaderView>
 
       <controls:NavigationLayout.Children>
-        <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Text="Home" />
-        <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Text="Lorem Ipsum" />
-        <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Text="Nested Navigation" />
+        <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Group="0" Text="Home" />
+        <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Group="1" Text="Lorem Ipsum" />
+        <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Group="1" Text="Nested Navigation" />
       </controls:NavigationLayout.Children>
 
     </controls:NavigationLayout>

@@ -7,6 +7,7 @@
     <IncludeExtensions>
     </IncludeExtensions>
     <IgnoreExtensions>
+      <IgnoreExtension>.xaml</IgnoreExtension>
     </IgnoreExtensions>
     <IgnoreFiles>
     </IgnoreFiles>

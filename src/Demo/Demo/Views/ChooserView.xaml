@@ -5,10 +5,10 @@
              x:Class="Demo.Views.ChooserView">
   <controls:NavigationLayout>
     <controls:NavigationLayout.Children>
-      <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternOneCommand}" Text="Master Detail Pattern One" />
-      <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternTwoCommand}" Text="Master Detail Pattern Two" />
-      <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Text="Navigation Pattern" />
-      <controls:NavigationLayoutMenu Command="{Binding TabbedCommand}" Text="Tabbed Navigation" />
+      <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Group="0" Text="Navigation Pattern" />
+      <controls:NavigationLayoutMenu Command="{Binding TabbedCommand}" Group="0" Text="Tabbed Navigation" />
+      <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternOneCommand}" Group="1" Text="Master Detail Pattern One" />
+      <controls:NavigationLayoutMenu Command="{Binding MasterDetailPatternTwoCommand}" Group="1" Text="Master Detail Pattern Two" />
     </controls:NavigationLayout.Children>
   </controls:NavigationLayout>
 </ContentPage>

@@ -60,7 +60,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </para></remarks>
         public override ActionBar ActionBar
         {
-            get { return this.actionBarAdapter ?? this.disposables.Add(this.actionBarAdapter = new ActionBarAdapter(this)); }
+            get
+            {
+                return this.actionBarAdapter ?? this.disposables.Add(this.actionBarAdapter = new ActionBarAdapter(this));
+            }
         }
 
         /// <summary>
@@ -68,7 +71,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public AppCompatDelegate AppCompatDelegate
         {
-            get { return this.appCompatDelegate ?? this.disposables.Add(this.appCompatDelegate = AppCompatDelegate.Create(this, this)); }
+            get
+            {
+                return this.appCompatDelegate ?? this.disposables.Add(this.appCompatDelegate = AppCompatDelegate.Create(this, this));
+            }
         }
 
         /// <summary>
@@ -76,7 +82,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public virtual ActionBarDrawerToggle.IDelegate DrawerToggleDelegate
         {
-            get { return this.AppCompatDelegate.DrawerToggleDelegate; }
+            get
+            {
+                return this.AppCompatDelegate.DrawerToggleDelegate;
+            }
         }
 
         /// <summary>
@@ -92,7 +101,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </para></remarks>
         public override MenuInflater MenuInflater
         {
-            get { return this.AppCompatDelegate.MenuInflater; }
+            get
+            {
+                return this.AppCompatDelegate.MenuInflater;
+            }
         }
 
         /// <summary>
@@ -100,7 +112,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public virtual Intent SupportParentActivityIntent
         {
-            get { return NavUtils.GetParentActivityIntent(this); }
+            get
+            {
+                return NavUtils.GetParentActivityIntent(this);
+            }
         }
 
         /// <summary>
@@ -117,7 +132,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </para></remarks>
         public override Window Window
         {
-            get { return this.windowAdapter ?? this.disposables.Add(this.windowAdapter = new WindowAdapter(base.Window, this)); }
+            get
+            {
+                return this.windowAdapter ?? this.disposables.Add(this.windowAdapter = new WindowAdapter(base.Window, this));
+            }
         }
 
         /// <summary>
@@ -125,7 +143,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         protected DisposableContainer Disposables
         {
-            get { return this.disposables; }
+            get
+            {
+                return this.disposables;
+            }
         }
 
         public override void AddContentView(View view, ViewGroup.LayoutParams @params)

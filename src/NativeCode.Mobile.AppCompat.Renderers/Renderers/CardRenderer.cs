@@ -2,7 +2,6 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 {
     using System.ComponentModel;
 
-    using Android.OS;
     using Android.Support.V7.Widget;
     using Android.Widget;
 
@@ -36,14 +35,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
             if (this.Control == null)
             {
-                var lollipop = Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop;
                 var context = this.Context.GetAppCompatThemedContext();
-                var control = new CardView(context) { PreventCornerOverlap = !lollipop, UseCompatPadding = lollipop };
-
-                var @params = new LinearLayout.LayoutParams(LayoutParamsHelper.MatchParent, LayoutParamsHelper.WrapContent);
-                var elevation = (int)control.CardElevation;
-                @params.SetMargins(elevation, elevation, elevation, elevation);
-                control.LayoutParameters = @params;
+                var control = new CardView(context);
 
                 if (this.Element.Command != null)
                 {
@@ -55,6 +48,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
                 this.UpdateCardBackgroundColor();
                 this.UpdateContentPadding();
+                this.UpdateElevation();
                 this.UpdateRadius();
             }
         }
@@ -70,6 +64,10 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             else if (e.PropertyName == Xamarin.Forms.Layout.PaddingProperty.PropertyName)
             {
                 this.UpdateContentPadding();
+            }
+            else if (e.PropertyName == Card.ElevationProperty.PropertyName)
+            {
+                this.UpdateElevation();
             }
             else if (e.PropertyName == Card.RadiusProperty.PropertyName)
             {
@@ -90,6 +88,15 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
             var top = (int)this.Element.Padding.Top;
 
             this.Control.SetContentPadding(left, top, right, bottom);
+        }
+
+        private void UpdateElevation()
+        {
+            this.Control.CardElevation = (float)this.Element.Elevation;
+            var @params = new LinearLayout.LayoutParams(LayoutParamsHelper.MatchParent, LayoutParamsHelper.WrapContent);
+            var elevation = (int)this.Control.CardElevation;
+            @params.SetMargins(elevation, elevation, elevation, elevation);
+            this.Control.LayoutParameters = @params;
         }
 
         private void UpdateRadius()

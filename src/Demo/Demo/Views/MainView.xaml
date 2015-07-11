@@ -2,7 +2,8 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
-             x:Class="Demo.Views.MainView" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
+             xmlns:shared="clr-namespace:Demo.Views.Shared;assembly=Demo"
+             x:Class="Demo.Views.MainView" BackgroundColor="Gray" IsBusy="{Binding IsBusy}" Title="{Binding Title}">
   <ScrollView>
     <StackLayout Padding="20">
       <Picker>
@@ -18,33 +19,36 @@
           <x:String>Item 9</x:String>
         </Picker.Items>
       </Picker>
-      <controls:Card Padding="40" Radius="20">
-        <controls:Card.Content>
-          <StackLayout>
-            <Button Command="{Binding ShowSnackBar}" Text="Hit me!" />
-            <StackLayout Orientation="Horizontal">
-              <Label Text="Switch On/Off" />
-              <Switch />
-            </StackLayout>
-            <StackLayout Orientation="Horizontal">
-              <Label Text="Entry Field" />
-              <Entry HorizontalOptions="FillAndExpand" />
-            </StackLayout>
-          </StackLayout>
-        </controls:Card.Content>
-      </controls:Card>
-      <controls:Card>
-        <controls:Card.Content>
+      <Label Text="Elevation" />
+      <Slider Minimum="0" Maximum="5"  Value="{Binding Elevation}" />
+      <Label Text="Radius" />
+      <Slider Minimum="0" Maximum="20" Value="{Binding Radius}" />
+      <Label Text="Padding" />
+      <Slider Minimum="0" Maximum="20" Value="{Binding Padding}" />
+      <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+        <StackLayout>
+          <Button Command="{Binding ShowSnackBar}" Text="Hit me!" />
           <StackLayout Orientation="Horizontal">
-            <controls:FloatingButton ButtonSize="Mini" Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
-            <controls:FloatingButton ButtonSize="Normal" Color="Green" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
+            <Label Text="Switch On/Off" />
+            <Switch />
           </StackLayout>
-        </controls:Card.Content>
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Entry Field" />
+            <Entry HorizontalOptions="FillAndExpand" />
+          </StackLayout>
+        </StackLayout>
       </controls:Card>
-      <controls:Card Command="{Binding ShowSnackBar}">
-        <controls:Card.Content>
-          <Label Text="Clickable CardView" />
-        </controls:Card.Content>
+      <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+        <StackLayout Orientation="Horizontal">
+          <controls:FloatingButton ButtonSize="Mini" Color="Black" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
+          <controls:FloatingButton ButtonSize="Normal" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
+        </StackLayout>
+      </controls:Card>
+      <controls:Card BackgroundColor="White" Command="{Binding ShowSnackBar}" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+        <Label Text="Clickable CardView" />
+      </controls:Card>
+      <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+        <shared:MenuHeaderView />
       </controls:Card>
     </StackLayout>
   </ScrollView>

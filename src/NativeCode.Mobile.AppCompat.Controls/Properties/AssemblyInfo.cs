@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using System.Resources;
+using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("NativeCode Development")]
 [assembly: AssemblyConfiguration("")]
@@ -12,4 +13,5 @@ using System.Resources;
 [assembly: AssemblyTitle("NativeCode.Mobile.AppCompat.Controls")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyVersion("1.0.0.0")]
+[assembly: ComVisible(false)]
 [assembly: NeutralResourcesLanguage("en")]

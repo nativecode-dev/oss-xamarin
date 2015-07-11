@@ -1,16 +1,18 @@
 ﻿namespace NativeCode.Mobile.AppCompat.Controls
 {
+    using NativeCode.Mobile.AppCompat.Controls.Platforms;
+
     using Xamarin.Forms;
 
     public class NavigationLayout : Layout<NavigationLayoutMenu>
     {
-        public static readonly BindableProperty HeaderViewProperty = BindableProperty.Create<NavigationLayout, ContentView>(
+        public static readonly BindableProperty HeaderViewProperty = BindableProperty.Create<NavigationLayout, NavigationLayoutHeader>(
             x => x.HeaderView,
-            default(ContentView));
+            default(NavigationLayoutHeader));
 
-        public ContentView HeaderView
+        public NavigationLayoutHeader HeaderView
         {
-            get { return (ContentView)this.GetValue(HeaderViewProperty); }
+            get { return (NavigationLayoutHeader)this.GetValue(HeaderViewProperty); }
             set { this.SetValue(HeaderViewProperty, value); }
         }
 
