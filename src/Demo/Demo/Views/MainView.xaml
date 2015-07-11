@@ -40,8 +40,8 @@
       </controls:Card>
       <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <StackLayout Orientation="Horizontal">
-          <controls:FloatingButton ButtonSize="Mini" Color="Black" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
-          <controls:FloatingButton ButtonSize="Normal" Command="{Binding FloatingButtonCommand}" Icon="launcher" />
+          <controls:FloatingButton ButtonSize="Mini" Color="Black" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
+          <controls:FloatingButton ButtonSize="Normal" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
         </StackLayout>
       </controls:Card>
       <controls:Card BackgroundColor="White" Command="{Binding ShowSnackBar}" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
