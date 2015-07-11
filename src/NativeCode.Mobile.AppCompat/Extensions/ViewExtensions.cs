@@ -21,12 +21,18 @@ namespace NativeCode.Mobile.AppCompat.Extensions
 
         private static BindableProperty cachedRendererProperty;
 
+        /// <summary>
+        /// Initializes static members of the <see cref="ViewExtensions"/> class.
+        /// </summary>
         static ViewExtensions()
         {
             var type = Type.GetType(PlatformType, true);
             FieldRenderer = type.GetField(PlatformRenderer, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static);
         }
 
+        /// <summary>
+        /// Gets the renderer property.
+        /// </summary>
         internal static BindableProperty RendererProperty
         {
             get { return cachedRendererProperty ?? (cachedRendererProperty = (BindableProperty)FieldRenderer.GetValue(null)); }
@@ -64,7 +70,7 @@ namespace NativeCode.Mobile.AppCompat.Extensions
                 throw new InvalidOperationException("Could not get renderer for bindable object.");
             }
 
-            return renderer.ViewGroup.RootView;
+            return renderer.ViewGroup;
         }
     }
 }

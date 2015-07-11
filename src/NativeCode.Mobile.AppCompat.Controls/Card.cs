@@ -12,11 +12,13 @@
             x => x.CommandParameter,
             default(object));
 
-        public static readonly BindableProperty RadiusProperty = BindableProperty.Create<Card, double>(x => x.Radius, 20.0d);
+        public static readonly BindableProperty ElevationProperty = BindableProperty.Create<Card, double>(x => x.Elevation, default(double));
+
+        public static readonly BindableProperty RadiusProperty = BindableProperty.Create<Card, double>(x => x.Radius, 5.0d);
 
         public Card()
         {
-            this.Padding = new Thickness(20);
+            this.Padding = new Thickness(5);
         }
 
         /// <summary>
@@ -35,6 +37,12 @@
         {
             get { return this.GetValue(CommandParameterProperty); }
             set { this.SetValue(CommandParameterProperty, value); }
+        }
+
+        public double Elevation
+        {
+            get { return (double)this.GetValue(ElevationProperty); }
+            set { this.SetValue(ElevationProperty, value); }
         }
 
         public double Radius

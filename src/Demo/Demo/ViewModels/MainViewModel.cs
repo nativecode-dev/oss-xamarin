@@ -2,7 +2,6 @@
 {
     using System.Windows.Input;
 
-    using NativeCode.Mobile.AppCompat.Controls;
     using NativeCode.Mobile.AppCompat.Controls.Platforms;
 
     using PropertyChanged;
@@ -22,6 +21,12 @@
             this.ShowSnackBar = new Command(this.HandleShowSnackBar);
             this.Title = "Main";
         }
+
+        public double Elevation { get; set; }
+
+        public double Radius { get; set; }
+
+        public int Padding { get; set; }
 
         [DoNotNotify]
         public ICommand FloatingButtonCommand { get; private set; }
