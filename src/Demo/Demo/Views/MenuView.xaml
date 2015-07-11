@@ -24,8 +24,8 @@
 
       <controls:NavigationLayout.Children>
         <controls:NavigationLayoutMenu Command="{Binding HomeCommand}" Text="Home" />
-        <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Text="Lorem Ipsum" />
-        <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Text="Nested Navigation" />
+        <controls:NavigationLayoutMenu Command="{Binding LoremIpsumCommand}" Group="2" Text="Lorem Ipsum" />
+        <controls:NavigationLayoutMenu Command="{Binding NavigationCommand}" Group="2" Text="Nested Navigation" />
       </controls:NavigationLayout.Children>
 
     </controls:NavigationLayout>

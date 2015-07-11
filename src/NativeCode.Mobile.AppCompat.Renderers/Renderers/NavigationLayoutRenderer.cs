@@ -75,12 +75,12 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         private void UpdateMenuItems()
         {
             this.mappings.Clear();
+            this.Control.Menu.Clear();
 
             for (var index = 0; index < this.Element.Children.Count; index++)
             {
-                // NOTE: Not sure if it's just my local machine or not, but this doesn't seem to resolve until compile-time.
-                var menu = (NavigationLayoutMenu)this.Element.Children[index];
-                var item = this.Control.Menu.Add(0, index, index, menu.Text);
+                var menu = this.Element.Children[index];
+                var item = this.Control.Menu.Add(menu.Group, index, index, menu.Text);
 
                 if (menu.Icon != null)
                 {

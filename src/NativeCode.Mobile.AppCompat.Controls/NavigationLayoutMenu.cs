@@ -8,9 +8,9 @@
     {
         public static readonly BindableProperty CommandProperty = BindableProperty.Create<NavigationLayoutMenu, ICommand>(x => x.Command, default(ICommand));
 
-        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create<NavigationLayoutMenu, object>(
-            x => x.CommandParameter,
-            default(object));
+        public static readonly BindableProperty CommandParameterProperty = BindableProperty.Create<NavigationLayoutMenu, object>(x => x.CommandParameter, default(object));
+
+        public static readonly BindableProperty GroupProperty = BindableProperty.Create<NavigationLayoutMenu, int>(x => x.Group, default(int));
 
         public static readonly BindableProperty IconProperty = BindableProperty.Create<NavigationLayoutMenu, ImageSource>(x => x.Icon, default(ImageSource));
 
@@ -26,6 +26,12 @@
         {
             get { return this.GetValue(CommandParameterProperty); }
             set { this.SetValue(CommandParameterProperty, value); }
+        }
+
+        public int Group
+        {
+            get { return (int)this.GetValue(GroupProperty); }
+            set { this.SetValue(GroupProperty, value); }
         }
 
         public ImageSource Icon
