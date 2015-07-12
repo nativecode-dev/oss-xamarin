@@ -89,7 +89,6 @@
     <Compile Include="Renderers\Controls\AppCompatEntryEditText.cs" />
     <Compile Include="FormsAppCompat.cs" />
     <Compile Include="Renderers\FloatingButtonRenderer.cs" />
-    <Compile Include="Renderers\NavigationLayoutHeaderRenderer.cs" />
     <Compile Include="Renderers\NavigationLayoutRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

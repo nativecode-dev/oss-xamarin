@@ -3,16 +3,13 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using System.Collections.Generic;
     using System.Linq;
 
-    using Android.Content;
     using Android.Support.Design.Widget;
     using Android.Views;
 
     using NativeCode.Mobile.AppCompat.Controls;
     using NativeCode.Mobile.AppCompat.Extensions;
     using NativeCode.Mobile.AppCompat.Renderers.Extensions;
-    using NativeCode.Mobile.AppCompat.Renderers.Helpers;
 
-    using Xamarin.Forms;
     using Xamarin.Forms.Platform.Android;
 
     public class NavigationLayoutRenderer : ViewRenderer<NavigationLayout, NavigationView>, NavigationView.IOnNavigationItemSelectedListener
@@ -74,12 +71,14 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
 
         private void UpdateHeaderView()
         {
-            if (this.Element.HeaderView != null)
+            if (this.Element.HeaderView == null)
             {
-                // TODO: It's adding it, but it never shows up in the XML in monitor.
-                var renderer = this.Element.HeaderView.GetRenderer();
-                this.Control.AddHeaderView(new HeaderContainer(this.Context, renderer));
+                return;
             }
+
+            // TODO: It's adding it, but it never shows up in the XML in monitor.
+            var header = this.Element.HeaderView.GetNativeView();
+            this.Control.AddHeaderView(header);
         }
 
         private void UpdateMenuItems()
@@ -97,50 +96,6 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
                 }
 
                 this.mappings.Add(item, menu);
-            }
-        }
-
-        internal class HeaderContainer : ViewGroup
-        {
-            private readonly IVisualElementRenderer child;
-
-            public HeaderContainer(Context context, IVisualElementRenderer child)
-                : base(context)
-            {
-                this.child = child;
-            }
-
-            protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec)
-            {
-                if (this.child == null)
-                {
-                    this.SetMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
-                }
-                else
-                {
-                    var element = this.child.Element;
-                    var context = this.Context;
-                    var width = (int)context.FromPixels(MeasureSpecFactory.GetSize(widthMeasureSpec));
-                    var size = this.child.Element.GetSizeRequest(width, double.PositiveInfinity);
-
-                    this.child.Element.Layout(new Rectangle(0.0, 0.0, width, size.Request.Height));
-
-                    var measuredWidth = MeasureSpecFactory.MakeMeasureSpec((int)context.ToPixels(element.Width), MeasureSpecMode.Exactly);
-                    var measuredHeight = MeasureSpecFactory.MakeMeasureSpec((int)context.ToPixels(element.Height), MeasureSpecMode.Exactly);
-
-                    this.child.ViewGroup.Measure(widthMeasureSpec, heightMeasureSpec);
-                    this.SetMeasuredDimension(measuredWidth, measuredHeight);
-                }
-            }
-
-            protected override void OnLayout(bool changed, int l, int t, int r, int b)
-            {
-                if (this.child == null)
-                {
-                    return;
-                }
-
-                this.child.UpdateLayout();
             }
         }
     }

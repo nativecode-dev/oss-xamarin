@@ -43,7 +43,6 @@
     <Compile Include="NavigationLayout.cs" />
     <Compile Include="NavigationLayoutMenu.cs" />
     <Compile Include="Platforms\IUserNotifier.cs" />
-    <Compile Include="NavigationLayoutHeader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
