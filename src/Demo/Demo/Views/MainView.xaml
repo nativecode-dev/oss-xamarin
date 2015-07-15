@@ -25,7 +25,7 @@
       <Slider Minimum="0" Maximum="20" Value="{Binding Radius}" />
       <Label Text="Padding" />
       <Slider Minimum="0" Maximum="20" Value="{Binding Padding}" />
-      <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+      <controls:Card Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <StackLayout>
           <Button Command="{Binding ShowSnackBar}" Text="Hit me!" />
           <StackLayout Orientation="Horizontal">
@@ -34,20 +34,20 @@
           </StackLayout>
           <StackLayout Orientation="Horizontal">
             <Label Text="Entry Field" />
-            <Entry HorizontalOptions="FillAndExpand" />
+            <Entry HorizontalOptions="FillAndExpand" Placeholder="Enter some text" />
           </StackLayout>
         </StackLayout>
       </controls:Card>
-      <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+      <controls:Card Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <StackLayout Orientation="Horizontal">
           <controls:FloatingButton ButtonSize="Mini" Color="Black" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
           <controls:FloatingButton ButtonSize="Normal" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
         </StackLayout>
       </controls:Card>
-      <controls:Card BackgroundColor="White" Command="{Binding ShowSnackBar}" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+      <controls:Card Command="{Binding ShowSnackBar}" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <Label Text="Clickable CardView" />
       </controls:Card>
-      <controls:Card BackgroundColor="White" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
+      <controls:Card Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <shared:MenuHeaderView />
       </controls:Card>
     </StackLayout>
