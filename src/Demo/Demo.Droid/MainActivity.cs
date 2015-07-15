@@ -21,7 +21,7 @@
             base.OnCreate(savedInstanceState);
 
             Forms.Init(this, savedInstanceState);
-            FormsAppCompat.EnableAll();
+            FormsAppCompat.Init();
 
             this.LoadApplication(new App());
         }

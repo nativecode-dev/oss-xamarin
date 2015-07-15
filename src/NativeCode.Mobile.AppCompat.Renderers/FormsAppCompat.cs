@@ -1,6 +1,7 @@
 namespace NativeCode.Mobile.AppCompat.Renderers
 {
     using System;
+    using System.Diagnostics;
     using System.Reflection;
 
     using NativeCode.Mobile.AppCompat.Controls;
@@ -8,6 +9,8 @@ namespace NativeCode.Mobile.AppCompat.Renderers
     using NativeCode.Mobile.AppCompat.Renderers.Renderers;
 
     using Xamarin.Forms;
+
+    using Switch = Xamarin.Forms.Switch;
 
     /// <summary>
     /// Enables renderers for various aspects of the library.
@@ -21,7 +24,7 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         private static readonly MethodInfo RegisterMethod;
 
         /// <summary>
-        /// Initializes static members of the <see cref="FormsAppCompat"/> class.
+        /// Initializes static members of the <see cref="FormsAppCompat" /> class.
         /// </summary>
         static FormsAppCompat()
         {
@@ -34,45 +37,91 @@ namespace NativeCode.Mobile.AppCompat.Renderers
         /// <summary>
         /// Enables registration of all renderers.
         /// </summary>
+        [Obsolete("Prefer to use Init.", false)]
         public static void EnableAll()
         {
-            EnableAndroidRenderers();
-            EnableAppCompatRenderers();
-            EnableMasterDetailRenderer();
+            Init();
         }
 
         /// <summary>
         /// Enables Android-specific renderers.
         /// </summary>
+        [Obsolete("Prefer to use Init.", false)]
         public static void EnableAndroidRenderers()
         {
-            RegisterType(typeof(Card), typeof(CardRenderer));
-            RegisterType(typeof(FloatingButton), typeof(FloatingButtonRenderer));
-            RegisterType(typeof(NavigationLayout), typeof(NavigationLayoutRenderer));
+            Init(AppCompatOption.CardViewSupport | AppCompatOption.FloatingActionButtonSupport | AppCompatOption.NavigationLayoutSupport);
         }
 
         /// <summary>
         /// Enables compatibility renderers.
         /// </summary>
+        [Obsolete("Prefer to use Init.", false)]
         public static void EnableAppCompatRenderers()
         {
-            RegisterType(typeof(Button), typeof(AppCompatButtonRenderer));
-            RegisterType(typeof(Entry), typeof(AppCompatEntryLayoutRenderer));
-            RegisterType(typeof(Picker), typeof(AppCompatSpinnerRenderer));
-            RegisterType(typeof(Switch), typeof(AppCompatSwitchRenderer));
+            Init(AppCompatOption.AppCompatButtonSupport | AppCompatOption.AppCompatEntrySupport | AppCompatOption.AppCompatSpinnerSupport | AppCompatOption.AppCompatSwitchSupport);
         }
 
         /// <summary>
-        /// Enables the <see cref="AppCompatMasterDetailRenderer"/>.
+        /// Enables the <see cref="AppCompatMasterDetailRenderer" />.
         /// </summary>
+        [Obsolete("Prefer to use Init.", false)]
         public static void EnableMasterDetailRenderer()
         {
-            RegisterType(typeof(MasterDetailPage), typeof(AppCompatMasterDetailRenderer));
+            Init(AppCompatOption.AppCompatMasterDetailSupport);
+        }
+
+        public static void Init(AppCompatOption options = AppCompatOption.All)
+        {
+            if (options == AppCompatOption.None)
+            {
+                return;
+            }
+
+            if (options.HasFlag(AppCompatOption.AppCompatButtonSupport))
+            {
+                RegisterType(typeof(Button), typeof(AppCompatButtonRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.AppCompatEntrySupport))
+            {
+                RegisterType(typeof(Entry), typeof(AppCompatEntryLayoutRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.AppCompatMasterDetailSupport))
+            {
+                RegisterType(typeof(MasterDetailPage), typeof(AppCompatMasterDetailRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.AppCompatSpinnerSupport))
+            {
+                RegisterType(typeof(Picker), typeof(AppCompatSpinnerRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.AppCompatSwitchSupport))
+            {
+                RegisterType(typeof(Switch), typeof(AppCompatSwitchRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.CardViewSupport))
+            {
+                RegisterType(typeof(Card), typeof(CardRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.FloatingActionButtonSupport))
+            {
+                RegisterType(typeof(FloatingButton), typeof(FloatingButtonRenderer));
+            }
+
+            if (options.HasFlag(AppCompatOption.NavigationLayoutSupport))
+            {
+                RegisterType(typeof(NavigationLayout), typeof(NavigationLayoutRenderer));
+            }
         }
 
         private static void RegisterType(Type handler, Type target)
         {
             RegisterMethod.Invoke(RegistrarInstance, new object[] { handler, target });
+            Debug.WriteLine("Registered renderer {0} for {1}.", target.Name, handler.Name);
         }
     }
 }
