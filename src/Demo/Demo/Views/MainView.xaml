@@ -19,12 +19,16 @@
           <x:String>Item 9</x:String>
         </Picker.Items>
       </Picker>
+
       <Label Text="Elevation" />
       <Slider Minimum="0" Maximum="5"  Value="{Binding Elevation}" />
+
       <Label Text="Radius" />
       <Slider Minimum="0" Maximum="20" Value="{Binding Radius}" />
+
       <Label Text="Padding" />
       <Slider Minimum="0" Maximum="20" Value="{Binding Padding}" />
+
       <controls:Card Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <StackLayout>
           <Button Command="{Binding ShowSnackBar}" Text="Hit me!" />
@@ -38,15 +42,18 @@
           </StackLayout>
         </StackLayout>
       </controls:Card>
+
       <controls:Card Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <StackLayout Orientation="Horizontal">
           <controls:FloatingButton ButtonSize="Mini" Color="Black" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
           <controls:FloatingButton ButtonSize="Normal" Command="{Binding FloatingButtonCommand}" Icon="ic_search" />
         </StackLayout>
       </controls:Card>
+
       <controls:Card Command="{Binding ShowSnackBar}" Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <Label Text="Clickable CardView" />
       </controls:Card>
+
       <controls:Card Elevation="{Binding Elevation}" Padding="{Binding Padding}" Radius="{Binding Radius}">
         <shared:MenuHeaderView />
       </controls:Card>

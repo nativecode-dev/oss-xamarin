@@ -25,7 +25,7 @@ namespace NativeCode.Mobile.AppCompat
         private readonly List<IDisposable> disposables = new List<IDisposable>();
 
         /// <summary>
-        /// Gets the <see cref="Activity"/> instance.
+        /// Gets the <see cref="Activity" /> instance.
         /// </summary>
         protected Activity Activity
         {
@@ -33,7 +33,7 @@ namespace NativeCode.Mobile.AppCompat
         }
 
         /// <summary>
-        /// Gets the <see cref="LayoutInflater"/> instance.
+        /// Gets the <see cref="LayoutInflater" /> instance.
         /// </summary>
         protected LayoutInflater LayoutInflater
         {
