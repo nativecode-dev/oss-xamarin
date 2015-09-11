@@ -18,7 +18,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
     /// <summary>
     /// Adapts a <see cref="Android.Support.V7.App.ActionBar"/> to a <see cref="Android.App.ActionBar"/>.
     /// </summary>
-    internal class ActionBarAdapter : ActionBar
+    public class ActionBarAdapter : ActionBar
     {
         private readonly Dictionary<IOnMenuVisibilityListener, MenuVisibilityListenerAdapter> menuVisibilityListeners =
             new Dictionary<IOnMenuVisibilityListener, MenuVisibilityListenerAdapter>();
