@@ -14,7 +14,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
     /// <summary>
     /// Adapts an existing <see cref="Window"/> to override required methods to implement <see cref="AppCompatDelegate"/>.
     /// </summary>
-    internal class WindowAdapter : Window
+    public class WindowAdapter : Window
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WindowAdapter"/> class.
