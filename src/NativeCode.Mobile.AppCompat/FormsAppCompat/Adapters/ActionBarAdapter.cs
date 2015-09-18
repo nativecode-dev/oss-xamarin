@@ -8,12 +8,12 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
     using Android.App;
     using Android.Graphics.Drawables;
     using Android.Support.V7.App;
-    using Android.Views;
     using Android.Widget;
 
     using Java.Lang;
 
     using ActionBar = Android.App.ActionBar;
+    using View = Android.Views.View;
 
     /// <summary>
     /// Adapts a <see cref="Android.Support.V7.App.ActionBar"/> to a <see cref="Android.App.ActionBar"/>.
@@ -127,7 +127,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat.Adapters
 
         private Android.Support.V7.App.ActionBar SupportActionBar
         {
-            get { return this.AppCompatDelegateProvider.AppCompatDelegate.SupportActionBar; }
+            get { return this.AppCompatDelegate.SupportActionBar; }
         }
 
         public override void AddOnMenuVisibilityListener(IOnMenuVisibilityListener listener)

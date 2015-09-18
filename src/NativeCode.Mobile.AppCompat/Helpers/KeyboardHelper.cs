@@ -28,7 +28,7 @@ namespace NativeCode.Mobile.AppCompat.Helpers
         private static readonly MethodInfo MethodShowKeyboard;
 
         /// <summary>
-        /// Initializes static members of the <see cref="KeyboardHelper"/> class.
+        /// Initializes static members of the <see cref="KeyboardHelper" /> class.
         /// </summary>
         static KeyboardHelper()
         {

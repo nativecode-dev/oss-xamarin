@@ -6,6 +6,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
     using Android.OS;
     using Android.Support.V4.App;
     using Android.Support.V7.App;
+    using Android.Support.V7.Widget;
     using Android.Views;
 
     using Java.Lang;
@@ -52,18 +53,17 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// Retrieve a reference to this activity's ActionBar.
         /// </summary>
         /// <since version="Added in API level 11" />
-        /// <remarks><para tool="javadoc-to-mdoc">Retrieve a reference to this activity's ActionBar.</para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/app/Activity.html#getActionBar()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para></remarks>
+        /// <remarks>
+        ///     <para tool="javadoc-to-mdoc">Retrieve a reference to this activity's ActionBar.</para>
+        ///     <para tool="javadoc-to-mdoc">
+        ///         <format type="text/html">
+        ///             <a href="http://developer.android.com/reference/android/app/Activity.html#getActionBar()" target="_blank">[Android Documentation]</a>
+        ///         </format>
+        ///     </para>
+        /// </remarks>
         public override ActionBar ActionBar
         {
-            get
-            {
-                return this.actionBarAdapter ?? this.disposables.Add(this.actionBarAdapter = new ActionBarAdapter(this));
-            }
+            get { return this.actionBarAdapter ?? this.disposables.Add(this.actionBarAdapter = new ActionBarAdapter(this)); }
         }
 
         /// <summary>
@@ -71,10 +71,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public AppCompatDelegate AppCompatDelegate
         {
-            get
-            {
-                return this.appCompatDelegate ?? this.disposables.Add(this.appCompatDelegate = AppCompatDelegate.Create(this, this));
-            }
+            get { return this.appCompatDelegate ?? this.disposables.Add(this.appCompatDelegate = AppCompatDelegate.Create(this, this)); }
         }
 
         /// <summary>
@@ -82,29 +79,30 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public virtual ActionBarDrawerToggle.IDelegate DrawerToggleDelegate
         {
-            get
-            {
-                return this.AppCompatDelegate.DrawerToggleDelegate;
-            }
+            get { return this.AppCompatDelegate.DrawerToggleDelegate; }
         }
 
         /// <summary>
-        /// Returns a <c><see cref="T:Android.Views.MenuInflater" /></c> with this context.
+        /// Returns a <c>
+        ///     <see cref="T:Android.Views.MenuInflater" />
+        /// </c> with this context.
         /// </summary>
         /// <since version="Added in API level 1" />
-        /// <remarks><para tool="javadoc-to-mdoc">Returns a <c><see cref="T:Android.Views.MenuInflater" /></c> with this context.
-        /// </para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/app/Activity.html#getMenuInflater()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para></remarks>
+        /// <remarks>
+        ///     <para tool="javadoc-to-mdoc">
+        ///     Returns a <c>
+        ///         <see cref="T:Android.Views.MenuInflater" />
+        ///     </c> with this context.
+        ///     </para>
+        ///     <para tool="javadoc-to-mdoc">
+        ///         <format type="text/html">
+        ///             <a href="http://developer.android.com/reference/android/app/Activity.html#getMenuInflater()" target="_blank">[Android Documentation]</a>
+        ///         </format>
+        ///     </para>
+        /// </remarks>
         public override MenuInflater MenuInflater
         {
-            get
-            {
-                return this.AppCompatDelegate.MenuInflater;
-            }
+            get { return this.AppCompatDelegate.MenuInflater; }
         }
 
         /// <summary>
@@ -112,30 +110,32 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         public virtual Intent SupportParentActivityIntent
         {
-            get
-            {
-                return NavUtils.GetParentActivityIntent(this);
-            }
+            get { return NavUtils.GetParentActivityIntent(this); }
         }
 
         /// <summary>
-        /// Retrieve the current <c><see cref="T:Android.Views.Window" /></c> for the activity.
+        /// Retrieve the current <c>
+        ///     <see cref="T:Android.Views.Window" />
+        /// </c> for the activity.
         /// </summary>
         /// <since version="Added in API level 1" />
-        /// <remarks><para tool="javadoc-to-mdoc">Retrieve the current <c><see cref="T:Android.Views.Window" /></c> for the activity.
-        /// This can be used to directly access parts of the Window API that
-        /// are not available through Activity/Screen.</para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/app/Activity.html#getWindow()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para></remarks>
+        /// <remarks>
+        ///     <para tool="javadoc-to-mdoc">
+        ///     Retrieve the current <c>
+        ///         <see cref="T:Android.Views.Window" />
+        ///     </c> for the activity.
+        ///     This can be used to directly access parts of the Window API that
+        ///     are not available through Activity/Screen.
+        ///     </para>
+        ///     <para tool="javadoc-to-mdoc">
+        ///         <format type="text/html">
+        ///             <a href="http://developer.android.com/reference/android/app/Activity.html#getWindow()" target="_blank">[Android Documentation]</a>
+        ///         </format>
+        ///     </para>
+        /// </remarks>
         public override Window Window
         {
-            get
-            {
-                return this.windowAdapter ?? this.disposables.Add(this.windowAdapter = new WindowAdapter(base.Window, this));
-            }
+            get { return this.windowAdapter ?? this.disposables.Add(this.windowAdapter = new WindowAdapter(base.Window, this)); }
         }
 
         /// <summary>
@@ -143,11 +143,10 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         /// </summary>
         protected DisposableContainer Disposables
         {
-            get
-            {
-                return this.disposables;
-            }
+            get { return this.disposables; }
         }
+
+        protected Toolbar Toolbar { get; private set; }
 
         public override void AddContentView(View view, ViewGroup.LayoutParams @params)
         {
@@ -288,8 +287,8 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
         }
 
         /// <summary>
-        /// Allows initialization prior to the <see cref="FormsApplicationActivity"/> receiving the
-        /// OnCreate call but after the <see cref="AppCompatDelegate"/> is initialized.
+        /// Allows initialization prior to the <see cref="FormsApplicationActivity" /> receiving the
+        /// OnCreate call but after the <see cref="AppCompatDelegate" /> is initialized.
         /// </summary>
         /// <param name="savedInstanceState">State of the saved instance.</param>
         protected virtual void BeforeOnCreate(Bundle savedInstanceState)
@@ -303,6 +302,12 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
             // NOTE: This is an important difference from AppCompatActivity, as we need to call this before
             // we make the base call so that the SetContentView works properly for Forms.
             this.AppCompatDelegate.OnCreate(savedInstanceState);
+
+            if (this.Toolbar == null)
+            {
+                this.Toolbar = new Toolbar(this);
+                this.AppCompatDelegate.SetSupportActionBar(this.Toolbar);
+            }
 
             // Allow additional initialization before we call FormsApplicationActivity.
             this.BeforeOnCreate(savedInstanceState);

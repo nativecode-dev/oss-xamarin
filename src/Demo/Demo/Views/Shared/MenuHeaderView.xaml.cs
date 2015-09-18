@@ -1,8 +1,8 @@
 ﻿namespace Demo.Views.Shared
 {
-    using NativeCode.Mobile.AppCompat.Controls;
+    using Xamarin.Forms;
 
-    public partial class MenuHeaderView : NavigationLayoutHeader
+    public partial class MenuHeaderView : ContentView
     {
         public MenuHeaderView()
         {

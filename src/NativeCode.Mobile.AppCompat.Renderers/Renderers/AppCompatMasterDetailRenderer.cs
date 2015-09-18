@@ -3,7 +3,6 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
     using System.ComponentModel;
 
     using Android.App;
-    using Android.Provider;
     using Android.Support.V4.Widget;
     using Android.Support.V7.App;
 

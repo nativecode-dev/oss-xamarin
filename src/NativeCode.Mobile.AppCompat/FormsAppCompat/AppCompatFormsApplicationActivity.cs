@@ -6,9 +6,9 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
     using Android.Widget;
 
     /// <summary>
-    /// Provides a <see cref="AppCompatDelegate"/>-backed activity while maintaining compatibility with $Xamarin.Forms$.
+    /// Provides a <see cref="AppCompatDelegate" />-backed activity while maintaining compatibility with $Xamarin.Forms$.
     /// </summary>
-    /// <remarks>See <see cref="http://bit.ly/1Lfr30c"/> for information on implementation.</remarks>
+    /// <remarks>See <see cref="http://bit.ly/1Lfr30c" /> for information on implementation.</remarks>
     public class AppCompatFormsApplicationActivity : AppCompatFormsActivity, IAppCompatCoordinatorLayoutProvider
     {
         private CoordinatorLayout coordinator;
@@ -30,6 +30,7 @@ namespace NativeCode.Mobile.AppCompat.FormsAppCompat
             if (content is LinearLayout && this.EnableCoordinatorLayout)
             {
                 this.coordinator = this.Inflate<CoordinatorLayout>(Resource.Layout.appcompat_coordinator, null);
+                this.coordinator.AddView(this.Toolbar);
                 this.coordinator.AddView(view);
 
                 this.Disposables.Add(this.coordinator);

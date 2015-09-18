@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<controls:NavigationLayoutHeader xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                                  xmlns:controls="clr-namespace:NativeCode.Mobile.AppCompat.Controls;assembly=NativeCode.Mobile.AppCompat.Controls"
-                                  x:Class="Demo.Views.Shared.MenuHeaderView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo.Views.Shared.MenuHeaderView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
   <Image x:Name="HeaderImage" Source="navbackground" IsOpaque="True" Opacity="0.75" />
-</controls:NavigationLayoutHeader>
+</ContentView>
