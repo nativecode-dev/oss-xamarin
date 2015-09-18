@@ -2130,40 +2130,46 @@ namespace NativeCode.Mobile.AppCompat
 			public static int layout_snackbar_include = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public static int notification_media_action = 2130903073;
+			public static int layout_tab_icon = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public static int notification_media_cancel_action = 2130903074;
+			public static int layout_tab_text = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public static int notification_template_big_media = 2130903075;
+			public static int notification_media_action = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public static int notification_template_big_media_narrow = 2130903076;
+			public static int notification_media_cancel_action = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public static int notification_template_lines = 2130903077;
+			public static int notification_template_big_media = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public static int notification_template_media = 2130903078;
+			public static int notification_template_big_media_narrow = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public static int notification_template_part_chronometer = 2130903079;
+			public static int notification_template_lines = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public static int notification_template_part_time = 2130903080;
+			public static int notification_template_media = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public static int select_dialog_item_material = 2130903081;
+			public static int notification_template_part_chronometer = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public static int select_dialog_multichoice_material = 2130903082;
+			public static int notification_template_part_time = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public static int select_dialog_singlechoice_material = 2130903083;
+			public static int select_dialog_item_material = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public static int support_simple_spinner_dropdown_item = 2130903084;
+			public static int select_dialog_multichoice_material = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public static int select_dialog_singlechoice_material = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public static int support_simple_spinner_dropdown_item = 2130903086;
 			
 			static Layout()
 			{
@@ -2266,14 +2272,14 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f070076
 			public static int Animation_AppCompat_DropDownUp = 2131165302;
 			
-			// aapt resource value: 0x7f070136
-			public static int AppTheme = 2131165494;
-			
 			// aapt resource value: 0x7f070137
-			public static int AppTheme_Light = 2131165495;
+			public static int AppTheme = 2131165495;
 			
 			// aapt resource value: 0x7f070138
-			public static int AppTheme_Light_DarkActionBar = 2131165496;
+			public static int AppTheme_Light = 2131165496;
+			
+			// aapt resource value: 0x7f070139
+			public static int AppTheme_Light_DarkActionBar = 2131165497;
 			
 			// aapt resource value: 0x7f070077
 			public static int Base_AlertDialog_AppCompat = 2131165303;
@@ -2287,20 +2293,20 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f07007a
 			public static int Base_Animation_AppCompat_DropDownUp = 2131165306;
 			
-			// aapt resource value: 0x7f070133
-			public static int Base_AppTheme = 2131165491;
-			
-			// aapt resource value: 0x7f07013a
-			public static int Base_AppTheme_EditTextStyle = 2131165498;
+			// aapt resource value: 0x7f070134
+			public static int Base_AppTheme = 2131165492;
 			
 			// aapt resource value: 0x7f07013b
-			public static int Base_AppTheme_EditTextStyle_Light = 2131165499;
+			public static int Base_AppTheme_EditTextStyle = 2131165499;
 			
-			// aapt resource value: 0x7f070134
-			public static int Base_AppTheme_Light = 2131165492;
+			// aapt resource value: 0x7f07013c
+			public static int Base_AppTheme_EditTextStyle_Light = 2131165500;
 			
 			// aapt resource value: 0x7f070135
-			public static int Base_AppTheme_Light_DarkActionBar = 2131165493;
+			public static int Base_AppTheme_Light = 2131165493;
+			
+			// aapt resource value: 0x7f070136
+			public static int Base_AppTheme_Light_DarkActionBar = 2131165494;
 			
 			// aapt resource value: 0x7f07007b
 			public static int Base_DialogWindowTitle_AppCompat = 2131165307;
@@ -2689,8 +2695,8 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f070125
 			public static int Base_Widget_Design_TabLayout = 2131165477;
 			
-			// aapt resource value: 0x7f070139
-			public static int DrawerArrowStyle = 2131165497;
+			// aapt resource value: 0x7f07013a
+			public static int DrawerArrowStyle = 2131165498;
 			
 			// aapt resource value: 0x7f070010
 			public static int Platform_AppCompat = 2131165200;
@@ -2885,19 +2891,22 @@ namespace NativeCode.Mobile.AppCompat
 			public static int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131165388;
 			
 			// aapt resource value: 0x7f070126
-			public static int TextAppearance_Design_Error = 2131165478;
+			public static int TextAppearance_Design_CollapsingToolbar_Expanded = 2131165478;
 			
 			// aapt resource value: 0x7f070127
-			public static int TextAppearance_Design_Hint = 2131165479;
+			public static int TextAppearance_Design_Error = 2131165479;
 			
 			// aapt resource value: 0x7f070128
-			public static int TextAppearance_Design_Snackbar_Action = 2131165480;
+			public static int TextAppearance_Design_Hint = 2131165480;
 			
 			// aapt resource value: 0x7f070129
-			public static int TextAppearance_Design_Snackbar_Message = 2131165481;
+			public static int TextAppearance_Design_Snackbar_Action = 2131165481;
 			
 			// aapt resource value: 0x7f07012a
-			public static int TextAppearance_Design_Tab = 2131165482;
+			public static int TextAppearance_Design_Snackbar_Message = 2131165482;
+			
+			// aapt resource value: 0x7f07012b
+			public static int TextAppearance_Design_Tab = 2131165483;
 			
 			// aapt resource value: 0x7f07001b
 			public static int TextAppearance_StatusBar_EventContent = 2131165211;
@@ -3175,32 +3184,32 @@ namespace NativeCode.Mobile.AppCompat
 			// aapt resource value: 0x7f070123
 			public static int Widget_AppCompat_Toolbar_Button_Navigation = 2131165475;
 			
-			// aapt resource value: 0x7f07012b
-			public static int Widget_Design_AppBarLayout = 2131165483;
-			
 			// aapt resource value: 0x7f07012c
-			public static int Widget_Design_CollapsingToolbar = 2131165484;
+			public static int Widget_Design_AppBarLayout = 2131165484;
 			
 			// aapt resource value: 0x7f07012d
-			public static int Widget_Design_CoordinatorLayout = 2131165485;
+			public static int Widget_Design_CollapsingToolbar = 2131165485;
 			
 			// aapt resource value: 0x7f07012e
-			public static int Widget_Design_FloatingActionButton = 2131165486;
+			public static int Widget_Design_CoordinatorLayout = 2131165486;
 			
 			// aapt resource value: 0x7f07012f
-			public static int Widget_Design_NavigationView = 2131165487;
+			public static int Widget_Design_FloatingActionButton = 2131165487;
 			
 			// aapt resource value: 0x7f070130
-			public static int Widget_Design_ScrimInsetsFrameLayout = 2131165488;
+			public static int Widget_Design_NavigationView = 2131165488;
 			
 			// aapt resource value: 0x7f070131
-			public static int Widget_Design_Snackbar = 2131165489;
+			public static int Widget_Design_ScrimInsetsFrameLayout = 2131165489;
+			
+			// aapt resource value: 0x7f070132
+			public static int Widget_Design_Snackbar = 2131165490;
 			
 			// aapt resource value: 0x7f070124
 			public static int Widget_Design_TabLayout = 2131165476;
 			
-			// aapt resource value: 0x7f070132
-			public static int Widget_Design_TextInputLayout = 2131165490;
+			// aapt resource value: 0x7f070133
+			public static int Widget_Design_TextInputLayout = 2131165491;
 			
 			static Style()
 			{

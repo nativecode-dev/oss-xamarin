@@ -692,6 +692,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Layout.design_navigation_menu = global::Demo.Droid.Resource.Layout.design_navigation_menu;
 			global::NativeCode.Mobile.AppCompat.Resource.Layout.layout_snackbar = global::Demo.Droid.Resource.Layout.layout_snackbar;
 			global::NativeCode.Mobile.AppCompat.Resource.Layout.layout_snackbar_include = global::Demo.Droid.Resource.Layout.layout_snackbar_include;
+			global::NativeCode.Mobile.AppCompat.Resource.Layout.layout_tab_icon = global::Demo.Droid.Resource.Layout.layout_tab_icon;
+			global::NativeCode.Mobile.AppCompat.Resource.Layout.layout_tab_text = global::Demo.Droid.Resource.Layout.layout_tab_text;
 			global::NativeCode.Mobile.AppCompat.Resource.Layout.notification_media_action = global::Demo.Droid.Resource.Layout.notification_media_action;
 			global::NativeCode.Mobile.AppCompat.Resource.Layout.notification_media_cancel_action = global::Demo.Droid.Resource.Layout.notification_media_cancel_action;
 			global::NativeCode.Mobile.AppCompat.Resource.Layout.notification_template_big_media = global::Demo.Droid.Resource.Layout.notification_template_big_media;
@@ -935,6 +937,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Demo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Demo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Demo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Demo.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_Design_Error = global::Demo.Droid.Resource.Style.TextAppearance_Design_Error;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_Design_Hint = global::Demo.Droid.Resource.Style.TextAppearance_Design_Hint;
 			global::NativeCode.Mobile.AppCompat.Resource.Style.TextAppearance_Design_Snackbar_Action = global::Demo.Droid.Resource.Style.TextAppearance_Design_Snackbar_Action;
@@ -2118,6 +2121,8 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.fab_normal = global::Demo.Droid.Resource.Layout.fab_normal;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.layout_snackbar = global::Demo.Droid.Resource.Layout.layout_snackbar;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.layout_snackbar_include = global::Demo.Droid.Resource.Layout.layout_snackbar_include;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.layout_tab_icon = global::Demo.Droid.Resource.Layout.layout_tab_icon;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.layout_tab_text = global::Demo.Droid.Resource.Layout.layout_tab_text;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.notification_media_action = global::Demo.Droid.Resource.Layout.notification_media_action;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.notification_media_cancel_action = global::Demo.Droid.Resource.Layout.notification_media_cancel_action;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Layout.notification_template_big_media = global::Demo.Droid.Resource.Layout.notification_template_big_media;
@@ -2367,6 +2372,7 @@ namespace Demo.Droid
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Demo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Demo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Demo.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Demo.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_Design_Error = global::Demo.Droid.Resource.Style.TextAppearance_Design_Error;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_Design_Hint = global::Demo.Droid.Resource.Style.TextAppearance_Design_Hint;
 			global::NativeCode.Mobile.AppCompat.Renderers.Resource.Style.TextAppearance_Design_Snackbar_Action = global::Demo.Droid.Resource.Style.TextAppearance_Design_Snackbar_Action;
@@ -5065,43 +5071,49 @@ namespace Demo.Droid
 			public const int layout_snackbar_include = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int notification_media_action = 2130903075;
+			public const int layout_tab_icon = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_media_cancel_action = 2130903076;
+			public const int layout_tab_text = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_template_big_media = 2130903077;
+			public const int notification_media_action = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_big_media_narrow = 2130903078;
+			public const int notification_media_cancel_action = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_lines = 2130903079;
+			public const int notification_template_big_media = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_media = 2130903080;
+			public const int notification_template_big_media_narrow = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_part_chronometer = 2130903081;
+			public const int notification_template_lines = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_part_time = 2130903082;
+			public const int notification_template_media = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int select_dialog_item_material = 2130903083;
+			public const int notification_template_part_chronometer = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int select_dialog_multichoice_material = 2130903084;
+			public const int notification_template_part_time = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int select_dialog_singlechoice_material = 2130903085;
+			public const int select_dialog_item_material = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int spinner = 2130903086;
+			public const int select_dialog_multichoice_material = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int support_simple_spinner_dropdown_item = 2130903087;
+			public const int select_dialog_singlechoice_material = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int spinner = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int support_simple_spinner_dropdown_item = 2130903089;
 			
 			static Layout()
 			{
@@ -5210,14 +5222,14 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f070079
 			public const int Animation_AppCompat_DropDownUp = 2131165305;
 			
-			// aapt resource value: 0x7f070139
-			public const int AppTheme = 2131165497;
-			
 			// aapt resource value: 0x7f07013a
-			public const int AppTheme_Light = 2131165498;
+			public const int AppTheme = 2131165498;
 			
 			// aapt resource value: 0x7f07013b
-			public const int AppTheme_Light_DarkActionBar = 2131165499;
+			public const int AppTheme_Light = 2131165499;
+			
+			// aapt resource value: 0x7f07013c
+			public const int AppTheme_Light_DarkActionBar = 2131165500;
 			
 			// aapt resource value: 0x7f07007a
 			public const int Base_AlertDialog_AppCompat = 2131165306;
@@ -5231,20 +5243,20 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f07007d
 			public const int Base_Animation_AppCompat_DropDownUp = 2131165309;
 			
-			// aapt resource value: 0x7f070136
-			public const int Base_AppTheme = 2131165494;
-			
-			// aapt resource value: 0x7f07013d
-			public const int Base_AppTheme_EditTextStyle = 2131165501;
+			// aapt resource value: 0x7f070137
+			public const int Base_AppTheme = 2131165495;
 			
 			// aapt resource value: 0x7f07013e
-			public const int Base_AppTheme_EditTextStyle_Light = 2131165502;
+			public const int Base_AppTheme_EditTextStyle = 2131165502;
 			
-			// aapt resource value: 0x7f070137
-			public const int Base_AppTheme_Light = 2131165495;
+			// aapt resource value: 0x7f07013f
+			public const int Base_AppTheme_EditTextStyle_Light = 2131165503;
 			
 			// aapt resource value: 0x7f070138
-			public const int Base_AppTheme_Light_DarkActionBar = 2131165496;
+			public const int Base_AppTheme_Light = 2131165496;
+			
+			// aapt resource value: 0x7f070139
+			public const int Base_AppTheme_Light_DarkActionBar = 2131165497;
 			
 			// aapt resource value: 0x7f07007e
 			public const int Base_DialogWindowTitle_AppCompat = 2131165310;
@@ -5642,8 +5654,8 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f070002
 			public const int CardView_Light = 2131165186;
 			
-			// aapt resource value: 0x7f07013c
-			public const int DrawerArrowStyle = 2131165500;
+			// aapt resource value: 0x7f07013d
+			public const int DrawerArrowStyle = 2131165501;
 			
 			// aapt resource value: 0x7f070013
 			public const int Platform_AppCompat = 2131165203;
@@ -5838,19 +5850,22 @@ namespace Demo.Droid
 			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131165391;
 			
 			// aapt resource value: 0x7f070129
-			public const int TextAppearance_Design_Error = 2131165481;
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131165481;
 			
 			// aapt resource value: 0x7f07012a
-			public const int TextAppearance_Design_Hint = 2131165482;
+			public const int TextAppearance_Design_Error = 2131165482;
 			
 			// aapt resource value: 0x7f07012b
-			public const int TextAppearance_Design_Snackbar_Action = 2131165483;
+			public const int TextAppearance_Design_Hint = 2131165483;
 			
 			// aapt resource value: 0x7f07012c
-			public const int TextAppearance_Design_Snackbar_Message = 2131165484;
+			public const int TextAppearance_Design_Snackbar_Action = 2131165484;
 			
 			// aapt resource value: 0x7f07012d
-			public const int TextAppearance_Design_Tab = 2131165485;
+			public const int TextAppearance_Design_Snackbar_Message = 2131165485;
+			
+			// aapt resource value: 0x7f07012e
+			public const int TextAppearance_Design_Tab = 2131165486;
 			
 			// aapt resource value: 0x7f07001e
 			public const int TextAppearance_StatusBar_EventContent = 2131165214;
@@ -6128,32 +6143,32 @@ namespace Demo.Droid
 			// aapt resource value: 0x7f070126
 			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131165478;
 			
-			// aapt resource value: 0x7f07012e
-			public const int Widget_Design_AppBarLayout = 2131165486;
-			
 			// aapt resource value: 0x7f07012f
-			public const int Widget_Design_CollapsingToolbar = 2131165487;
+			public const int Widget_Design_AppBarLayout = 2131165487;
 			
 			// aapt resource value: 0x7f070130
-			public const int Widget_Design_CoordinatorLayout = 2131165488;
+			public const int Widget_Design_CollapsingToolbar = 2131165488;
 			
 			// aapt resource value: 0x7f070131
-			public const int Widget_Design_FloatingActionButton = 2131165489;
+			public const int Widget_Design_CoordinatorLayout = 2131165489;
 			
 			// aapt resource value: 0x7f070132
-			public const int Widget_Design_NavigationView = 2131165490;
+			public const int Widget_Design_FloatingActionButton = 2131165490;
 			
 			// aapt resource value: 0x7f070133
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131165491;
+			public const int Widget_Design_NavigationView = 2131165491;
 			
 			// aapt resource value: 0x7f070134
-			public const int Widget_Design_Snackbar = 2131165492;
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131165492;
+			
+			// aapt resource value: 0x7f070135
+			public const int Widget_Design_Snackbar = 2131165493;
 			
 			// aapt resource value: 0x7f070127
 			public const int Widget_Design_TabLayout = 2131165479;
 			
-			// aapt resource value: 0x7f070135
-			public const int Widget_Design_TextInputLayout = 2131165493;
+			// aapt resource value: 0x7f070136
+			public const int Widget_Design_TextInputLayout = 2131165494;
 			
 			static Style()
 			{

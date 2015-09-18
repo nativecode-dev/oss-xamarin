@@ -43,21 +43,13 @@ namespace NativeCode.Mobile.AppCompat.Renderers.Renderers
         {
             private static readonly Lazy<ButtonClickListener> DefaultInstance = new Lazy<ButtonClickListener>(() => new ButtonClickListener());
 
-            public static ButtonClickListener Instance
-            {
-                get { return DefaultInstance.Value; }
-            }
+            public static ButtonClickListener Instance => DefaultInstance.Value;
 
             public void OnClick(View view)
             {
                 var renderer = view.Tag as AppCompatButtonRenderer;
 
-                if (renderer == null)
-                {
-                    return;
-                }
-
-                renderer.Element.InvokeSendClicked();
+                renderer?.Element.InvokeSendClicked();
             }
         }
     }
