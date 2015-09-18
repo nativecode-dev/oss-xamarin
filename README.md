@@ -1,3 +1,8 @@
+# PSA
+**You probably shouldn't upgrade to Xamarin.Android 5.1.4 until they fix the debug issues. Currently, the only way to debug Android apps is to disable all linking.**
+
+Please see all the comments [here](http://forums.xamarin.com/discussion/44632/stable-release-xamarin-android-5-1-4-cycle-5-service-release-2#latest). If you already upgraded to 5.1.4 and are experiencing issues, it's recommended to downgrade to 5.1.3 until the issues are resolved.
+
 # [Power to the people, Cos!](http://www.imdb.com/title/tt0105435/?ref_=nv_sr_1)
 
 Provide Material Design themes now for Xamarin.Forms apps natively without hacks! Check out the [wiki](https://github.com/nativecode-dev/oss-xamarin/wiki) for more information. And yes, I [blogged](https://www.secretlifeof.net/development/use-appcompat-v7-with-xamarin-forms) about it.
