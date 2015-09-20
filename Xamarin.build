@@ -6,6 +6,7 @@
   # Define properties
   -->
   <property name="CurrentPath" value="${path::get-directory-name(project::get-buildfile-path())}" />
+  <property name="MSBuildVersion" value="14.0" />
   <property name="Solution" value="src\Xamarin.sln" />
   <property name="ToolsPath" value="${path::get-full-path(path::combine(CurrentPath, '.build'))}" />
 
