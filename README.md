@@ -1,3 +1,6 @@
+# Obsolete
+Due to Xamarin.Forms 2.0 now providing Material Design compatibility through the FormsAppCompatActivity, this project really is no longer needed. There may be some things from this project that can be ported, but I'll be exploring that option if it presents itself in my day to day Xamarin use. Thanks to everyone who has reported issues and tried it out!
+
 # PSA
 **You probably shouldn't upgrade to Xamarin.Android 5.1.4 until they fix the debug issues. Currently, the only way to debug Android apps is to disable all linking.**
 
